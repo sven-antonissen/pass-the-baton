@@ -1,11 +1,13 @@
 """Check that every translations/<code>/site.json has the same keys and placeholders as English.
 
 Used as the localisation agent's check: a pull request only opens if this passes.
+When AGENT_FOCUS lists language codes, only those languages are checked.
 """
 
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -17,8 +19,9 @@ PLACEHOLDER = re.compile(r"\{[a-z_]+\}")
 def main() -> int:
     en = json.loads((ROOT / "translations/en/site.json").read_text(encoding="utf-8"))
     problems = []
+    focus = {x.strip() for x in os.environ.get("AGENT_FOCUS", "").split(",") if x.strip()}
     for f in sorted((ROOT / "translations").glob("*/site.json")):
-        if f.parent.name == "en":
+        if f.parent.name == "en" or (focus and f.parent.name not in focus):
             continue
         try:
             data = json.loads(f.read_text(encoding="utf-8"))
