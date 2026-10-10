@@ -255,3 +255,11 @@ html, body { overflow-x: hidden; }
 [dir="rtl"] .track, [dir="rtl"] .bar i { transform: scaleX(-1); transform-origin: center; }
 [dir="rtl"] .bar i { right: 0; left: auto; transform: none; }
 [dir="rtl"] .bar b { right: auto; left: 18px; }
+
+/* Navigation: only what the movement offers */
+nav a.nav-cta { background: var(--amber); color: var(--ink); opacity: 1; padding: 8px 16px; border-radius: 999px; border-bottom: 0; }
+nav a.nav-cta:hover { background: var(--glint); color: var(--ink); }
+/* Language choice lives in the footer */
+.footer-grid { display: flex; justify-content: space-between; align-items: center; gap: 16px 32px; flex-wrap: wrap; }
+.footer-grid p { margin: 0; max-width: 70ch; }
+footer .lang-switch ul { top: auto; bottom: calc(100% + 8px); }

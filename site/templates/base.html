@@ -33,20 +33,20 @@
 <body>
 <header class="top"><div class="wrap">
 <a class="brand" href="{{base}}"><img src="{{up}}brand/favicon.svg" alt="">Pass the Baton</a>
-<nav>
-<a href="{{base}}manifesto/">{{t:nav_manifesto}}</a>
+<nav aria-label="Main">
+<a href="{{base}}#demand">{{t:demand_heading}}</a>
 <a href="{{base}}countries/">{{t:nav_countries}}</a>
-<a href="{{repo}}">{{t:nav_help}}</a>
+<a href="{{base}}manifesto/">{{t:nav_manifesto}}</a>
+<a class="nav-cta" href="{{base}}#join">{{t:join_title}}</a>
+</nav>
+</div></header>
+{{body}}
+<footer><div class="wrap footer-grid">
+<p>{{t:footer_text}} {{t:footer_licences}} <a href="{{repo}}">{{t:footer_source}}</a>.</p>
 <details class="lang-switch">
 <summary aria-label="{{t:language_label}}">{{lang_name}}</summary>
 <ul>{{switcher}}</ul>
 </details>
-</nav>
-</div></header>
-{{body}}
-<footer><div class="wrap">
-{{t:footer_text}} {{t:footer_licences}}
-<a href="{{repo}}">{{t:footer_source}}</a>.
 </div></footer>
 </body>
 </html>
