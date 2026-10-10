@@ -1,0 +1,42 @@
+{
+  "country": "Ireland",
+  "iso2": "IE",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 66,
+    "notes": "State Pension age is 66; the contributory pension can be claimed at any age between 66 and 70. Earlier plans to raise the age to 67 and 68 were dropped and the Government stated its intention to keep it at 66. There is no general mandatory retirement age; employers may set their own.",
+    "source": "https://www.citizensinformation.ie/en/social-welfare/older-and-retired-people/state-pension-non-contributory/"
+  },
+  "political_system": "parliamentary republic",
+  "population": { "value": null, "year": null, "source": null },
+  "median_age": { "value": 39.2, "year": 2026, "source": "https://www.populationpyramids.org/median-age-by-country" },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President",
+      "holder": "Catherine Connolly",
+      "birth_date": "1955-11-05",
+      "in_office_since": "2025-11-11",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Catherine_Connolly"
+    },
+    {
+      "office": "Head of government",
+      "title": "Taoiseach",
+      "holder": "Micheál Martin",
+      "birth_date": "1960-08-16",
+      "in_office_since": "2025-01-23",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Miche%C3%A1l_Martin"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "Population: no figure from the Central Statistics Office or UN found in this run; left null.",
+    "Median age 39.2 (2026) comes from populationpyramids.org, which cites UN data; another aggregator gives 39.3 for 2025. A direct UN/CSO source was not found.",
+    "President Connolly's term end date was not confirmed from a source in this run; left null.",
+    "Taoiseach has no fixed term; the next general election date was not found. The Dáil must be dissolved within five years of its first meeting; no date announced in sources found.",
+    "Retirement age: one third-party site (irishbenefits.ie) states the pension age rises to 67 in 2031, which conflicts with Citizens Information and the Government's stated intention to keep 66; no official confirmation of any change found. Official source gov.ie / Department of Social Protection not retrieved in this run.",
+    "Birth dates and office start dates are from Wikipedia/Britannica; official sources (president.ie, gov.ie) were not retrieved in this run."
+  ]
+}

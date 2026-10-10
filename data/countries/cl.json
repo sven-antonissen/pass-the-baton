@@ -1,0 +1,32 @@
+{
+  "country": "Chile",
+  "iso2": "CL",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 65,
+    "by_group": {"men": 65, "women": 60},
+    "notes": "General pension age is 65 for men and 60 for women; statutory is set to the higher value. Solidarity pensions are available from 65 for both sexes. No scheduled change found.",
+    "source": "https://www.cambridge.org/core/journals/journal-of-pension-economics-and-finance/article/chilean-pension-withdrawals-and-the-2025-reform-fiscal-and-retirement-consequences/ADAA0903863A29C2DED67EDFC4306770"
+  },
+  "political_system": "unitary presidential republic",
+  "population": { "value": 19900000, "year": 2025, "source": "https://www.unfpa.org/data/world-population/CL" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President",
+      "holder": "José Antonio Kast",
+      "birth_date": "1966-01-18",
+      "in_office_since": "2026-03-11",
+      "term_ends": "2030-03-11",
+      "source": "https://www.riotimesonline.com/who-is-jose-antonio-kast-chile-profile-2026/"
+    }
+  ],
+  "next_national_election": { "date": "2029-11-18", "source": "https://en.wikipedia.org/wiki/Elections_in_Chile" },
+  "open_questions": [
+    "Median age: sources found disagree (37.5 vs 36) and none is a clear UN/INE figure with year; left null.",
+    "Retirement age source is an academic article (2025); an official source (Superintendencia de Pensiones / IPS) was not found in this run. The Wikipedia 2026 retirement age table lists the same ages (65 men, 60 women).",
+    "Birth date of President Kast is from several secondary sources (Wikipedia, Rio Times); no official source found in this run.",
+    "Next election date 2029-11-18 is from Wikipedia and consistent with the Georgetown SIGLA calendar; official source (Servel) not found in this run."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "country": "Colombia",
+  "iso2": "CO",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 62,
+    "by_group": {"men": 62, "women": 57},
+    "notes": "Public pension regime (RPM) ages are 62 for men and 57 for women; statutory is set to the higher value. The 2024 pension reform (Law 2381) was upheld by the Constitutional Court in August 2026 and keeps these ages; it is scheduled to take effect in April 2027. Only Congress can change the ages; a debate on equalising them was reported in late September 2026 but no change has been set. The private savings regime (RAIS) has no minimum age.",
+    "source": "https://colombiaone.com/2026/09/17/colombia-life-expectancy-continues-to-climb/"
+  },
+  "political_system": "unitary presidential republic",
+  "population": { "value": 53400000, "year": 2025, "source": "https://www.unfpa.org/data/world-population/CO" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President",
+      "holder": "Abelardo de la Espriella",
+      "birth_date": "1978-07-31",
+      "in_office_since": "2026-08-07",
+      "term_ends": "2030-08-07",
+      "source": "https://en.wikipedia.org/wiki/Abelardo_de_la_Espriella"
+    }
+  ],
+  "next_national_election": { "date": "2030-05-26", "source": "https://sigla.georgetown.domains/gateway/pec/" },
+  "open_questions": [
+    "Median age: sources found disagree (33.5 vs 31.6) and none states a clear year or originates from the UN/DANE directly; left null.",
+    "Birth date of President de la Espriella is from Wikipedia only; an official source (e.g. presidencia.gov.co) was not found in this run.",
+    "Term end date 2030-08-07 is derived from the four-year term beginning 2026-08-07, not from an official calendar.",
+    "Next election date 2030-05-26 is the expected date per the Georgetown SIGLA calendar; the date of the 2030 congressional elections was not confirmed. Official source (Registraduría) not found in this run."
+  ]
+}
