@@ -1,0 +1,43 @@
+{
+  "country": "Iran",
+  "iso2": "IR",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 62,
+    "by_group": {"men": 62, "women": 55},
+    "notes": "Minimum retirement ages of 62 for men (raised from 60 under the Seventh Development Plan legislation passed in November 2023) and 55 for women. Statutory is the higher of the two values. Veterans, disabled workers and hazardous occupations remain under special rules.",
+    "source": "https://www.intellinews.com/millions-face-longer-wait-to-retire-as-iran-overhauls-pensions-368522/"
+  },
+  "political_system": "Islamic republic with an appointed Supreme Leader and an elected President",
+  "population": { "value": 92400000, "year": 2025, "source": "https://www.unfpa.org/data/world-population/IR" },
+  "median_age": { "value": 33.4, "year": 2024, "source": "https://en.wikipedia.org/wiki/Demographics_of_Asia" },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "Supreme Leader",
+      "holder": "Mojtaba Khamenei",
+      "birth_date": "1969-09-08",
+      "in_office_since": "2026-03-08",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Mojtaba_Khamenei"
+    },
+    {
+      "office": "Head of government",
+      "title": "President",
+      "holder": "Masoud Pezeshkian",
+      "birth_date": "1954-09-29",
+      "in_office_since": "2024-07-28",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Masoud_Pezeshkian"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "Mojtaba Khamenei was selected by the Assembly of Experts on 2026-03-08 after Ali Khamenei was killed on 2026-02-28. Reports through mid-2026 (CNN, CBS) say he had not appeared in public; a source from about 2026-10-09 still lists him as Supreme Leader. His current status was not independently confirmed.",
+    "The Supreme Leader serves without a fixed term in the sources found, so term_ends is null.",
+    "Date of the next presidential and parliamentary elections not found; left null.",
+    "Pezeshkian term_ends left null: the date of the next presidential election was not found.",
+    "Population is the UNFPA 2025 figure; median age is the UN World Population Prospects 2024 value for 2024 taken from a Wikipedia table. A direct UN median age source was not retrieved.",
+    "Retirement age figures come from a news report (bne IntelliNews) on the pension rules; an official Iranian source was not retrieved."
+  ]
+}

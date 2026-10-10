@@ -1,0 +1,43 @@
+{
+  "country": "Israel",
+  "iso2": "IL",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 67,
+    "by_group": {"men": 67, "women": 62},
+    "notes": "Men 67. Women: under a 2021 law the age rises gradually from 62 to 65 (to be complete in 2032) depending on date of birth, so 62 is the lower bound and the exact figure for a given woman depends on her birth date. Statutory is the highest value for men.",
+    "source": "https://retiringinisrael.com/retirement-age-in-israel/"
+  },
+  "political_system": "parliamentary republic with a unicameral Knesset and a largely ceremonial president",
+  "population": { "value": 10305000, "year": 2026, "source": "https://www.timesofisrael.com/ahead-of-rosh-hashanah-israel-population-is-at-10305000-up-1-2-over-last-year/" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President",
+      "holder": "Isaac Herzog",
+      "birth_date": "1960-09-22",
+      "in_office_since": "2021-07-07",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Isaac_Herzog"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Benjamin Netanyahu",
+      "birth_date": "1949-10-21",
+      "in_office_since": "2022-12-29",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Benjamin_Netanyahu"
+    }
+  ],
+  "next_national_election": { "date": "2026-10-27", "source": "https://blogs.loc.gov/law/2026/10/falqs-israels-upcoming-election-on-october-27-2026/" },
+  "open_questions": [
+    "Median age for Israel not found from an official source this run; left null.",
+    "The Library of Congress source reports the Knesset dissolved on 2026-07-17 ahead of the 2026-10-27 election, while Wikipedia and Britannica describe the election as the first held after a full four-year term; the election date itself is consistent across sources.",
+    "President Herzog's term is listed as expiring in 2028 (Wikipedia list of presidents); the exact end date was not confirmed, so term_ends is null. His start date is given as 2021-07-07 by Wikipedia, while another source says the term begins July 9, 2021.",
+    "Netanyahu remains Prime Minister until a new government is formed after the 2026-10-27 election; term_ends is null.",
+    "Population figure is a provisional Central Bureau of Statistics estimate reported by the Times of Israel (Sept 2026); it includes about 304,000 foreign nationals residing in the country. The CBS page itself was not retrieved.",
+    "Retirement age is from a secondary website quoting the National Insurance Institute (Bituach Leumi); the official NII page was not retrieved."
+  ]
+}
