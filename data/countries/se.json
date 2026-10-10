@@ -1,0 +1,41 @@
+{
+  "country": "Sweden",
+  "iso2": "SE",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 67,
+    "notes": "From 1 January 2026 the target retirement age (riktålder) is 67. The earliest withdrawal of income and premium pension is 64, and the guarantee pension starts at 67. The age is indexed to life expectancy and set six years ahead. Employment protection (LAS) allows staying in work until 69.",
+    "source": "https://www.nordiskpost.com/2026/01/07/sweden-67-retirement-age-benchmark-from-2026/"
+  },
+  "political_system": "unitary parliamentary constitutional monarchy",
+  "population": { "value": 10701046, "year": 2026, "source": "https://www.populationpyramids.org/sweden" },
+  "median_age": { "value": 40.4, "year": 2026, "source": "https://www.populationpyramids.org/sweden" },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "King",
+      "holder": "Carl XVI Gustaf",
+      "birth_date": null,
+      "in_office_since": null,
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Magdalena_Andersson"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister (caretaker)",
+      "holder": "Ulf Kristersson",
+      "birth_date": "1963-12-29",
+      "in_office_since": "2022-10-18",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Ulf_Kristersson"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "Head of government is in flux: after the 13 Sept 2026 election the left-leaning bloc won 175 of 349 seats, and Kristersson has served as caretaker prime minister since 17 Sept 2026. Magdalena Andersson is expected to be proposed as prime minister. The latest news found is 23 days old; check whether the Riksdag has elected a new prime minister and update the entry.",
+    "King Carl XVI Gustaf: birth date and accession date were not found in this run's search results (the cited page only confirms him as monarch), so both are left null.",
+    "Next national election date not found; the general election was just held on 2026-09-13, so the next is expected in 2030 but this is unverified.",
+    "Population (10,701,046) and median age (40.4) are UN World Population Prospects 2024 projections for 2026 as shown on populationpyramids.org. Statistics Sweden (SCB) figures were not retrieved; replace with the latest SCB data.",
+    "Retirement age source is a news article on the Swedish Pensions Agency rules; confirm on pensionsmyndigheten.se."
+  ]
+}
