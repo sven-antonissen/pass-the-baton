@@ -1,20 +1,16 @@
 # Pass the Baton
 
-**Halk için geçerli olan kural, onu yönetenler için de geçerli olmalı.**
+**Halk için geçerli olan, halkı yönetenler için de geçerli olmalı.**
 
-Dünyanın her yerinde insanlar belli bir yaşta işlerini sonraki kuşağa devreder. Bu hareket liderlerden de aynısını istiyor. Yaşlılara güvenmediğimizden değil, yenilenmeye saygı duyduğumuz için.
+Dünyanın her yerinde insanlar belli bir yaşta işlerini yeni kuşağa devrediyor. Bu hareket, liderlerden de aynısını istiyor.
 
-## Talebimiz
+**Talebimiz:** Kendi ülkesinin yasal emeklilik yaşına ve en geç 67 yaşına ulaşmış olan kişi, en yüksek makamlardan birinde yeni bir döneme başlamaz.
 
-**Kendi ülkesinin yasal emeklilik yaşına ulaşmış olan ve en geç 67 yaşında olan hiç kimse, en yüksek makamlardan birinde yeni bir döneme başlamaz.**
+Yaşlılara güvensizlikten değil, yenilenmeye duyduğumuz saygıdan. Hareket şiddet karşıtıdır, hiçbir partiye bağlı değildir ve herkese açıktır. #PassTheBaton #BatonuDevret
 
 ## Devamını okuyun
 
-- [Manifesto (Türkçe)](MANIFESTO.md)
+- [Türkçe manifesto](MANIFESTO.md)
 - [İngilizce özgün manifesto](../../MANIFESTO.md)
 
-Hareket şiddetsizdir ve hiçbir partiye bağlı değildir. Sen de sesini yükselt: #PassTheBaton #BatonuDevret
-
----
-
-*Bu metin [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) lisansı altındadır.*
+Bu metin [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) lisansı altındadır.
