@@ -103,6 +103,29 @@ def fmt(s: str, **values) -> str:
     return s
 
 
+def language_detection(lang: str, key: str) -> str:
+    """A tiny script: remember the visitor's language choice, and on the English
+    pages send first-time visitors to their browser's language if we have it.
+    Search engines and visitors without JavaScript simply get the page they asked for."""
+    supported = [c for c in languages() if c != "en"]
+    targets = {c: "/" + page_path(c, key) for c in supported}
+    redirect = ""
+    if lang == "en":
+        redirect = (
+            "var t=" + json.dumps(targets) + ";"
+            "if(!s){var ls=navigator.languages||[navigator.language||''];"
+            "for(var i=0;i<ls.length;i++){var c=(ls[i]||'').toLowerCase().split('-')[0];"
+            "if(c==='en')break;if(t[c]){location.replace(t[c]+location.hash);return;}}}"
+        )
+    return (
+        "<script>(function(){var s=null;try{s=localStorage.getItem('ptb-lang')}catch(e){}"
+        + redirect
+        + "document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[hreflang]');"
+        "if(a){try{localStorage.setItem('ptb-lang',a.getAttribute('hreflang'))}catch(e){}}});"
+        "})();</script>"
+    )
+
+
 def page(lang: str, key: str, title: str, description: str, body: str, jsonld: str = "") -> str:
     strings = load_strings(lang)
     depth = page_path(lang, key).count("/")
@@ -129,6 +152,7 @@ def page(lang: str, key: str, title: str, description: str, body: str, jsonld: s
         locale=LOCALES.get(lang, lang),
         og_image=f"{ORIGIN}/og.png",
         jsonld=jsonld,
+        langdetect=language_detection(lang, key),
         up=up,
         base=base,
         repo=REPO_URL,
