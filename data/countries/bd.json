@@ -1,0 +1,42 @@
+{
+  "country": "Bangladesh",
+  "iso2": "BD",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 59,
+    "notes": "General retirement age for government employees (raised from 57 to 59 in 2011). A higher age applies to freedom fighters; sources differ (60 in a 2012 change per one reference, 61 per a 2024 policy article). In 2024 the interim government was reported to be considering raising the general age to 61; no such change was confirmed. No statutory retirement age for elected or senior political office was found.",
+    "source": "https://cpd.org.bd/raising-the-retirement-age-will-have-both-immediate-and-medium-to-long-term-effects/"
+  },
+  "political_system": "unitary parliamentary republic",
+  "population": { "value": 176000000, "year": 2025, "source": "https://www.ined.fr/en/everything_about_population/data/world-projections/projections-by-countries" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President",
+      "holder": "Mirza Fakhrul Islam Alamgir",
+      "birth_date": "1948-01-26",
+      "in_office_since": "2026-08-21",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Mirza_Fakhrul_Islam_Alamgir"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Tarique Rahman",
+      "birth_date": "1968-11-20",
+      "in_office_since": "2026-02-17",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Tarique_Rahman"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "Office holders changed in 2026: Tarique Rahman became Prime Minister on 2026-02-17 after the 2026-02-12 election; President Mohammed Shahabuddin resigned (acting president Hafiz Uddin Ahmad from 2026-07-24) and Mirza Fakhrul Islam Alamgir was sworn in on 2026-08-21.",
+    "Date of the next general election not found; set to null.",
+    "Term end dates for the President and the Prime Minister were not confirmed from an official source; set to null.",
+    "Retirement age: the 59-year figure comes from sources dated 2024-2025; whether the new government changed it in 2026 was not verified. The freedom fighter age (60 or 61) is unresolved.",
+    "Median age: no clearly dated UN/national figure was found in this run; left null.",
+    "Population: 176 million (2025) is the UN World Population Prospects 2024 figure as rounded to millions by INED. The 2022 census result was about 169.8 million, so figures differ by source."
+  ]
+}
