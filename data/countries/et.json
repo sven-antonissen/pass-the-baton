@@ -1,0 +1,42 @@
+{
+  "country": "Ethiopia",
+  "iso2": "ET",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 60,
+    "notes": "Old-age pension age for civil servants and private-sector employees (60 with at least 10 years of contributions). Early pension is possible from 55 with 25 years of contributions; separate retirement laws apply to police and defence forces. No statutory retirement age for elected or senior political office was found.",
+    "source": "https://www.ssa.gov/policy/docs/progdesc/ssptw/2018-2019/africa/ethiopia.html"
+  },
+  "political_system": "federal parliamentary republic",
+  "population": { "value": 135000000, "year": 2025, "source": "https://www.ined.fr/en/everything_about_population/data/world-projections/projections-by-countries" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President",
+      "holder": "Taye Atske Selassie",
+      "birth_date": "1956-01-13",
+      "in_office_since": "2024-10-07",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Taye_Atske_Selassie"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Abiy Ahmed",
+      "birth_date": "1976-08-15",
+      "in_office_since": "2018-04-02",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Abiy_Ahmed"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "General election was held on 2026-06-01 (Prosperity Party won 438 of 486 declared seats). A source said the new House would select the Prime Minister later in 2026; not confirmed in this run whether Abiy Ahmed has been formally re-elected or sworn in for a new term, so term_ends is null.",
+    "President's term length is six years per reference sources, but the exact end date was not confirmed from an official source; term_ends is null.",
+    "Date of the next national election not found; set to null.",
+    "Median age: no clearly dated UN/national figure was found in this run; left null.",
+    "Population: 135 million (2025) is the UN World Population Prospects 2024 figure as rounded to millions by INED. An Ethiopian national annual projection of about 111.7 million (2025) was also seen, so figures differ by source.",
+    "Retirement age source is a US Social Security Administration summary (2018-2019); the Ethiopian public servants' pension proclamation No. 1267/2022 should be checked directly for the exact current text."
+  ]
+}

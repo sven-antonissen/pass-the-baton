@@ -1,0 +1,43 @@
+{
+  "country": "Pakistan",
+  "iso2": "PK",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 60,
+    "notes": "Superannuation age for federal and provincial civil servants. Voluntary retirement is possible earlier (for example from 55 with 25 years of service in Punjab and Khyber Pakhtunkhwa rules). A Khyber Pakhtunkhwa amendment to raise the age to 63 was struck down by the Peshawar High Court in 2020. No statutory retirement age for elected or senior political office was found.",
+    "source": "https://www.dawn.com/news/1553380"
+  },
+  "political_system": "federal parliamentary republic",
+  "population": { "value": 255000000, "year": 2025, "source": "https://www.ined.fr/en/everything_about_population/data/world-projections/projections-by-countries" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President",
+      "holder": "Asif Ali Zardari",
+      "birth_date": "1955-07-26",
+      "in_office_since": "2024-03-10",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Asif_Ali_Zardari"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Shehbaz Sharif",
+      "birth_date": "1951-09-23",
+      "in_office_since": "2024-03-04",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Shehbaz_Sharif"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "Holders confirmed as current by Dawn and APP reports dated 2026-10-10 (President Zardari met Prime Minister Sharif).",
+    "Date of the next National Assembly election not found; the last general election was in February 2024 and terms are five years, but no official date was confirmed. Set to null.",
+    "Term end dates for the President (five-year term, elected by Parliament) and the Prime Minister (elected by the National Assembly) were not confirmed from an official source; set to null.",
+    "Prime Minister in_office_since uses 2024-03-04 (English Wikipedia); a second reference says he was elected on 2024-03-03. Check the National Assembly or Prime Minister's Office for the exact swearing-in date.",
+    "Median age: no clearly dated UN/national figure was found in this run; left null.",
+    "Population: 255 million (2025) is the UN World Population Prospects 2024 figure as rounded to millions by INED. The 2023 census result was about 241.5 million, so figures differ by source.",
+    "Retirement age source is a 2020 Dawn article; the Civil Servants Act 1973 and the Establishment Division rules should be checked for the exact current text."
+  ]
+}

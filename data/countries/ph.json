@@ -1,0 +1,33 @@
+{
+  "country": "Philippines",
+  "iso2": "PH",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 65,
+    "notes": "Mandatory retirement age in the civil service (GSIS) and, by default, in the private sector. Optional retirement is possible from 60 (with 15 years of government service under RA 8291, per secondary legal commentary). Special laws set different ages for some groups, such as uniformed personnel and the judiciary. Elected officials may continue GSIS membership if they reach 65 during their term.",
+    "source": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/10/70798"
+  },
+  "political_system": "presidential republic",
+  "population": { "value": 117000000, "year": 2025, "source": "https://www.ined.fr/en/everything_about_population/data/world-projections/projections-by-countries" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President",
+      "holder": "Ferdinand Marcos Jr.",
+      "birth_date": "1957-09-13",
+      "in_office_since": "2022-06-30",
+      "term_ends": "2028-06-30",
+      "source": "https://en.wikipedia.org/wiki/Bongbong_Marcos"
+    }
+  ],
+  "next_national_election": { "date": "2028-05-08", "source": "https://en.wikipedia.org/wiki/2028_Philippine_presidential_election" },
+  "open_questions": [
+    "term_ends (2028-06-30) is based on the six-year, non-renewable presidential term and the vice-presidential page stating the next term starts on 2028-06-30 (https://en.wikipedia.org/wiki/2028_Philippine_vice_presidential_election); check the 1987 Constitution or Comelec for an official statement.",
+    "The election date of 2028-05-08 comes from Wikipedia; the Commission on Elections confirms May 2028 polls (PNA) but an official page with the exact date was not found.",
+    "The Philippines also has a Vice President (Sara Duterte), who was not listed as the task asks only for head of state and head of government.",
+    "Median age: no clearly dated UN/national figure was found in this run; left null.",
+    "Population: 117 million (2025) is the UN World Population Prospects 2024 figure as rounded to millions by INED. A Philippine official projection of about 114.8 million for mid-2026 was also seen, so figures differ by source.",
+    "Retirement age source is a GSIS resolution in the Supreme Court e-library; the 60 optional-retirement figure comes from secondary legal commentary and should be checked against RA 8291 text."
+  ]
+}
