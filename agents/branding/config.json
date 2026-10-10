@@ -1,6 +1,6 @@
 {
   "model": "claude-opus-5-5",
-  "max_tokens": 32000,
+  "max_tokens": 64000,
   "inputs": [
     "MANIFESTO.md",
     "agents/branding/feedback.md",
