@@ -38,7 +38,7 @@ The volunteers agent from the architecture is not built yet: it needs a channel 
 - Queue agents (localisation, research, partners) start while their queue has items.
 - Media and coordinator start once a week.
 - Branding only runs by hand.
-- At most `max_agent_runs_per_day` agent runs per day (default 4), counting every route.
+- At most `max_agent_runs_per_day` agent runs per day (default 4), counting every route. For a one-off busier day, add it to `max_runs_on_date`.
 
 Settings live in [`orchestrator.json`](orchestrator.json). Set `"paused": true` to stop everything, change the daily budget, or switch an agent to `"auto": false`. Each orchestrator run shows its decisions under *Actions → Orchestrator*.
 

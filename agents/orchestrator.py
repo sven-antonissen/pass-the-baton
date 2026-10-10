@@ -84,7 +84,9 @@ def decide(settings: dict, prs: list[dict], runs: list[dict], today: datetime.da
         if r.get("workflowName") in agent_workflows and str(r.get("createdAt", ""))[:10] == today.isoformat()
     ]
     busy = {r.get("workflowName") for r in runs if r.get("status") in {"queued", "in_progress", "waiting", "pending"}}
-    budget = settings.get("max_agent_runs_per_day", 4) - len(runs_today)
+    daily = settings.get("max_agent_runs_per_day", 4)
+    daily = settings.get("max_runs_on_date", {}).get(today.isoformat(), daily)  # one-off exceptions
+    budget = daily - len(runs_today)
     log.append(f"Agent runs today: {len(runs_today)}; budget left: {max(budget, 0)}.")
 
     start: list[str] = []
