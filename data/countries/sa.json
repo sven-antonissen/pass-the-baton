@@ -1,0 +1,41 @@
+{
+  "country": "Saudi Arabia",
+  "iso2": "SA",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 65,
+    "notes": "Differs by cohort since the social insurance amendments of 3 July 2024: new labour-market entrants after that date retire at 65; existing contributors under 50 Hijri years with under 20 years of contributions move gradually within a 58-65 (Gregorian) range; other existing contributors keep the earlier age of 60 Hijri years (about 58 years 3 months Gregorian). statutory is set to the highest value (65).",
+    "source": "https://mercans.com/resources/statutory-alerts/saudi-arabia-new-social-security-law-3-july-2025/"
+  },
+  "political_system": "absolute monarchy",
+  "population": { "value": 35300280, "year": 2024, "source": "https://demographer.org/countries/saudi-arabia-demographics/" },
+  "median_age": { "value": 29.7, "year": 2026, "source": "https://www.worldometers.info/demographics/saudi-arabia-demographics/" },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "King",
+      "holder": "Salman bin Abdulaziz Al Saud",
+      "birth_date": "1935-12-31",
+      "in_office_since": "2015-01-23",
+      "term_ends": null,
+      "source": "https://www.britannica.com/biography/Salman-of-Saudi-Arabia"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister (also Crown Prince)",
+      "holder": "Mohammed bin Salman Al Saud",
+      "birth_date": "1985-08-31",
+      "in_office_since": "2022-09-27",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Mohammed_bin_Salman"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "No scheduled national election for head of state, head of government or a national legislature was found in this run's sources; the offices are not filled by election, so the date is left null.",
+    "Retirement age: several secondary sources report 60 for men and 55 for women under the older GOSI rules; this was not confirmed against GOSI or the Civil Retirement Law text, and the 2024 amendments appear to replace it with the cohort-based rules in the notes. Verify on gosi.gov.sa.",
+    "Population 35,300,280 (2024, World Bank WDI, matching the GASTAT mid-year estimate) was found on a secondary site (demographer.org). UN WPP shows 34.6 million for 2025; the GASTAT primary page was not retrieved.",
+    "Median age 29.7 (2026) is a UN WPP 2024-based figure via Worldometer; no GASTAT median age was retrieved.",
+    "The King and the Prime Minister hold office without a fixed term, so term_ends is null for both."
+  ]
+}

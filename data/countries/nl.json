@@ -1,0 +1,40 @@
+{
+  "country": "Netherlands",
+  "iso2": "NL",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 67,
+    "notes": "AOW state pension age is 67 in 2026 and 2027, rising to 67 years and 3 months in 2028; 67 years and 3 months is fixed through 2031. After that it is linked to life expectancy and set five years in advance.",
+    "source": "https://www.rijksoverheid.nl/themas/belastingen-uitkeringen-en-toeslagen/algemene-ouderdomswet-aow/aow-leeftijd"
+  },
+  "political_system": "unitary parliamentary constitutional monarchy",
+  "population": { "value": 18131238, "year": 2025, "source": "https://theworlddata.com/netherlands-population-statistics/" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "King",
+      "holder": "Willem-Alexander",
+      "birth_date": "1967-04-27",
+      "in_office_since": "2013-04-30",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Willem-Alexander_of_the_Netherlands"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Rob Jetten",
+      "birth_date": "1987-03-25",
+      "in_office_since": "2026-02-23",
+      "term_ends": null,
+      "source": "https://www.government.nl/government/members-of-cabinet/rob-jetten"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "Median age: sources based on UN WPP 2024 disagree (41.5 vs 42.6 for 2026); no CBS (Statistics Netherlands) figure was retrieved, so the value is left null.",
+    "Population 18,131,238 (end of 2025) is attributed to CBS's February 2026 release but was found on a secondary site (theworlddata.com); verify against the CBS page directly.",
+    "Next national (House of Representatives) election: no fixed date found. The Jetten cabinet took office on 23 February 2026; the term end of the House and the date of the next election were not confirmed.",
+    "The King's term is lifelong (hereditary) and the Prime Minister has no fixed term, so term_ends is null for both."
+  ]
+}
