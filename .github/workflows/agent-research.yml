@@ -2,9 +2,14 @@ name: Agent - research
 
 on:
   workflow_dispatch:
+    inputs:
+      focus:
+        description: "Optional: the countries to profile in this run, e.g. 'Mexico, Spain, Kenya'"
+        required: false
+        default: ""
 
 concurrency:
-  group: agent-research
+  group: agent-research-${{ inputs.focus }}
   cancel-in-progress: false
 
 jobs:
@@ -17,5 +22,6 @@ jobs:
       agent: research
       output: data/countries
       title: "Research agent: country profiles"
+      focus: ${{ inputs.focus }}
     secrets:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

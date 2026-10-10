@@ -23,3 +23,27 @@ The research agent profiles the first countries in this list that are not yet in
 - Turkey
 - United Kingdom
 - United States
+- Spain
+- Poland
+- Sweden
+- Ukraine
+- Nigeria
+- Egypt
+- Kenya
+- Ethiopia
+- Pakistan
+- Bangladesh
+- Philippines
+- Vietnam
+- Thailand
+- Iran
+- Israel
+- Colombia
+- Chile
+- Peru
+- Ireland
+- Portugal
+- Greece
+- Austria
+- Switzerland
+- Denmark

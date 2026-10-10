@@ -19,6 +19,11 @@ on:
         required: false
         type: number
         default: 30
+      focus:
+        description: Optional instruction that narrows this run, e.g. a list of countries
+        required: false
+        type: string
+        default: ""
     secrets:
       ANTHROPIC_API_KEY:
         required: true
@@ -62,6 +67,7 @@ jobs:
       - name: Run the agent
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          AGENT_FOCUS: ${{ inputs.focus }}
         run: python agents/runner.py "${{ inputs.agent }}"
 
       - name: Open a pull request for review

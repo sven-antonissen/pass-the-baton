@@ -80,6 +80,9 @@ def build_message(config: dict) -> str:
         folder = ROOT / rel
         names = sorted(p.name for p in folder.iterdir()) if folder.is_dir() else []
         parts.append(f'<listing path="{rel}">\n' + "\n".join(names) + "\n</listing>")
+    focus = os.environ.get("AGENT_FOCUS", "").strip()
+    if focus:
+        parts.append(f"Focus for this run (overrides the queue order): {focus}")
     parts.append("Do your task now and return all files in one write_files call.")
     return "\n\n".join(parts)
 
