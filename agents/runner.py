@@ -50,6 +50,13 @@ WRITE_FILES_TOOL = {
 }
 
 
+def fail(msg: str) -> None:
+    """Stop with an error that also shows up as an annotation on GitHub Actions."""
+    if os.environ.get("GITHUB_ACTIONS"):
+        print(f"::error title=Agent failed::{msg}")
+    sys.exit(msg)
+
+
 def load_agent(name: str) -> tuple[str, dict]:
     folder = ROOT / "agents" / name
     if not folder.is_dir():
@@ -106,24 +113,36 @@ def main() -> None:
 
     import anthropic  # imported here so --dry-run works without the package
 
-    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-    response = client.messages.create(
-        model=config["model"],
-        max_tokens=config["max_tokens"],
-        system=instructions,
-        tools=[WRITE_FILES_TOOL],
-        tool_choice={"type": "tool", "name": "write_files"},
-        messages=[{"role": "user", "content": message}],
-    )
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        fail("ANTHROPIC_API_KEY is not set. Add it as a repository secret (Settings > Secrets and variables > Actions).")
 
+    client = anthropic.Anthropic()
+    try:
+        with client.messages.stream(
+            model=config["model"],
+            max_tokens=config["max_tokens"],
+            system=instructions,
+            tools=[WRITE_FILES_TOOL],
+            tool_choice={"type": "tool", "name": "write_files"},
+            messages=[{"role": "user", "content": message}],
+        ) as stream:
+            response = stream.get_final_message()
+    except anthropic.APIStatusError as e:
+        fail(f"Claude API error {e.status_code}: {e.message}")
+    except anthropic.APIConnectionError as e:
+        fail(f"Could not reach the Claude API: {e}")
+
+    if response.stop_reason == "max_tokens":
+        fail("The agent ran out of output space; raise max_tokens in config.json.")
     calls = [b for b in response.content if b.type == "tool_use" and b.name == "write_files"]
     if not calls:
-        sys.exit("The agent returned no files.")
-    if response.stop_reason == "max_tokens":
-        sys.exit("The agent ran out of output space; raise max_tokens in config.json.")
+        fail("The agent returned no files.")
 
     result = calls[0].input
-    written = write_outputs(result, config["output_dir"])
+    try:
+        written = write_outputs(result, config["output_dir"])
+    except (ValueError, KeyError, TypeError) as e:
+        fail(f"Could not write the agent's files: {e}")
 
     summary = result.get("summary", "").strip()
     usage = response.usage
