@@ -1,0 +1,43 @@
+{
+  "country": "Australia",
+  "iso2": "AU",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 67,
+    "notes": "Australia has no official retirement age. 67 is the Age Pension age, the same for men and women, for people born on or after 1 January 1957. Services Australia states there are no plans to change it.",
+    "source": "https://www.servicesaustralia.gov.au/who-can-get-age-pension?context=22526"
+  },
+  "political_system": "federal parliamentary constitutional monarchy",
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "King of Australia",
+      "holder": "Charles III",
+      "birth_date": "1948-11-14",
+      "in_office_since": "2022-09-08",
+      "term_ends": null,
+      "source": "https://handbook.aph.gov.au/Monarchs/111"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Anthony Norman Albanese",
+      "birth_date": "1963-03-02",
+      "in_office_since": "2022-05-23",
+      "term_ends": null,
+      "source": "https://simple.wikipedia.org/wiki/Anthony_Albanese"
+    }
+  ],
+  "next_national_election": {
+    "date": null,
+    "source": null
+  },
+  "open_questions": [
+    "Next federal election has no fixed date. Reference sources say it must be held on or before 2028-05-20 (https://www.buildaballot.org.au/please-explain/when-is-the-next-australian-federal-election) and may be called from 2027-08-07 (https://theswingison.com/explainers/when-are-the-next-elections). The Australian Electoral Commission has not announced a date in the sources found, so the date is left null.",
+    "Prime Minister has no fixed term, so term_ends is null. Albanese was re-appointed after the 2025 federal election (3 May 2025; https://www.facebook.com/ausgov/posts/the-hon-anthony-albanese-mp-has-been-re-appointed-as-the-31st-prime-minister-of-/993683146271061/); in_office_since keeps the original 2022-05-23 swearing-in date.",
+    "The King's powers in Australia are exercised by the Governor-General (Sam Mostyn according to https://simple.wikipedia.org/wiki/Anthony_Albanese). That office is not profiled; details were not verified in this run.",
+    "The monarch holds the office without a set term; term_ends is null on that basis.",
+    "Albanese's birth date and swearing-in date come from Simple Wikipedia and Britannica (birth date 1963-03-02 consistent in both); the official pm.gov.au page was not retrieved.",
+    "Prime Minister Albanese's in_office_since and the statement that no legislated change to the Age Pension age is planned should be re-checked at the next refresh."
+  ]
+}
