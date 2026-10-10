@@ -1,0 +1,42 @@
+{
+  "country": "Egypt",
+  "iso2": "EG",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 60,
+    "notes": "Under Social Insurance Law 148 of 2019 the normal pension age is 60. From 1 July 2032 it rises to 61 and then by one year every two years, reaching 65 by 2040. One law firm summary states 65 for employers and business owners.",
+    "source": "https://www.mercer.com/insights/law-and-policy/egypt-consolidates-pension-and-employee-social-insurance-law/"
+  },
+  "political_system": "republic with an executive president and a prime minister appointed by the president",
+  "population": { "value": 118400000, "year": 2025, "source": "https://www.unfpa.org/data/world-population/EG" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President",
+      "holder": "Abdel Fattah el-Sisi",
+      "birth_date": "1954-11-19",
+      "in_office_since": "2014-06-08",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/President_of_Egypt"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Mostafa Madbouly",
+      "birth_date": "1966-04-28",
+      "in_office_since": "2018-06-14",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Mostafa_Madbouly"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "President's term_ends left null: sources say he was sworn in for a third six-year term on 2024-04-02 running to 2030 (planetrulers.com, Britannica says April 2024 and that this is his final term under the constitution), but no source with the exact end date was found.",
+    "President's birth date 1954-11-19 is from Britannica, CNN and Wikipedia; the source field points to the Wikipedia page that gives the 2014-06-08 start date. No Egyptian official source was found.",
+    "Next national election date is null: the next presidential election is expected around 2030 but no date was found. Recent House and Senate elections were not verified in this run.",
+    "Median age not found in a reliable source in this run; left null.",
+    "Population conflict: UN/UNFPA gives 118.4 million for 2025, while a Wikipedia table lists an official estimate of 108.6 million for 1 January 2026 (apparently the national statistics agency CAPMAS). The UN figure is used; check the CAPMAS figure directly.",
+    "Retirement age: a law firm summary (Lexology, 2019) says the age is 60 for private-sector employees and 65 for employers and business owners. Confirm the group differences in the law text. Prime Minister Madbouly was reappointed in June 2024 and was chairing cabinet on 2026-10-07 (Rio Times)."
+  ]
+}

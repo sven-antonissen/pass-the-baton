@@ -1,0 +1,32 @@
+{
+  "country": "Nigeria",
+  "iso2": "NG",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 60,
+    "notes": "Public-service retirement is at age 60 or 35 years of service, whichever comes first. Other groups differ: teachers 65 (raised from 60 in 2022), non-academic university staff 65, professors and judicial officers 70 (per the sources found). The Pension Reform Act 2014 lets holders of a retirement savings account access benefits from age 50. Nigeria has no single national old-age pension age; statutory is set to the general public-service age, not the highest occupational age.",
+    "source": "https://www.researchgate.net/publication/305197828_Pension_Reforms_in_Nigeria"
+  },
+  "political_system": "federal presidential republic",
+  "population": { "value": 237500000, "year": 2025, "source": "https://www.unfpa.org/data/world-population/NG" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President",
+      "holder": "Bola Ahmed Tinubu",
+      "birth_date": "1952-03-29",
+      "in_office_since": "2023-05-29",
+      "term_ends": "2027-05-29",
+      "source": "https://en.wikipedia.org/wiki/Bola_Tinubu"
+    }
+  ],
+  "next_national_election": { "date": "2027-01-16", "source": "https://www.premiumtimesng.com/news/top-news/914520-2027-inec-to-address-nigerians-as-election-countdown-hits-100-days.html" },
+  "open_questions": [
+    "Median age left null: two sources citing UN WPP 2024 disagree for 2025 (Worldometer 18.1, PopulationPyramid.net 19.2). Find the UN table directly.",
+    "Retirement age: no single statutory national pension age was found in an official source. The 60-year figure for the public service comes from an academic paper (ResearchGate); confirm against the Pension Commission (PenCom) or the Public Service Rules. Teacher, academic and judicial ages differ.",
+    "term_ends 2027-05-29 is derived from the oath date (2023-05-29) and the four-year term in Section 135 of the Constitution (Wikipedia 2027 Nigerian general election); ngelections.com also lists 29 May 2027 as handover day. Confirm with an official source.",
+    "Birth date 1952-03-29 is taken from Wikipedia and a biography citing affidavits; one source notes that disputes over his age and documents have been reported. No official source was found in this run.",
+    "Election date moved from 2027-02-20 to 2027-01-16 after the Electoral Act 2026 (AllAfrica, Feb 2026); the 16 January date was confirmed by Premium Times about five days before this run. The incumbent is a candidate for a second term."
+  ]
+}

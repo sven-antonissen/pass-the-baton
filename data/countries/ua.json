@@ -1,0 +1,41 @@
+{
+  "country": "Ukraine",
+  "iso2": "UA",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 65,
+    "notes": "Same for men and women. Under Law 1058-IV the age depends on the insurance record: 60 with at least 33 years (2026), 63 with 23 to 33 years, 65 with 15 to 23 years. The 60-year requirement rises to 34 years in 2027 and 35 years from 2028. Statutory is set to 65, the highest of the three tiers. Special rules apply to some groups (for example military service pensions).",
+    "source": "https://dn.gov.ua/en/news/skilky-rokiv-strakhovoho-stazhu-dlia-pryznachennia-pensii-za-vikom-neobkhidno-maty-u-2026-rotsi"
+  },
+  "political_system": "unitary semi-presidential republic (currently under martial law)",
+  "population": { "value": 39000000, "year": 2025, "source": "https://www.unfpa.org/data/world-population/UA" },
+  "median_age": { "value": 41.8, "year": 2026, "source": "https://www.populationpyramids.org/median-age-by-country" },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President",
+      "holder": "Volodymyr Zelenskyy",
+      "birth_date": "1978-01-25",
+      "in_office_since": "2019-05-20",
+      "term_ends": null,
+      "source": "https://www.cnn.com/world/europe/volodymyr-zelensky-fast-facts"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Serhii Koretskyi",
+      "birth_date": "1978-03-14",
+      "in_office_since": "2026-07-16",
+      "term_ends": null,
+      "source": "https://ukranews.com/en/dossier/375-serhiy-fedorovych-koretsky"
+    }
+  ],
+  "next_national_election": { "date": null, "source": "https://www.cbsnews.com/news/ukraine-prime-minister-resigns-yulia-svyrydenko-volodymyr-zelenskyy-politics/" },
+  "open_questions": [
+    "President's term_ends is null: his original five-year term was due to end on 2024-05-20 (planetrulers.com/ukraine-president), but he remains in office because elections are suspended during martial law (CBS/AP, July 2026). No new end date exists.",
+    "Next national election is null: no presidential or parliamentary election date is set while martial law continues. Check again for any announced date.",
+    "Prime Minister has no fixed term end; he is appointed by the Verkhovna Rada (appointed 2026-07-16 with 289 votes) after the previous PM Yulia Svyrydenko stepped down on 2026-07-12.",
+    "Median age (41.8, UN WPP 2024 projection for 2026) and population (39 million, UN 2025) are UN modelled estimates, not Ukrainian statistical service figures. The median age was found on one aggregator site that cites the UN.",
+    "Pension age differs by insurance record (60/63/65), not by group; statutory is set to the highest tier, 65. Confirm whether the movement should use 60 as the baseline age."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "country": "Kenya",
+  "iso2": "KE",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 60,
+    "notes": "Mandatory retirement age in the public service is 60 (Public Service Commission rules); persons with disabilities may serve to 65. Private-sector ages depend on the scheme rules or employment contract. Kenya has no single national pension age.",
+    "source": "https://src.go.ke/2023/05/24/understanding-retirement-benefits-in-the-public-service/"
+  },
+  "political_system": "presidential republic with devolved county governments",
+  "population": { "value": 57500000, "year": 2025, "source": "https://www.unfpa.org/data/world-population/KE" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President",
+      "holder": "William Samoei Ruto",
+      "birth_date": "1966-12-21",
+      "in_office_since": "2022-09-13",
+      "term_ends": null,
+      "source": "http://www.president.go.ke/administration/office-of-the-president/"
+    }
+  ],
+  "next_national_election": { "date": "2027-08-10", "source": "https://www.the-star.co.ke/news/2026-06-24-iebc-confirms-august-10-as-date-for-2027-general-election" },
+  "open_questions": [
+    "President's term_ends left null: his term runs until the next president is sworn in after the 2027-08-10 election (sworn-in date set by Article 141). A High Court ruling reported by The EastAfrican (2026) said the President's term is not fixed at five years and suspended its effect until after the next general election.",
+    "Median age left null: the only figure found (21.1 for 2025, PopulationPyramid.net) could not be cross-checked; a similar site disagreed with Worldometer for Nigeria, so the method is uncertain. Find the UN WPP 2024 table directly.",
+    "Population: UN/UNFPA gives 57.5 million for 2025, while a Wikipedia table lists an official projection of 54.2 million for 1 July 2026. The UN figure is used; check the Kenya National Bureau of Statistics directly.",
+    "Retirement age: figure of 60 comes from the Salaries and Remuneration Commission page on public-service pensions and a Star article citing the Public Service Commission manual. A 2026 rule for some university staff was reported (65) but not verified.",
+    "The incumbent is reported to be expected to seek a second term (People Daily, June 2026); no official candidate list exists yet."
+  ]
+}
