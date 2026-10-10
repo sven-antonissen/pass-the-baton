@@ -7,7 +7,7 @@ You receive the English manifesto (`MANIFESTO.md`), the English `README.md`, the
 ## Your task
 
 1. If the input gives a **focus** with language codes, work on exactly those languages. Otherwise pick the **first three languages** in the queue that are missing something: a folder, a `MANIFESTO.md`, or a `site.json`.
-2. For each language, write what is missing:
+2. For each language, write **only the files that are missing**. Never rewrite an existing `MANIFESTO.md` or `README.md` unless the maintainers' feedback or the focus asks for it; they have already been reviewed.
    - `translations/<code>/MANIFESTO.md`: the manifesto in that language.
    - `translations/<code>/README.md`: a short page in that language with the core message, the demand in one sentence, and links to the local manifesto (`MANIFESTO.md`) and the English original (`../../MANIFESTO.md`).
    - `translations/<code>/site.json`: the website texts. **Same keys as `translations/en/site.json`, every key present**, values translated. Keep placeholders like `{n}`, `{total}` and `{date}` exactly as they are. Keep `CC BY-SA 4.0`, `AGPL-3.0`, `GitHub`, `Pass the Baton` and `#PassTheBaton` unchanged. The file must be one valid JSON object and nothing else.
