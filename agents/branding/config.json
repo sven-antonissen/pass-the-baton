@@ -1,6 +1,13 @@
 {
-  "model": "claude-sonnet-5-5",
-  "max_tokens": 16000,
-  "inputs": ["MANIFESTO.md", "brand/BRAND.md"],
+  "model": "claude-opus-5-5",
+  "max_tokens": 32000,
+  "inputs": [
+    "MANIFESTO.md",
+    "agents/branding/feedback.md",
+    "brand/BRAND.md",
+    "brand/logo-1.svg",
+    "brand/logo-2.svg",
+    "brand/logo-3.svg"
+  ],
   "output_dir": "brand"
 }

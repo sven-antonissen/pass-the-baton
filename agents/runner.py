@@ -87,9 +87,21 @@ def safe_path(rel: str, output_dir: str) -> Path:
     return target
 
 
+def check_content(rel: str, content: str) -> None:
+    """Refuse output that would break the site: SVG files must be valid XML."""
+    if rel.endswith(".svg"):
+        import xml.dom.minidom
+
+        try:
+            xml.dom.minidom.parseString(content.encode("utf-8"))
+        except Exception as e:  # noqa: BLE001 - any parse error means a broken file
+            raise ValueError(f"{rel} is not valid SVG: {e}") from e
+
+
 def write_outputs(result: dict, output_dir: str) -> list[str]:
     written = []
     for item in result.get("files", []):
+        check_content(item["path"], item["content"])
         target = safe_path(item["path"], output_dir)
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(item["content"], encoding="utf-8")

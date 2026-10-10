@@ -4,6 +4,7 @@ Each agent is a folder with two files anyone can read:
 
 - `instructions.md`: what the agent does and the rules it follows.
 - `config.json`: which model it uses, which files it reads, and the **one folder it may write to**.
+- `feedback.md` (optional): what the maintainers want changed. The agent reads it on every run, so reviewing a pull request and writing feedback here is how you steer an agent.
 
 `runner.py` runs an agent. The agent can only write inside its own folder; anything else is refused.
 
