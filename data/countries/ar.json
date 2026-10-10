@@ -1,0 +1,34 @@
+{
+  "country": "Argentina",
+  "iso2": "AR",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 65,
+    "notes": "Ordinary retirement (jubilación ordinaria) requires age 65 for men and 60 for women, plus 30 years of contributions. Women may opt to keep working until 65. The single value stored here is the men's age; the women's age is 60.",
+    "source": "https://www.anses.gob.ar/jubilaciones-y-pensiones/como-iniciar-mi-jubilacion"
+  },
+  "political_system": "federal presidential republic",
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President of the Argentine Nation",
+      "holder": "Javier Gerardo Milei",
+      "birth_date": "1970-10-22",
+      "in_office_since": "2023-12-10",
+      "term_ends": "2027-12-10",
+      "source": "https://en.wikipedia.org/wiki/Javier_Milei"
+    }
+  ],
+  "next_national_election": {
+    "date": "2027-10-24",
+    "source": "https://en.wikipedia.org/wiki/2027_Argentine_general_election"
+  },
+  "open_questions": [
+    "Birth date of Javier Milei (1970-10-22) comes from reference works (Wikipedia, IMDb, Simple Wikipedia, all consistent); no official government source was found in this run.",
+    "Term end date 2027-12-10 comes from a news profile (https://www.riotimesonline.com/who-is-javier-milei-argentina-profile-2026/) and a Wikipedia article that describes a four-year term from 2023-12-10; the constitutional text was not retrieved.",
+    "Election date 2027-10-24 (first round; possible runoff within 30 days, likely 2027-11-21) is from Wikipedia and a news profile; the official electoral authority (Dirección Nacional Electoral / CNE) was not consulted. Primaries (PASO) may be abolished.",
+    "Milei has said he intends to run for a second term in 2027 (source: https://www.gjopen.com/questions/4736-will-javier-milei-win-the-2027-argentine-presidential-election). Re-election status is not an official fact.",
+    "The political_system phrase is not supported by a source retrieved in this run; verify against the Constitution of Argentina or an official reference.",
+    "Retirement age: Argentina has different ages for men (65) and women (60); the schema holds one number, so 65 is stored and 60 is given in notes. Confirm with the team which value the website should use."
+  ]
+}

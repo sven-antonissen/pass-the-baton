@@ -1,0 +1,43 @@
+{
+  "country": "Belgium",
+  "iso2": "BE",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 66,
+    "notes": "Statutory retirement age is 66 for pensions starting from 1 February 2025 and rises to 67 for pensions starting from 1 February 2030. The same age applies to employees, the self-employed and civil servants. Early retirement is possible with long careers (for example age 63 with 42 years).",
+    "source": "https://www.lexgo.be/en/news-and-articles/3550-raising-the-statutory-retirement-age-the-summit-is-breached"
+  },
+  "political_system": "federal parliamentary constitutional monarchy",
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "King of the Belgians",
+      "holder": "Philippe",
+      "birth_date": "1960-04-15",
+      "in_office_since": "2013-07-21",
+      "term_ends": null,
+      "source": "https://www.monarchie.be/en/for-children/the-king-the-queen-and-their-family"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Bart Albert Liliane De Wever",
+      "birth_date": "1970-12-21",
+      "in_office_since": "2025-02-03",
+      "term_ends": null,
+      "source": "https://simple.wikipedia.org/wiki/Bart_De_Wever"
+    }
+  ],
+  "next_national_election": {
+    "date": null,
+    "source": null
+  },
+  "open_questions": [
+    "Next federal election: sources indicate it is expected in 2029 (IPU lists an expected date of 2029-06-30 at https://data.ipu.org/parliament/BE/BE-LC01/election/BE-LC01-E20240609/; the Flemish Parliament page says June 2029). No exact date has been officially set in the sources found, so the date is left null.",
+    "The retirement age source is a Belgian law-firm summary of the pension law; the official Federal Pensions Service (SFP/FPD) page was not retrieved. Supporting sources (https://english.n-va.be/news/government-reaches-agreement-on-new-pension-law, https://www.loyensloeff.com/insights/news--events/news/belgiums-pension-reform-early-retirement-and-the-bonusmalus-impact-for-hr/) agree on 66 now and 67 from 2030. The stored value 66 will change to 67 for pensions starting on 1 February 2030.",
+    "Prime Minister has no fixed term; term_ends is null. The current Chamber of Representatives was elected on 2024-06-09 with five-year terms (https://en.wikipedia.org/wiki/2024_Belgian_federal_election).",
+    "The monarch holds the office without a set term; term_ends is null on that basis.",
+    "De Wever's birth date and swearing-in date (2025-02-03) come from Simple Wikipedia, consistent with English Wikipedia, Wikiwand and the France 24 report of the swearing-in; no official federal government page was retrieved.",
+    "The political_system phrase is based on a descriptive reference page (https://planetrulers.com/belgium-king/); verify against an official source if wording matters."
+  ]
+}
