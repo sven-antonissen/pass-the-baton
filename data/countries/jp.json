@@ -1,0 +1,41 @@
+{
+  "country": "Japan",
+  "iso2": "JP",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 65,
+    "notes": "Japan has no single statutory retirement age. The public pension eligibility age is 65 (claiming is possible from 60 with a reduction, or deferred up to 75). Employers that set a mandatory retirement age below 65 must provide continued employment to 65 under the Act on Stabilization of Employment of Elderly Persons, and must make an effort to offer work up to 70 (https://legalclarity.org/what-is-the-legal-retirement-age-in-japan/). Many companies set mandatory retirement at 60.",
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10158362/"
+  },
+  "political_system": "parliamentary constitutional monarchy",
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "Emperor",
+      "holder": "Naruhito",
+      "birth_date": "1960-02-23",
+      "in_office_since": "2019-05-01",
+      "term_ends": null,
+      "source": "https://www.britannica.com/biography/Naruhito"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Sanae Takaichi",
+      "birth_date": "1961-03-07",
+      "in_office_since": "2025-10-21",
+      "term_ends": null,
+      "source": "https://japan.kantei.go.jp/105/meibo/daijin/takaichi_sanae.html"
+    }
+  ],
+  "next_national_election": {
+    "date": null,
+    "source": "https://en.wikipedia.org/wiki/Next_Japanese_general_election"
+  },
+  "open_questions": [
+    "Japan next national election: no fixed date. The House of Representatives was elected on 2026-02-08 for a four-year term. Wikipedia says the next election is due no later than 8 February 2030, while the IPU gives an expected date of 31 January 2030 (https://data.ipu.org/parliament/JP/JP-LC01/election/JP-LC01-E20260208/). The cabinet can dissolve the House earlier. The House of Councillors election schedule was not checked.",
+    "Takaichi: the kantei.go.jp profile confirms the birth date (7 March 1961) and the role of Prime Minister; the in-office date (2025-10-21) is from Wikipedia (https://en.wikipedia.org/wiki/Premiership_of_Sanae_Takaichi). She was re-elected Prime Minister by the House on 18 February 2026 after the election (IPU); the original start date is kept. An official source for the in-office date is needed. The Prime Minister has no fixed term end, so term_ends is null.",
+    "Emperor: the Constitution describes the Emperor as 'the symbol of the State' (Britannica), and whether he counts as 'head of state' is a matter of definition. He is listed as head of state here for consistency; the movement should decide whether this hereditary, non-political office is in scope. Birth and accession dates are from Britannica; an Imperial Household Agency source was not found in this run.",
+    "Retirement age: 65 is the pension eligibility age, not a statutory retirement age. The PMC source is a 2023 review article; an official Japan Pension Service or Ministry of Health, Labour and Welfare source is still needed."
+  ]
+}

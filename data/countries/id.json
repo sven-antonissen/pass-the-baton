@@ -1,0 +1,32 @@
+{
+  "country": "Indonesia",
+  "iso2": "ID",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 59,
+    "notes": "Pension age under the BPJS Ketenagakerjaan pension programme (Government Regulation PP 45/2015), same for men and women. It was 56 in 2015, 57 from 2019, 58 from 2022 and 59 from 1 January 2025 (applies through 2028). It rises by one year every three years until 65 (reported as reached in 2043). Other schemes (for example civil service, military) may use different ages and were not checked.",
+    "source": "https://jakartaglobe.id/business/pension-age-in-indonesia-increases-to-59-what-it-means-for-workers"
+  },
+  "political_system": "presidential republic",
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President",
+      "holder": "Prabowo Subianto",
+      "birth_date": "1951-10-17",
+      "in_office_since": "2024-10-20",
+      "term_ends": "2029-10-20",
+      "source": "https://www.britannica.com/biography/Prabowo-Subianto"
+    }
+  ],
+  "next_national_election": {
+    "date": null,
+    "source": null
+  },
+  "open_questions": [
+    "Indonesia next national election: exact date not found. Sources say the presidential and legislative elections are due in 2029 (the current term expires 20 October 2029 per Wikipedia, https://en.wikipedia.org/wiki/2029_Indonesian_presidential_election), but the KPU has not been found to have fixed a date, and the Election Bill is reported as stalled. Wikipedia says October 2029, while the previous election was held in February.",
+    "Term end 2029-10-20 comes from Wikipedia (https://en.wikipedia.org/wiki/2029_Indonesian_presidential_election); an official source (KPU or MPR) was not found in this run.",
+    "Indonesia has no single statutory retirement age: 59 is the BPJS pension programme age. Retirement ages for civil servants and other groups were not verified; an official source (BPJS Ketenagakerjaan or the government regulation text) is still needed.",
+    "Prabowo's in_office_since date (2024-10-20) is confirmed by Britannica; an official government/MPR source was not found in this run."
+  ]
+}
