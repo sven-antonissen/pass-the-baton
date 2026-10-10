@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="pl-title">
+  <title id="pl-title">Pass the Baton colour palette</title>
+  <defs>
+    <linearGradient id="pl-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D98E1C"/>
+      <stop offset="0.10" stop-color="#FFCF73"/>
+      <stop offset="0.20" stop-color="#FFF4DC"/>
+      <stop offset="0.30" stop-color="#FFC34F"/>
+      <stop offset="0.55" stop-color="#F5A623"/>
+      <stop offset="0.78" stop-color="#C27A0C"/>
+      <stop offset="0.88" stop-color="#A85F07"/>
+      <stop offset="0.94" stop-color="#B5700F"/>
+      <stop offset="1" stop-color="#6B3B04"/>
+    </linearGradient>
+    <linearGradient id="pl-rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF4DC"/>
+      <stop offset="0.4" stop-color="#FFC34F"/>
+      <stop offset="1" stop-color="#8A4E06"/>
+    </linearGradient>
+    <linearGradient id="pl-hole" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A0E02"/>
+      <stop offset="1" stop-color="#9A5A0A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="#F6F3EC"/>
+  <text x="80" y="110" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="48" fill="#111318">Pass the Baton: colour palette</text>
+  <g font-family="Inter, 'Helvetica Neue', Arial, sans-serif">
+    <rect x="80" y="170" width="225" height="360" rx="18" fill="#111318"/>
+    <text x="104" y="240" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="48" fill="#F6F3EC">Aa</text>
+    <rect x="325" y="170" width="225" height="360" rx="18" fill="#F6F3EC" stroke="#111318" stroke-opacity="0.25" stroke-width="2"/>
+    <text x="349" y="240" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="48" fill="#111318">Aa</text>
+    <rect x="570" y="170" width="225" height="360" rx="18" fill="#F5A623"/>
+    <text x="594" y="240" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="48" fill="#111318">Aa</text>
+    <rect x="815" y="170" width="225" height="360" rx="18" fill="#FFF4DC" stroke="#111318" stroke-opacity="0.15" stroke-width="2"/>
+    <text x="839" y="240" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="48" fill="#111318">Aa</text>
+    <rect x="1060" y="170" width="225" height="360" rx="18" fill="#A85F07"/>
+    <rect x="1305" y="170" width="225" height="360" rx="18" fill="#6B3B04"/>
+    <text x="1329" y="240" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="48" fill="#F6F3EC">Aa</text>
+
+    <g fill="#111318">
+      <text x="80" y="575" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="24">Relay Ink</text>
+      <text x="80" y="608" font-size="22">#111318</text>
+      <text x="80" y="640" font-size="17">Text, wordmark, dark bg</text>
+
+      <text x="325" y="575" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="24">Paper</text>
+      <text x="325" y="608" font-size="22">#F6F3EC</text>
+      <text x="325" y="640" font-size="17">Light background</text>
+
+      <text x="570" y="575" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="24">Baton Amber</text>
+      <text x="570" y="608" font-size="22">#F5A623</text>
+      <text x="570" y="640" font-size="17">Signature baton metal</text>
+
+      <text x="815" y="575" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="24">Amber Glint</text>
+      <text x="815" y="608" font-size="22">#FFF4DC</text>
+      <text x="815" y="640" font-size="17">Specular highlight</text>
+
+      <text x="1060" y="575" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="24">Amber Shade</text>
+      <text x="1060" y="608" font-size="22">#A85F07</text>
+      <text x="1060" y="640" font-size="17">Core shade, graphic only</text>
+
+      <text x="1305" y="575" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="24">Amber Shadow</text>
+      <text x="1305" y="608" font-size="22">#6B3B04</text>
+      <text x="1305" y="640" font-size="17">Shadow edge, accent text</text>
+    </g>
+
+    <text x="80" y="720" font-size="18" font-weight="600" letter-spacing="2" fill="#6B3B04">BATON SHADING: GRADIENT ACROSS THE WIDTH, LIGHT FROM THE UPPER LEFT</text>
+  </g>
+  <ellipse cx="820" cy="846" rx="720" ry="8" fill="#111318" opacity="0.15"/>
+  <path d="M100 750 L1500 754 A14 38 0 0 1 1500 830 L100 834 Z" fill="url(#pl-body)"/>
+  <path d="M110 767 L1500 770" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="100" cy="792" rx="15" ry="42" fill="url(#pl-rim)"/>
+  <ellipse cx="102" cy="794" rx="11" ry="34" fill="url(#pl-hole)"/>
+</svg>

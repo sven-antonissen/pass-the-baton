@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="ho-title">
+  <title id="ho-title">Pass the Baton: an older hand passes a lifelike amber baton to a younger hand</title>
+  <defs>
+    <radialGradient id="ho-bg" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0" stop-color="#22242C"/>
+      <stop offset="0.6" stop-color="#15171C"/>
+      <stop offset="1" stop-color="#0B0C10"/>
+    </radialGradient>
+    <radialGradient id="ho-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F5A623" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#F5A623" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ho-skinA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#A56B43"/>
+      <stop offset="0.5" stop-color="#8A5636"/>
+      <stop offset="1" stop-color="#66391F"/>
+    </linearGradient>
+    <linearGradient id="ho-skinB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F5CDA9"/>
+      <stop offset="0.5" stop-color="#E2AE86"/>
+      <stop offset="1" stop-color="#BF8760"/>
+    </linearGradient>
+    <linearGradient id="ho-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D98E1C"/>
+      <stop offset="0.10" stop-color="#FFCF73"/>
+      <stop offset="0.20" stop-color="#FFF4DC"/>
+      <stop offset="0.30" stop-color="#FFC34F"/>
+      <stop offset="0.55" stop-color="#F5A623"/>
+      <stop offset="0.78" stop-color="#C27A0C"/>
+      <stop offset="0.88" stop-color="#A85F07"/>
+      <stop offset="0.94" stop-color="#B5700F"/>
+      <stop offset="1" stop-color="#6B3B04"/>
+    </linearGradient>
+    <linearGradient id="ho-rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF4DC"/>
+      <stop offset="0.4" stop-color="#FFC34F"/>
+      <stop offset="1" stop-color="#8A4E06"/>
+    </linearGradient>
+    <linearGradient id="ho-hole" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A0E02"/>
+      <stop offset="0.6" stop-color="#3D2205"/>
+      <stop offset="1" stop-color="#9A5A0A"/>
+    </linearGradient>
+    <clipPath id="ho-clip">
+      <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z"/>
+    </clipPath>
+  </defs>
+  <rect width="1600" height="900" fill="url(#ho-bg)"/>
+  <ellipse cx="800" cy="460" rx="620" ry="380" fill="url(#ho-glow)"/>
+  <g transform="translate(800 470) rotate(-10) scale(0.78)" stroke-linecap="round">
+    <!-- older arm from upper left -->
+    <path d="M-360 -200 L-1000 -870" stroke="#8A5636" stroke-width="170" fill="none"/>
+    <path d="M-560 -409 L-1100 -975" stroke="#4A4F5C" stroke-width="240" stroke-linecap="butt" fill="none"/>
+    <path d="M-560 -409 L-600 -451" stroke="#5E6472" stroke-width="250" stroke-linecap="butt" fill="none"/>
+    <!-- younger arm from lower right -->
+    <path d="M330 200 L1000 900" stroke="#E2AE86" stroke-width="170" fill="none"/>
+    <path d="M537 416 L1250 1160" stroke="#F6F3EC" stroke-width="230" stroke-linecap="butt" fill="none"/>
+    <path d="M537 416 L578 459" stroke="#DCD6C8" stroke-width="240" stroke-linecap="butt" fill="none"/>
+    <!-- older back of hand and thumb (behind baton) -->
+    <path d="M-450 -40 C-460 -150 -400 -225 -315 -235 C-220 -245 -140 -195 -118 -125 L-110 -40 Z" fill="#8A5636"/>
+    <path d="M-140 -100 L-95 100" stroke="#7A4A2D" stroke-width="60" fill="none"/>
+    <!-- younger palm and thumb (behind baton) -->
+    <path d="M120 50 C115 160 190 238 300 240 C410 242 465 170 462 50 Z" fill="#E2AE86"/>
+    <path d="M235 -10 L118 -100" stroke="#D9A27A" stroke-width="60" fill="none"/>
+    <!-- baton -->
+    <g stroke-linecap="butt">
+      <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z" fill="url(#ho-body)"/>
+      <g clip-path="url(#ho-clip)" fill="none" stroke-linecap="round">
+        <path d="M-560 -58 L580 -52 M-560 -22 L580 -20 M-560 8 L580 7 M-560 36 L580 33 M-560 60 L580 55" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="2"/>
+        <path d="M-560 -40 L580 -36 M-560 -6 L580 -5 M-560 22 L580 20 M-560 52 L580 48" stroke="#3A2002" stroke-opacity="0.10" stroke-width="2"/>
+        <path d="M-520 -44 L540 -39" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="5"/>
+      </g>
+      <path d="M550 -66 A22 66 0 0 1 550 66" fill="none" stroke="#6B3B04" stroke-opacity="0.35" stroke-width="3"/>
+      <ellipse cx="-550" cy="0" rx="26" ry="74" fill="url(#ho-rim)"/>
+      <ellipse cx="-547" cy="3" rx="19" ry="61" fill="url(#ho-hole)"/>
+      <path d="M-573.8 -30 A26 74 0 0 1 -550 -74" fill="none" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <!-- older fingers curling over the front -->
+    <g fill="url(#ho-skinA)" stroke="#5A321C" stroke-width="3">
+      <rect x="-436" y="-78" width="62" height="136" rx="31"/>
+      <rect x="-375" y="-92" width="70" height="168" rx="35"/>
+      <rect x="-307" y="-98" width="70" height="182" rx="35"/>
+      <rect x="-239" y="-94" width="70" height="172" rx="35"/>
+    </g>
+    <g fill="none" stroke="#5A321C" stroke-opacity="0.55" stroke-width="3">
+      <path d="M-420 -40 Q-405 -32 -390 -40 M-358 -46 Q-340 -36 -322 -46 M-290 -50 Q-272 -40 -254 -50 M-222 -46 Q-204 -36 -186 -46"/>
+      <path d="M-418 14 Q-405 21 -392 14 M-356 18 Q-340 26 -324 18 M-288 22 Q-272 30 -256 22 M-220 18 Q-204 26 -188 18"/>
+    </g>
+    <!-- younger fingers curling up over the front -->
+    <g fill="url(#ho-skinB)" stroke="#A9744F" stroke-width="3">
+      <rect x="140" y="-86" width="70" height="182" rx="35"/>
+      <rect x="210" y="-94" width="70" height="194" rx="35"/>
+      <rect x="280" y="-88" width="70" height="186" rx="35"/>
+      <rect x="354" y="-72" width="62" height="162" rx="31"/>
+    </g>
+    <g fill="none" stroke="#A9744F" stroke-opacity="0.45" stroke-width="3">
+      <path d="M160 -30 Q175 -24 190 -30 M230 -36 Q245 -30 260 -36 M300 -32 Q315 -26 330 -32 M372 -20 Q385 -14 398 -20"/>
+    </g>
+  </g>
+  <text x="80" y="830" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="36" fill="#F6F3EC">Passing it on is leadership.</text>
+  <text x="80" y="866" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="3" fill="#F5A623">#PassTheBaton</text>
+</svg>

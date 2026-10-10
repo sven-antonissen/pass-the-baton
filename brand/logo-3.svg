@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" width="800" height="700" role="img" aria-labelledby="l3-title">
+  <title id="l3-title">Pass the Baton: stacked lockup</title>
+  <defs>
+    <linearGradient id="l3-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D98E1C"/>
+      <stop offset="0.10" stop-color="#FFCF73"/>
+      <stop offset="0.20" stop-color="#FFF4DC"/>
+      <stop offset="0.30" stop-color="#FFC34F"/>
+      <stop offset="0.55" stop-color="#F5A623"/>
+      <stop offset="0.78" stop-color="#C27A0C"/>
+      <stop offset="0.88" stop-color="#A85F07"/>
+      <stop offset="0.94" stop-color="#B5700F"/>
+      <stop offset="1" stop-color="#6B3B04"/>
+    </linearGradient>
+    <linearGradient id="l3-rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF4DC"/>
+      <stop offset="0.4" stop-color="#FFC34F"/>
+      <stop offset="1" stop-color="#8A4E06"/>
+    </linearGradient>
+    <linearGradient id="l3-hole" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A0E02"/>
+      <stop offset="0.6" stop-color="#3D2205"/>
+      <stop offset="1" stop-color="#9A5A0A"/>
+    </linearGradient>
+    <clipPath id="l3-clip">
+      <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z"/>
+    </clipPath>
+    <filter id="l3-blur" x="-50%" y="-200%" width="200%" height="500%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+  <ellipse cx="410" cy="372" rx="330" ry="16" transform="rotate(-2 410 372)" fill="#111318" opacity="0.28" filter="url(#l3-blur)"/>
+  <g transform="translate(400 220) rotate(-14) scale(0.6)">
+    <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z" fill="url(#l3-body)"/>
+    <g clip-path="url(#l3-clip)" fill="none" stroke-linecap="round">
+      <path d="M-560 -58 L580 -52 M-560 -22 L580 -20 M-560 8 L580 7 M-560 36 L580 33 M-560 60 L580 55" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="2"/>
+      <path d="M-560 -40 L580 -36 M-560 -6 L580 -5 M-560 22 L580 20 M-560 52 L580 48" stroke="#3A2002" stroke-opacity="0.10" stroke-width="2"/>
+      <path d="M-520 -44 L540 -39" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="5"/>
+    </g>
+    <path d="M550 -66 A22 66 0 0 1 550 66" fill="none" stroke="#6B3B04" stroke-opacity="0.35" stroke-width="3"/>
+    <ellipse cx="-550" cy="0" rx="26" ry="74" fill="url(#l3-rim)"/>
+    <ellipse cx="-547" cy="3" rx="19" ry="61" fill="url(#l3-hole)"/>
+    <path d="M-573.8 -30 A26 74 0 0 1 -550 -74" fill="none" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="400" y="478" text-anchor="middle" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="60" letter-spacing="12" fill="#111318">PASS THE</text>
+  <text x="400" y="630" text-anchor="middle" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="150" letter-spacing="2" fill="#111318">BATON</text>
+</svg>
