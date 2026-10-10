@@ -17,7 +17,8 @@ Only these files: `site/style.css`, `site/templates/base.html`, `site/templates/
 
 How the templates work:
 - `base.html` wraps every page. Placeholders: `{{lang}}`, `{{dir}}`, `{{title}}`, `{{description}}`, `{{up}}` (relative path to the site root), `{{repo}}`, `{{body}}`. Keep them all.
-- `home.html` is the home page body. Placeholders: `{{art}}` (hero illustration, may be empty), `{{baton}}` (baton band, may be empty), `{{langs}}` (language links), `{{repo}}`, `{{up}}`. Keep `{{langs}}` and the links to `manifesto/` and `countries/`.
+- `home.html` is the home page body. Placeholders filled by the build from the data: `{{facts}}` (the amber facts strip), `{{gap}}` (leaders versus the people they lead), `{{countries_cloud}}` (country list), `{{langs}}` (language links), `{{repo}}`, `{{up}}`. Keep them all, and the links to `manifesto/` and `countries/`.
+- The current design concept is **the exchange zone**: the stretch of a relay track where the baton changes hands (dark track with lane lines, an amber zone, the lifelike baton crossing it). Build on it rather than starting over, unless the feedback says otherwise.
 - Use artwork by path from the site root, for example `design/hero-relay.svg` or `brand/baton.svg`, but **only files that appear in the listings**.
 - Other pages (manifesto, translations, countries) use `article.doc`, `article.doc.wide`, tables and `.tag` / `.tag.on`; style them well too.
 

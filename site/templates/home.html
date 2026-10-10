@@ -1,38 +1,73 @@
-<div class="hero"><div class="wrap">
-{{art}}
-<h1>Passing it on is leadership.</h1>
-<p class="lead">All over the world, people hand their work to the next generation at a certain age. We ask leaders to do the same. Not out of distrust of older people, but out of respect for renewal.</p>
-<a class="btn primary" href="manifesto/">Read the manifesto</a>
-<a class="btn ghost" href="{{repo}}">Help build it</a>
-</div></div>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Passing it on is leadership.</h1>
+      <p class="lead">All over the world, people hand their work to the next generation at a certain age. We ask the people who lead countries to do the same. Not out of distrust of older people, but out of respect for renewal.</p>
+      <a class="btn primary" href="manifesto/">Read the manifesto</a>
+      <a class="btn ghost" href="countries/">See the countries</a>
+    </div>
+    <div class="baton-art">
+      <img src="design/baton-cutout.svg" alt="A lifelike amber relay baton crossing the exchange zone">
+    </div>
+  </div>
+</section>
 
-<section><div class="wrap">
-<h2>The demand</h2>
-<p class="demand">Anyone who has reached the statutory retirement age of their own country, and at the latest 67, does not start a new term in one of the highest offices.</p>
-<p>It applies worldwide, in every country and under every regime, starting with heads of state, heads of government and ministers. A term already under way may be completed. Ordinary citizens remain free to keep working.</p>
-<p><a href="countries/">See how countries compare</a>, with sources for every fact.</p>
-</div></section>
+{{facts}}
 
-<section style="padding-top:0"><div class="wrap">
-<h2>Why</h2>
-<div class="grid">
-<div class="card"><h3>A double standard</h3><p>A nurse, a builder or a teacher hands over their work. Those who decide over millions of lives often stay until the very end.</p></div>
-<div class="card"><h3>A short horizon</h3><p>Decisions on climate, debt and pensions mostly affect generations who will bear the consequences themselves.</p></div>
-<div class="card"><h3>Renewal is blocked</h3><p>Those who never leave make no room for new ideas, new people and new energy.</p></div>
-<div class="card"><h3>Respect for experience</h3><p>Experience stays valuable, as adviser, mentor or ambassador. Passing the baton is an act of leadership, not a defeat.</p></div>
-</div>
-</div></section>
+<section class="section">
+  <div class="wrap demand-grid">
+    <div class="big-67" aria-hidden="true">67<span>the latest age for starting a new term</span></div>
+    <div>
+      <h2 class="sr-only">The demand</h2>
+      <p class="demand-text">Anyone who has reached the statutory retirement age of their own country, and at the latest 67, does not start a new term in one of the highest offices.</p>
+      <p class="demand-notes">It applies worldwide, in every country and under every regime, starting with heads of state, heads of government and ministers. A term already under way may be completed. Ordinary citizens remain free to keep working.</p>
+    </div>
+  </div>
+</section>
 
-{{baton}}
+{{gap}}
 
-<section id="languages"><div class="wrap">
-<h2>Read it in your language</h2>
-<div class="langs">{{langs}}</div>
-<p>Missing yours? <a href="{{repo}}/blob/main/CONTRIBUTING.md">Help translate it</a>.</p>
-</div></section>
+<section class="section">
+  <div class="wrap">
+    <h2>Why the baton has to move</h2>
+    <div class="why-grid">
+      <div><h3>A double standard</h3><p>A nurse, a builder or a teacher hands over their work. Those who decide over millions of lives often stay until the very end.</p></div>
+      <div><h3>A short horizon</h3><p>Decisions on climate, debt and pensions mostly affect generations who will bear the consequences themselves.</p></div>
+      <div><h3>Renewal is blocked</h3><p>Those who never leave make no room for new ideas, new people and new energy.</p></div>
+      <div><h3>Experience stays valuable</h3><p>As adviser, mentor or ambassador. Passing the baton is an act of leadership, not a defeat.</p></div>
+    </div>
+  </div>
+</section>
 
-<section style="padding-top:0"><div class="wrap">
-<h2>Pass it on</h2>
-<p>Hand a baton to someone, in real life or online, and share it with <strong>#PassTheBaton</strong>. Non-violent, non-partisan, open to everyone.</p>
-<a class="btn primary" href="{{repo}}">Join on GitHub</a>
-</div></section>
+<section class="handover">
+  <img src="design/handover-clean.svg" alt="An older hand passing a lifelike amber relay baton to a younger hand">
+  <div class="wrap">
+    <blockquote>Passing the baton is an act of leadership, not a defeat.<cite>From the manifesto</cite></blockquote>
+  </div>
+</section>
+
+<section class="section paper-2">
+  <div class="wrap">
+    {{countries_cloud}}
+    <a class="btn dark" href="countries/">Compare the countries</a>
+  </div>
+</section>
+
+<section class="section" id="languages">
+  <div class="wrap">
+    <h2>Read it in your language</h2>
+    <div class="langs">{{langs}}</div>
+    <p>Missing yours? <a href="{{repo}}/blob/main/CONTRIBUTING.md">Help translate it</a>.</p>
+  </div>
+</section>
+
+<section class="join">
+  <div class="wrap">
+    <div>
+      <h2>Pass it on</h2>
+      <p>Hand a baton to someone, in real life or online, and share it with #PassTheBaton. Non-violent, non-partisan and open to everyone.</p>
+      <a class="btn dark" href="{{repo}}">Help build the movement</a>
+    </div>
+    <img src="design/baton-cutout.svg" alt="">
+  </div>
+</section>
