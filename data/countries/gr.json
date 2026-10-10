@@ -1,0 +1,41 @@
+{
+  "country": "Greece",
+  "iso2": "GR",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 67,
+    "notes": "Statutory pension age is 67 for both men and women (minimum 15 years of insurance). Retirement is possible from 62 with 40 years of contributions. By law, ages are reviewed every three years against life expectancy at 65; in February 2026 the Labour Ministry said no increase was expected for 2027 (reported by GreekReporter).",
+    "source": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/10/pensions-at-a-glance-2023-country-notes_2e11a061/greece_abd4eadb/1ffe41a5-en.pdf"
+  },
+  "political_system": "unitary parliamentary republic",
+  "population": { "value": 10372335, "year": 2025, "source": "https://www.statistics.gr/documents/20181/d8439ad7-d043-2235-f4b4-8466c3c9cd56" },
+  "median_age": { "value": 47.2, "year": 2025, "source": "https://ec.europa.eu/eurostat/web/interactive-publications/demography-2026" },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President of the Hellenic Republic",
+      "holder": "Konstantinos Tasoulas",
+      "birth_date": null,
+      "in_office_since": "2025-03-13",
+      "term_ends": "2030-03-13",
+      "source": "https://www.presidency.gr/en/president/"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Kyriakos Mitsotakis",
+      "birth_date": "1968-03-04",
+      "in_office_since": "2023-06-26",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Kyriakos_Mitsotakis"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "President Tasoulas: exact birth date not confirmed. presidency.gr gives only the year 1959 (Ioannina); a secondary site gave 15 March 1958 (Athens), which conflicts; a news report said he was 65 in March 2025. Needs an official full date.",
+    "President Tasoulas: term_ends 2030-03-13 is derived from the five-year term and the 2025-03-13 start; not stated on an official page in this run.",
+    "Next national election: no scheduled date found. On 2026-10-10 the Prime Minister ruled out early elections and said he would complete the four-year term (GreekCityTimes); the previous election was in June 2023, so a vote is expected by mid-2027. Needs an official or electoral-authority source.",
+    "Prime Minister Mitsotakis: birth date and start date come from Wikipedia; the official primeminister.gr biography was not retrieved. His in-office date 2023-06-26 is the start of his current term (he also served 2019-2023).",
+    "Pension age: the OECD source is the 2023 edition; the 2026 reporting (GreekReporter, 2026-09-19) is consistent with 67 but a current official e-EFKA or Labour Ministry page was not retrieved."
+  ]
+}

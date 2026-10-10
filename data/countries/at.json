@@ -1,0 +1,43 @@
+{
+  "country": "Austria",
+  "iso2": "AT",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 65,
+    "by_group": { "men": 65, "women": 61.5 },
+    "notes": "Statutory age is 65 for men. For women it is being raised in half-year steps by birth cohort from 60 to 65 between 2024 and 2033 (women born after 30 June 1968 retire at 65). The women's value of 61.5 is the 2026 figure given in a secondary reference and applies to one birth cohort; it differs by year of birth. statutory is set to the highest value (men, 65).",
+    "source": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/10/pensions-at-a-glance-2023-country-notes_2e11a061/austria_1ef2ecce/abe61e55-en.pdf"
+  },
+  "political_system": "federal parliamentary republic",
+  "population": { "value": 9209827, "year": 2025, "source": "https://www.statistik.at/fileadmin/announcement/2025/11/20251112BevoelkerungsprognoseEN.pdf" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "Federal President",
+      "holder": "Alexander Van der Bellen",
+      "birth_date": "1944-01-18",
+      "in_office_since": "2017-01-26",
+      "term_ends": null,
+      "source": "https://www.archive.austria.org/the-latest/2016/12/5/austrian-presidential-election-alexander-van-der-bellen-elected"
+    },
+    {
+      "office": "Head of government",
+      "title": "Federal Chancellor",
+      "holder": "Christian Stocker",
+      "birth_date": "1960-03-20",
+      "in_office_since": "2025-03-03",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Christian_Stocker"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "Median age: no figure from Statistik Austria, Eurostat, UN or World Bank was retrieved for Austria. Secondary sites gave conflicting values (43.2 to 44.9), so the field is left null.",
+    "Population: 9,209,827 is the 2025 figure in Statistik Austria's population projection table (annual average, main scenario), not a stand-alone register count. Replace with the official 1 January 2025 or 2026 population statistic.",
+    "President Van der Bellen: start of the second six-year term (re-elected October 2022) and its end date were not retrieved, so term_ends is null. Wikipedia says the next presidential election is likely in 2028 and that he cannot run again; needs an official source (Federal Ministry of the Interior). in_office_since is the first inauguration (2017-01-26).",
+    "Next national election: no date found. The last National Council election was in September 2024 and the presidential election is expected in 2028; neither date was confirmed from an official source.",
+    "Chancellor Stocker: the official Federal Chancellery page confirms he was sworn in on 2025-03-03; his birth date 1960-03-20 comes from Wikipedia, not from an official CV.",
+    "Women's pension age: the 2026 value of 61.5 is from Wikipedia's retirement-age table; the OECD and other sources confirm only the 60-to-65 phase-in by 2033."
+  ]
+}

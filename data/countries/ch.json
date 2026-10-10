@@ -1,0 +1,33 @@
+{
+  "country": "Switzerland",
+  "iso2": "CH",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": null,
+    "notes": "Not verified in this run; no source found.",
+    "source": null
+  },
+  "political_system": "federal semi-direct democracy with a collegial executive (seven-member Federal Council)",
+  "population": { "value": 9127125, "year": 2025, "source": "https://www.bfs.admin.ch/bfs/en/home/statistics/population.html" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state and head of government (collective; chaired by the President of the Confederation)",
+      "title": "President of the Swiss Confederation",
+      "holder": "Guy Parmelin",
+      "birth_date": "1959-11-09",
+      "in_office_since": "2026-01-01",
+      "term_ends": "2026-12-31",
+      "source": "https://en.wikipedia.org/wiki/Guy_Parmelin"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "Retirement age: not researched with a source in this run. Needs the official AHV/AVS reference age from the Federal Social Insurance Office (ahv-iv.ch or bsv.admin.ch), including the transition for women. Field left null.",
+    "Median age: no figure from the Federal Statistical Office, UN or World Bank was retrieved. Left null.",
+    "Switzerland has no single head of state or government. The seven-member Federal Council acts collectively; the president chairs it for one calendar year and cannot be re-elected for the following year. Only the 2026 president (Parmelin) is listed. The other members need entries or a site-level decision: Ignazio Cassis (Vice-President 2026, born 1961-04-13), Karin Keller-Sutter (born 1963-12-22), Albert Rösti (born 1967-08-07), Élisabeth Baume-Schneider, Beat Jans and Martin Pfister (birth dates not retrieved). Those birth dates come from Wikipedia and need official confirmation.",
+    "Parmelin: in_office_since and term_ends refer to the 2026 presidency (one-year term, from the federal government site and swissinfo). He has been a Federal Councillor since 2016-01-01 (Wikipedia). term_ends 2026-12-31 is derived from the one-year calendar term. Federal Council terms are four years, set after each federal parliamentary election.",
+    "Population: 9,127,125 on 31 December 2025 is from the FSO website. The FSO press release of 2026-08-20 rounds it to 9,127,100.",
+    "Next national election: no date retrieved. A federal parliamentary election is expected in autumn 2027, followed by a Federal Council election by the new parliament, but this was not confirmed from an official source in this run."
+  ]
+}
