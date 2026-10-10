@@ -1,22 +1,18 @@
 # Pass the Baton
 
-**Co obowiązuje obywateli, powinno obowiązywać także tych, którzy nimi rządzą.**
+**To, co obowiązuje obywateli, powinno obowiązywać także tych, którzy nimi przewodzą.**
 
-Na całym świecie ludzie w pewnym wieku przekazują swoją pracę następnemu pokoleniu. Ten ruch prosi przywódców, by zrobili to samo.
+Na całym świecie ludzie w pewnym wieku przekazują swoją pracę następnemu pokoleniu. Ten ruch prosi przywódców, by zrobili to samo. Nie z braku zaufania do osób starszych, lecz z szacunku dla odnowy.
 
 ## Postulat
 
 **Kto osiągnął ustawowy wiek emerytalny w swoim kraju, a najpóźniej 67 lat, nie rozpoczyna nowej kadencji na jednym z najwyższych urzędów.**
 
-Nie z braku zaufania do starszych osób, lecz z szacunku dla odnowy.
+Pass the Baton to ogólnoświatowy ruch bez przemocy, niezależny od partii. Hashtagi: #PassTheBaton i #PrzekażPałeczkę.
 
-Pass the Baton to globalny ruch, bez przemocy i ponad podziałami partyjnymi. Hashtagi: #PassTheBaton · #PrzekażPałeczkę
-
-## Czytaj dalej
+## Przeczytaj manifest
 
 - [Manifest po polsku](MANIFESTO.md)
-- [The manifesto in English (original)](../../MANIFESTO.md)
+- [Oryginał po angielsku](../../MANIFESTO.md)
 
----
-
-*Ten tekst jest udostępniany na licencji [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*
+Teksty na licencji [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).

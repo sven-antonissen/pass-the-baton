@@ -1,22 +1,18 @@
 # Pass the Baton
 
-**Ciò che vale per i cittadini deve valere per chi li guida.**
+**Ciò che vale per i cittadini deve valere anche per chi li guida.**
 
-In tutto il mondo, a una certa età le persone passano il loro lavoro alla generazione successiva. Questo movimento chiede ai leader di fare lo stesso.
+In tutto il mondo, a una certa età le persone passano il proprio lavoro alla generazione successiva. Questo movimento chiede ai leader di fare lo stesso. Non per sfiducia verso le persone anziane, ma per rispetto del rinnovamento.
 
 ## La richiesta
 
-**Chi ha raggiunto l'età pensionabile prevista dalla legge nel proprio paese, e al più tardi i 67 anni, non inizia un nuovo mandato in una delle più alte cariche.**
+**Chi ha raggiunto l'età pensionabile prevista dalla legge del proprio paese, e al più tardi i 67 anni, non inizia un nuovo mandato in una delle massime cariche.**
 
-Non per sfiducia verso gli anziani, ma per rispetto del rinnovamento.
+Pass the Baton è un movimento mondiale, nonviolento e indipendente da ogni partito. Hashtag: #PassTheBaton e #PassaIlTestimone.
 
-Pass the Baton è un movimento globale, nonviolento e apartitico. Hashtag: #PassTheBaton · #PassaIlTestimone
+## Leggi il manifesto
 
-## Leggi di più
+- [Manifesto in italiano](MANIFESTO.md)
+- [Manifesto originale in inglese](../../MANIFESTO.md)
 
-- [Il manifesto in italiano](MANIFESTO.md)
-- [The manifesto in English (original)](../../MANIFESTO.md)
-
----
-
-*Questo testo è distribuito con licenza [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*
+Testi con licenza [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
