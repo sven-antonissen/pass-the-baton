@@ -1,0 +1,42 @@
+{
+  "country": "Germany",
+  "iso2": "DE",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 67,
+    "notes": "The standard retirement age (Regelaltersgrenze) rises gradually from 65 to 67 between 2012 and 2029; people born in 1964 or later have a standard retirement age of 67.",
+    "source": "https://www.uni-paderborn.de/en/zv/4-2/wissenschaftliche-tarifbeschaeftigte-1/termination-of-the-employment-relationship"
+  },
+  "political_system": "federal parliamentary republic",
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "Federal President",
+      "holder": "Frank-Walter Steinmeier",
+      "birth_date": "1956-01-05",
+      "in_office_since": "2017-03-19",
+      "term_ends": null,
+      "source": "https://www.bundespraesident.de/EN/federal-president/curriculum-vitae/curriculum-vitae_node.html"
+    },
+    {
+      "office": "Head of government",
+      "title": "Federal Chancellor",
+      "holder": "Friedrich Merz",
+      "birth_date": "1955-11-11",
+      "in_office_since": "2025-05-06",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Friedrich_Merz"
+    }
+  ],
+  "next_national_election": {
+    "date": null,
+    "source": "https://en.wikipedia.org/wiki/Next_German_federal_election"
+  },
+  "open_questions": [
+    "Next Bundestag election: no exact date set yet. Sources state it must be held on or before 2029-03-25 (possible Sundays 2029-01-28 to 2029-03-25); the president sets the date. Date left null.",
+    "Steinmeier's exact term end date was not found in an official source, so term_ends is null. He began a second term after re-election on 2022-02-13; the Federal Convention to elect his successor is reported for 2027-01-30, and he cannot seek a third term.",
+    "Chancellor has no fixed term (office depends on the Bundestag). A government crisis around Merz was reported in 2026; his status should be re-checked at the next refresh.",
+    "Retirement age source is a university administration page that cites the statute; the official Deutsche Rentenversicherung page was not retrieved in this run. Some sources report political debate about raising the age further; no change in law was confirmed.",
+    "Steinmeier birth date is confirmed on bundespraesident.de; Merz birth date is from Wikipedia only (no official source found in this run)."
+  ]
+}
