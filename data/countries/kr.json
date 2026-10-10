@@ -1,0 +1,33 @@
+{
+  "country": "South Korea",
+  "iso2": "KR",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 60,
+    "notes": "60 is the statutory mandatory retirement age at workplaces. National Pension old-age eligibility is currently 63 and rises by one year every five years to 65 by 2033. Bills to raise the mandatory retirement age to 65 are under discussion and are not law as of the sources found.",
+    "source": "https://www.koreaherald.com/article/10773744"
+  },
+  "political_system": "presidential republic; the president is both head of state and head of government; the Prime Minister is a senior cabinet member appointed by the president with National Assembly approval",
+  "population": { "value": 51700000, "year": 2025, "source": "https://www.unfpa.org/data/world-population/KR" },
+  "median_age": { "value": 46.2, "year": 2026, "source": "https://www.populationpyramids.org/median-age-by-country" },
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President",
+      "holder": "Lee Jae Myung",
+      "birth_date": "1964-12-22",
+      "in_office_since": "2025-06-04",
+      "term_ends": null,
+      "source": "https://www.korea.net/Government/Administration/President-Lee-Jae-Myung"
+    }
+  ],
+  "next_national_election": { "date": null, "source": "https://en.wikipedia.org/wiki/Cabinet_of_Lee_Jae_Myung" },
+  "open_questions": [
+    "Lee Jae Myung's birth date: the official record (korea.net) is 1964-12-22, but reference works state this was registered late and the actual birth is believed to be around 1963-12-08. The official date is stored; confirm which to use.",
+    "Date taking office (2025-06-04) is from the Carnegie Endowment (June 2026) and the Wikipedia cabinet page, not from korea.net.",
+    "term_ends is null: no source retrieved for the end date of the single five-year presidential term.",
+    "Next national election: a legislative election is listed for 2028 but no exact date was found; the next presidential election date was not retrieved. Local elections already took place in June 2026.",
+    "Prime Minister Han Seong-sook (born 1967-06-20; confirmed 2026-06-30, one source says took office 2026-07-01) is not listed as an office because the president is head of government; add if wanted.",
+    "Median age sources conflict (44.5 to 47.0 across aggregators); 46.2 is the UN-based 2026 figure from populationpyramids.org. A direct UN or Statistics Korea figure was not retrieved."
+  ]
+}

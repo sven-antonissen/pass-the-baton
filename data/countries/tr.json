@@ -1,0 +1,33 @@
+{
+  "country": "Turkey",
+  "iso2": "TR",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 60,
+    "by_group": { "men": 60, "women": 58 },
+    "notes": "statutory is the highest of the two values. Normal retirement age for people first insured after 30 April 2008 is 60 for men and 58 for women; it is scheduled to rise gradually from 2036 to 65 for both (end year 2044 to 2048 depending on source). Since March 2023, people first insured on or before 8 September 1999 can retire at any age once contribution conditions are met.",
+    "source": "https://www.ssa.gov/policy/docs/progdesc/intl_update/2023-04/index.html"
+  },
+  "political_system": "presidential republic (executive presidential system since 2018)",
+  "population": { "value": 86092168, "year": 2025, "source": "https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President",
+      "holder": "Recep Tayyip Erdoğan",
+      "birth_date": "1954-02-26",
+      "in_office_since": "2014-08-28",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan"
+    }
+  ],
+  "next_national_election": { "date": "2028-05-07", "source": "https://www.kurdistan24.net/en/story/940070/erdogan-set-to-seek-final-term-as-t%C3%BCrkiyes-president" },
+  "open_questions": [
+    "Election date: the normal date is reported as 2028-05-07 (Wikipedia says no later than 2028-05-14). A presidential adviser has proposed 2028-04-16 if parliament votes to renew elections (360 of 600 votes needed); no vote has been held. Presidential and parliamentary elections are held together.",
+    "term_ends is null: the exact end date of Erdoğan's current term (elected May 2023) was not found in a source. Erdoğan was prime minister 2003 to 2014, president since 2014 and re-elected in 2018 and 2023.",
+    "Median age left null: sources conflict (32.5 vs 34.4 for 2025 on aggregators; UN 2020 figure 31.5) and no TurkStat or UN figure for a recent year was retrieved.",
+    "Population of 86,092,168 (31 Dec 2025, official estimate) is taken from a Wikipedia list; the TurkStat original was not opened. A UN projection for 2025 is 87.6 million.",
+    "Retirement age rules are complex (depends on entry date to insurance and contribution days); the SSA summary dates from April 2023 and no current SGK page was retrieved."
+  ]
+}
