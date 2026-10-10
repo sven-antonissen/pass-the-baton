@@ -1,0 +1,42 @@
+{
+  "country": "India",
+  "iso2": "IN",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": null,
+    "notes": "No single national statutory retirement age was found. Most central government employees retire at 60 under Fundamental Rule 56; State government ages vary by state (commonly 56 to 62), and judges have constitutional ages (Supreme Court 65, High Court 62). As of July 2026 no nationwide change had been announced. Elected offices such as President, Prime Minister and members of Parliament have no retirement age.",
+    "source": "https://www.keka.com/retirement-age"
+  },
+  "political_system": "federal parliamentary republic",
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President",
+      "holder": "Droupadi Murmu",
+      "birth_date": "1958-06-20",
+      "in_office_since": "2022-07-25",
+      "term_ends": null,
+      "source": "https://www.presidentofindia.gov.in/Profile"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Narendra Modi",
+      "birth_date": null,
+      "in_office_since": "2014-05-26",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Narendra_Modi"
+    }
+  ],
+  "next_national_election": {
+    "date": null,
+    "source": "https://en.wikipedia.org/wiki/Lok_Sabha"
+  },
+  "open_questions": [
+    "Retirement age: no statutory national age for all citizens/public office found; statutory left null. The 60-year figure for central government staff comes from a secondary source (Keka); the official DoPT / Fundamental Rule 56 text was not retrieved in this run.",
+    "Modi birth date: a news report (The Week, 2026-09-17) says he turned 76 on that day, which implies a birthday of 17 September, but no source stating the full birth date was found in this run. Left null.",
+    "Modi has been Prime Minister since 2014-05-26; his third term began 2024-06-09 (swearing-in date per Wikipedia's presidency page). No fixed personal term; the PM serves while holding Lok Sabha majority.",
+    "Murmu's term end date was not found in an official source (term begins at entering office; presidential election expected in 2027), so term_ends is null.",
+    "Next general election: no date announced. Sources state the 18th Lok Sabha's tenure ends in June 2029 and elections are expected by April-June 2029. Date left null."
+  ]
+}

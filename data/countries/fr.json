@@ -1,0 +1,41 @@
+{
+  "country": "France",
+  "iso2": "FR",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 64,
+    "notes": "The 2023 pension reform raises the statutory age from 62 to 64. Under the Social Security Financing Act for 2026 this increase is suspended until 2028. From 1 September 2026, age 64 applies only to people born from 1969; for generations 1964 to 1968 the legal age lies between 62 years 9 months and 63 years 9 months.",
+    "source": "https://www.service-public.gouv.fr/particuliers/actualites/A18825?lang=en"
+  },
+  "political_system": "semi-presidential republic",
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President of the French Republic",
+      "holder": "Emmanuel Macron",
+      "birth_date": "1977-12-21",
+      "in_office_since": "2017-05-14",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Emmanuel_Macron"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Sébastien Lecornu",
+      "birth_date": "1986-06-11",
+      "in_office_since": "2025-09-09",
+      "term_ends": null,
+      "source": "https://simple.wikipedia.org/wiki/S%C3%A9bastien_Lecornu"
+    }
+  ],
+  "next_national_election": {
+    "date": "2027-04-18",
+    "source": "https://www.france24.com/en/europe/20260630-france-sets-presidential-election-date-as-macron-finishes-final-term"
+  },
+  "open_questions": [
+    "Macron: in_office_since is the start of his first term (2017-05-14); he was re-elected on 2022-04-24 and the exact start date of the second term was not confirmed from an official source (one source says 13 May 2022). The exact end date of the current term was not found, so term_ends is null. He is barred from a third consecutive term; first round of the next presidential election is 2027-04-18, run-off 2027-05-02.",
+    "Prime Minister has no fixed term; Lecornu was appointed on 2025-09-09 and reappointed on 2025-10-10. in_office_since uses the first date; confirm whether the website should use the reappointment date.",
+    "Retirement age: the statutory age of 64 is suspended until 2028 for generations 1964 to 1968 (see notes). Whether the full-rate pension age (without full contribution record) should be recorded was not checked in this run.",
+    "Next national election: the date is from a press report citing an executive source; the official decree/Council of Ministers publication was not found in this run."
+  ]
+}
