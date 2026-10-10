@@ -8,7 +8,7 @@ Overal ter wereld geven mensen op een bepaalde leeftijd hun werk door aan een vo
 
 Niet uit wantrouwen tegenover ouderen, maar uit respect voor vernieuwing.
 
-- [Manifest (Nederlands)](MANIFEST.md)
+- [Manifest (Nederlands)](MANIFESTO.md)
 - [Architectuur (Engels)](../../docs/ARCHITECTURE.md)
 - [Meedoen (Engels)](../../CONTRIBUTING.md)
 

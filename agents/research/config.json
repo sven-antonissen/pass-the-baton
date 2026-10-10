@@ -1,0 +1,8 @@
+{
+  "model": "claude-sonnet-5-5",
+  "max_tokens": 12000,
+  "inputs": ["agents/research/countries.md"],
+  "list_dirs": ["data/countries"],
+  "output_dir": "data/countries",
+  "web_search": { "type": "web_search_20250305", "max_uses": 12 }
+}

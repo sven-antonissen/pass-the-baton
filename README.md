@@ -16,7 +16,9 @@ Not out of distrust of older people, but out of respect for renewal.
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | How a small team of AI agents supports the campaign, with a human approving everything that goes out |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to build, translate or start a local chapter |
 | [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) | How we treat each other |
-| [translations/](translations/) | The texts in other languages (Dutch for now) |
+| [translations/](translations/) | The texts in other languages |
+| [agents/](agents/) | The AI agents and their instructions |
+| [site/](site/) | The website at [pass-the-baton.org](https://pass-the-baton.org) |
 
 ## Status
 

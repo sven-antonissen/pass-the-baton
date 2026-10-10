@@ -1,0 +1,25 @@
+# Country queue
+
+The research agent profiles the first countries in this list that are not yet in `data/countries/`. Reorder or add lines to change priorities. The order below has no meaning beyond a starting point: G20 members, then other countries alphabetically as they are added.
+
+- Argentina
+- Australia
+- Belgium
+- Brazil
+- Canada
+- China
+- France
+- Germany
+- India
+- Indonesia
+- Italy
+- Japan
+- Mexico
+- Netherlands
+- Russia
+- Saudi Arabia
+- South Africa
+- South Korea
+- Turkey
+- United Kingdom
+- United States

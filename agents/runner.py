@@ -67,13 +67,19 @@ def load_agent(name: str) -> tuple[str, dict]:
 
 
 def build_message(config: dict) -> str:
-    parts = []
+    import datetime
+
+    parts = [f"Today's date: {datetime.date.today().isoformat()}"]
     for rel in config.get("inputs", []):
         path = ROOT / rel
         if path.is_file():
             parts.append(f'<file path="{rel}">\n{path.read_text(encoding="utf-8")}\n</file>')
         else:
             parts.append(f'<file path="{rel}" missing="true"/>')
+    for rel in config.get("list_dirs", []):
+        folder = ROOT / rel
+        names = sorted(p.name for p in folder.iterdir()) if folder.is_dir() else []
+        parts.append(f'<listing path="{rel}">\n' + "\n".join(names) + "\n</listing>")
     parts.append("Do your task now and return all files in one write_files call.")
     return "\n\n".join(parts)
 
@@ -96,6 +102,11 @@ def check_content(rel: str, content: str) -> None:
             xml.dom.minidom.parseString(content.encode("utf-8"))
         except Exception as e:  # noqa: BLE001 - any parse error means a broken file
             raise ValueError(f"{rel} is not valid SVG: {e}") from e
+    if rel.endswith(".json"):
+        try:
+            json.loads(content)
+        except json.JSONDecodeError as e:
+            raise ValueError(f"{rel} is not valid JSON: {e}") from e
 
 
 def write_outputs(result: dict, output_dir: str) -> list[str]:
@@ -128,20 +139,38 @@ def main() -> None:
     if not os.environ.get("ANTHROPIC_API_KEY"):
         fail("ANTHROPIC_API_KEY is not set. Add it as a repository secret (Settings > Secrets and variables > Actions).")
 
+    tools = [WRITE_FILES_TOOL]
+    search = config.get("web_search")
+    if search:
+        # Server-side web search; type is in config.json so it can be updated without code changes.
+        tools.append({
+            "type": search.get("type", "web_search_20250305"),
+            "name": "web_search",
+            "max_uses": search.get("max_uses", 5),
+        })
+
     client = anthropic.Anthropic()
-    try:
-        with client.messages.stream(
-            model=config["model"],
-            max_tokens=config["max_tokens"],
-            system=instructions,
-            tools=[WRITE_FILES_TOOL],
-            messages=[{"role": "user", "content": message}],
-        ) as stream:
-            response = stream.get_final_message()
-    except anthropic.APIStatusError as e:
-        fail(f"Claude API error {e.status_code}: {e.message}")
-    except anthropic.APIConnectionError as e:
-        fail(f"Could not reach the Claude API: {e}")
+    messages = [{"role": "user", "content": message}]
+    tokens_in = tokens_out = 0
+    for _ in range(5):  # a long search turn may pause; continue it a few times at most
+        try:
+            with client.messages.stream(
+                model=config["model"],
+                max_tokens=config["max_tokens"],
+                system=instructions,
+                tools=tools,
+                messages=messages,
+            ) as stream:
+                response = stream.get_final_message()
+        except anthropic.APIStatusError as e:
+            fail(f"Claude API error {e.status_code}: {e.message}")
+        except anthropic.APIConnectionError as e:
+            fail(f"Could not reach the Claude API: {e}")
+        tokens_in += response.usage.input_tokens
+        tokens_out += response.usage.output_tokens
+        if response.stop_reason != "pause_turn":
+            break
+        messages = [messages[0], {"role": "assistant", "content": response.content}]
 
     if response.stop_reason == "max_tokens":
         fail("The agent ran out of output space; raise max_tokens in config.json.")
@@ -156,11 +185,10 @@ def main() -> None:
         fail(f"Could not write the agent's files: {e}")
 
     summary = result.get("summary", "").strip()
-    usage = response.usage
     body = (
         f"{summary}\n\n**Files**\n" + "\n".join(f"- `{p}`" for p in written)
         + f"\n\n_Agent: {args.agent} · model: {config['model']} · "
-        f"tokens in/out: {usage.input_tokens}/{usage.output_tokens}_\n\n"
+        f"tokens in/out: {tokens_in}/{tokens_out}_\n\n"
         "Review before merging: merging this pull request is the human approval."
     )
     (ROOT / ".agent-pr-body.md").write_text(body, encoding="utf-8")

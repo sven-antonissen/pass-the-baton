@@ -1,0 +1,68 @@
+name: Run an agent (reusable)
+
+on:
+  workflow_call:
+    inputs:
+      agent:
+        description: Folder name under agents/
+        required: true
+        type: string
+      output:
+        description: The folder the agent writes to
+        required: true
+        type: string
+      title:
+        description: Pull request title
+        required: true
+        type: string
+      timeout:
+        required: false
+        type: number
+        default: 30
+    secrets:
+      ANTHROPIC_API_KEY:
+        required: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: ${{ inputs.timeout }}
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install anthropic
+
+      - name: Run the agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python agents/runner.py "${{ inputs.agent }}"
+
+      - name: Open a pull request for review
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OUTPUT: ${{ inputs.output }}
+          TITLE: ${{ inputs.title }}
+          AGENT: ${{ inputs.agent }}
+        run: |
+          git add -N -- "$OUTPUT"
+          if [ -z "$(git status --porcelain -- "$OUTPUT")" ]; then
+            echo "No changes; nothing to review."
+            exit 0
+          fi
+          branch="agent/${AGENT}-${{ github.run_id }}"
+          git config user.name "pass-the-baton-agent"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add -- "$OUTPUT"
+          git commit -m "$TITLE"
+          git push origin "$branch"
+          gh pr create --title "$TITLE" --body-file .agent-pr-body.md --label agent \
+            || gh pr create --title "$TITLE" --body-file .agent-pr-body.md

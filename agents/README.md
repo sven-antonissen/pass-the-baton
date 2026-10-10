@@ -19,7 +19,15 @@ Each agent is a folder with two files anyone can read:
 
 | Agent | Phase | Writes to | Runs |
 | --- | --- | --- | --- |
-| [branding](branding/) | 1 | `brand/` | By hand, and on the 1st of each month |
+| [branding](branding/) | 1 | `brand/` | By hand, and on the 1st of each month (Opus, the most expensive) |
+| [localisation](localisation/) | 2 | `translations/` | By hand, and when the manifesto or language queue changes; three languages per run |
+| [research](research/) | 2 | `data/countries/` | By hand, and every Monday; three countries per run, with web search |
+
+The website in [`site/`](../site/) is not an agent: it is built from the repository on every merge and published to pass-the-baton.org.
+
+## Costs
+
+Each pull request shows the tokens the run used. To keep costs low: cheaper models for routine work, small batches per run, and infrequent schedules. Pause any agent under *Actions* by disabling its workflow.
 
 ## Running locally
 

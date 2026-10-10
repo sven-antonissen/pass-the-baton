@@ -1,0 +1,23 @@
+name: Agent - research
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 5 * * 1" # 05:41 UTC every Monday
+
+concurrency:
+  group: agent-research
+  cancel-in-progress: false
+
+jobs:
+  research:
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: ./.github/workflows/_run-agent.yml
+    with:
+      agent: research
+      output: data/countries
+      title: "Research agent: country profiles"
+    secrets:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
