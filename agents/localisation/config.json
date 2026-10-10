@@ -1,7 +1,18 @@
 {
   "model": "claude-sonnet-5-5",
-  "max_tokens": 24000,
-  "inputs": ["MANIFESTO.md", "README.md", "agents/localisation/languages.md"],
-  "list_dirs": ["translations"],
-  "output_dir": "translations"
+  "max_tokens": 32000,
+  "inputs": [
+    "MANIFESTO.md",
+    "README.md",
+    "translations/en/site.json",
+    "agents/localisation/languages.md"
+  ],
+  "list_dirs": [
+    "translations"
+  ],
+  "output_dir": "translations",
+  "protect": [
+    "translations/en/site.json"
+  ],
+  "check": "python3 agents/check_site_strings.py"
 }

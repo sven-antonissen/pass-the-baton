@@ -33,6 +33,15 @@ jobs:
           python-version: "3.12"
       - run: pip install markdown
       - run: python site/build.py
+      - name: Render the share image (og.png) with the brand fonts
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq librsvg2-bin >/dev/null
+          mkdir -p ~/.fonts
+          curl -fsSL -o ~/.fonts/ArchivoBlack-Regular.ttf https://github.com/google/fonts/raw/main/ofl/archivoblack/ArchivoBlack-Regular.ttf || true
+          curl -fsSL -o ~/.fonts/Inter.ttf "https://github.com/google/fonts/raw/main/ofl/inter/Inter%5Bopsz,wght%5D.ttf" || true
+          fc-cache -f >/dev/null 2>&1 || true
+          rsvg-convert -w 1200 -h 630 -o _site/og.png site/og-card.svg
+          ls -la _site/og.png
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

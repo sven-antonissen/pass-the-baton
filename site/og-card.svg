@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<rect width="1200" height="630" fill="#111318"/>
+<line x1="-400" y1="660" x2="-20" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/><line x1="-270" y1="660" x2="110" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/><line x1="-140" y1="660" x2="240" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/><line x1="-10" y1="660" x2="370" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/><line x1="120" y1="660" x2="500" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/><line x1="250" y1="660" x2="630" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/><line x1="380" y1="660" x2="760" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/><line x1="510" y1="660" x2="890" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/><line x1="640" y1="660" x2="1020" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/><line x1="770" y1="660" x2="1150" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/><line x1="900" y1="660" x2="1280" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/><line x1="1030" y1="660" x2="1410" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/><line x1="1160" y1="660" x2="1540" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/><line x1="1290" y1="660" x2="1670" y2="-30" stroke="#F6F3EC" stroke-opacity="0.08" stroke-width="3"/>
+<polygon points="700,630 860,630 1210,-10 1050,-10" fill="#F5A623" fill-opacity="0.15"/>
+<line x1="700" y1="630" x2="1050" y2="-10" stroke="#F5A623" stroke-opacity="0.6" stroke-width="4"/>
+<line x1="860" y1="630" x2="1210" y2="-10" stroke="#F5A623" stroke-opacity="0.6" stroke-width="4"/>
+<svg x="590" y="0" width="700" height="394" viewBox="0 0 1600 900">
+  
+  <defs>
+    <radialGradient id="bc-bg" cx="0.5" cy="0.4" r="0.8">
+      <stop offset="0" stop-color="#FDFBF7"/>
+      <stop offset="0.6" stop-color="#F6F3EC"/>
+      <stop offset="1" stop-color="#E4DED0"/>
+    </radialGradient>
+    <linearGradient id="bc-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D98E1C"/>
+      <stop offset="0.10" stop-color="#FFCF73"/>
+      <stop offset="0.20" stop-color="#FFF4DC"/>
+      <stop offset="0.30" stop-color="#FFC34F"/>
+      <stop offset="0.55" stop-color="#F5A623"/>
+      <stop offset="0.78" stop-color="#C27A0C"/>
+      <stop offset="0.88" stop-color="#A85F07"/>
+      <stop offset="0.94" stop-color="#B5700F"/>
+      <stop offset="1" stop-color="#6B3B04"/>
+    </linearGradient>
+    <linearGradient id="bc-rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF4DC"/>
+      <stop offset="0.4" stop-color="#FFC34F"/>
+      <stop offset="1" stop-color="#8A4E06"/>
+    </linearGradient>
+    <linearGradient id="bc-hole" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A0E02"/>
+      <stop offset="0.6" stop-color="#3D2205"/>
+      <stop offset="1" stop-color="#9A5A0A"/>
+    </linearGradient>
+    <clipPath id="bc-clip">
+      <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z"/>
+    </clipPath>
+    <filter id="bc-blur" x="-50%" y="-200%" width="200%" height="500%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="bc-blur2" x="-50%" y="-200%" width="200%" height="500%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+  <ellipse cx="820" cy="790" rx="540" ry="30" transform="rotate(-4 820 790)" fill="#2A1E0A" opacity="0.28" filter="url(#bc-blur)"/>
+  <ellipse cx="380" cy="778" rx="170" ry="16" fill="#2A1E0A" opacity="0.25" filter="url(#bc-blur2)"/>
+  <g transform="translate(800 430) rotate(-24)">
+    <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z" fill="url(#bc-body)"/>
+    <g clip-path="url(#bc-clip)" fill="none" stroke-linecap="round">
+      <path d="M-560 -58 L580 -52 M-560 -22 L580 -20 M-560 8 L580 7 M-560 36 L580 33 M-560 60 L580 55" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="2"/>
+      <path d="M-560 -40 L580 -36 M-560 -6 L580 -5 M-560 22 L580 20 M-560 52 L580 48" stroke="#3A2002" stroke-opacity="0.10" stroke-width="2"/>
+      <path d="M-520 -44 L540 -39" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="5"/>
+    </g>
+    <path d="M550 -66 A22 66 0 0 1 550 66" fill="none" stroke="#6B3B04" stroke-opacity="0.35" stroke-width="3"/>
+    <ellipse cx="-550" cy="0" rx="26" ry="74" fill="url(#bc-rim)"/>
+    <ellipse cx="-547" cy="3" rx="19" ry="61" fill="url(#bc-hole)"/>
+    <path d="M-573.8 -30 A26 74 0 0 1 -550 -74" fill="none" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  </svg>
+<text x="64" y="250" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="78" fill="#F6F3EC" letter-spacing="-2">Passing it on</text>
+<text x="64" y="340" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="78" fill="#F6F3EC" letter-spacing="-2">is leadership.</text>
+<text x="66" y="410" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="27" fill="#B9BCC6">The same retirement age for leaders as for the people.</text>
+<rect x="64" y="500" width="352" height="64" rx="32" fill="#F5A623"/>
+<text x="240" y="542" text-anchor="middle" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="700" fill="#111318">pass-the-baton.org</text>
+<text x="440" y="542" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="25" font-weight="600" fill="#F5A623">#PassTheBaton</text>
+</svg>

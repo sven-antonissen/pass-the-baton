@@ -2,9 +2,14 @@ name: Agent - localisation
 
 on:
   workflow_dispatch:
+    inputs:
+      focus:
+        description: "Optional: the language codes to work on in this run, e.g. 'es, fr, de'"
+        required: false
+        default: ""
 
 concurrency:
-  group: agent-localisation
+  group: agent-localisation-${{ inputs.focus }}
   cancel-in-progress: false
 
 jobs:
@@ -16,6 +21,7 @@ jobs:
     with:
       agent: localisation
       output: translations
-      title: "Localisation agent: new translations"
+      title: "Localisation agent: translations and website texts"
+      focus: ${{ inputs.focus }}
     secrets:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

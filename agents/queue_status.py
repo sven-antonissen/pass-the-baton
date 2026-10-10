@@ -23,7 +23,8 @@ def queue_items(path: Path) -> list[str]:
 
 def remaining_localisation() -> list[str]:
     codes = [item.split(":", 1)[0].strip() for item in queue_items(ROOT / "agents/localisation/languages.md")]
-    done = {p.name for p in (ROOT / "translations").iterdir() if (p / "MANIFESTO.md").exists()}
+    done = {p.name for p in (ROOT / "translations").iterdir()
+            if (p / "MANIFESTO.md").exists() and (p / "site.json").exists()}
     return [c for c in codes if c not in done]
 
 

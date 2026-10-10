@@ -2,7 +2,12 @@
 
 Static HTML only: no server, no tracking, no cookies. The content comes from
 the repository itself, so whatever the agents add through merged pull requests
-(brand artwork, translations) appears on the next deploy.
+(brand artwork, translations, country profiles) appears on the next deploy.
+
+Every language gets a full site: a home page, the manifesto and the countries
+page. English lives at the root, other languages under /<code>/. Interface
+texts come from translations/<code>/site.json, falling back to English for any
+missing key.
 
   pip install markdown
   python site/build.py
@@ -20,9 +25,12 @@ from pathlib import Path
 import markdown
 
 ROOT = Path(__file__).resolve().parent.parent
+SITE = Path(__file__).resolve().parent
 OUT = ROOT / "_site"
+TEMPLATES = SITE / "templates"
 REPO_URL = "https://github.com/sven-antonissen/pass-the-baton"
 DOMAIN = "pass-the-baton.org"
+ORIGIN = f"https://{DOMAIN}"
 
 RTL = {"ar", "he", "fa", "ur"}
 LANG_NAMES = {
@@ -31,30 +39,102 @@ LANG_NAMES = {
     "zh": "中文", "ru": "Русский", "sw": "Kiswahili", "id": "Bahasa Indonesia",
     "ja": "日本語", "tr": "Türkçe", "it": "Italiano", "pl": "Polski", "ko": "한국어",
 }
+LOCALES = {
+    "en": "en_GB", "nl": "nl_BE", "es": "es_ES", "fr": "fr_FR", "de": "de_DE", "pt": "pt_BR",
+    "ar": "ar_AR", "hi": "hi_IN", "zh": "zh_CN", "ru": "ru_RU", "sw": "sw_KE", "id": "id_ID",
+    "ja": "ja_JP", "tr": "tr_TR", "it": "it_IT", "pl": "pl_PL", "ko": "ko_KR",
+}
+PAGES = {"home": "", "manifesto": "manifesto/", "countries": "countries/"}
+SCALE = 90  # bars run from 0 to 90 years
 
 
-TEMPLATES = Path(__file__).resolve().parent / "templates"
+# ---------- Languages and strings ----------
+
+def languages() -> list[str]:
+    folder = ROOT / "translations"
+    found = sorted(p.name for p in folder.iterdir() if (p / "MANIFESTO.md").exists()) if folder.is_dir() else []
+    return ["en"] + [c for c in found if c != "en"]
 
 
-def render(template: str, **values: str) -> str:
-    """Fill {{name}} placeholders. Unknown placeholders are left as they are."""
-    text = (TEMPLATES / template).read_text(encoding="utf-8")
+def load_strings(lang: str) -> dict:
+    def read(code: str) -> dict:
+        f = ROOT / "translations" / code / "site.json"
+        try:
+            return json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+        except json.JSONDecodeError:
+            return {}
+    strings = read("en")
+    if lang != "en":
+        strings.update({k: v for k, v in read(lang).items() if isinstance(v, str) and v.strip()})
+    return strings
+
+
+def has_own_strings(lang: str) -> bool:
+    return lang == "en" or (ROOT / "translations" / lang / "site.json").exists()
+
+
+def lang_root(lang: str) -> str:
+    return "" if lang == "en" else f"{lang}/"
+
+
+def page_path(lang: str, key: str) -> str:
+    return lang_root(lang) + PAGES[key]
+
+
+def page_url(lang: str, key: str) -> str:
+    return f"{ORIGIN}/{page_path(lang, key)}"
+
+
+# ---------- Rendering ----------
+
+def fill(text: str, strings: dict, **values: str) -> str:
     for key, value in values.items():
         text = text.replace("{{" + key + "}}", value)
-    return text
+    return re.sub(r"\{\{t:([a-z0-9_]+)\}\}", lambda m: html.escape(strings.get(m.group(1), "")), text)
 
 
-def page(title: str, body: str, lang: str = "en", depth: int = 0, description: str = "") -> str:
+def render(template: str, strings: dict, **values: str) -> str:
+    return fill((TEMPLATES / template).read_text(encoding="utf-8"), strings, **values)
+
+
+def fmt(s: str, **values) -> str:
+    for k, v in values.items():
+        s = s.replace("{" + k + "}", str(v))
+    return s
+
+
+def page(lang: str, key: str, title: str, description: str, body: str, jsonld: str = "") -> str:
+    strings = load_strings(lang)
+    depth = page_path(lang, key).count("/")
     up = "../" * depth
+    base = up + lang_root(lang)
+    langs = languages()
+    alternates = "\n".join(
+        f'<link rel="alternate" hreflang="{code}" href="{page_url(code, key)}">' for code in langs
+    ) + f'\n<link rel="alternate" hreflang="x-default" href="{page_url("en", key)}">'
+    switcher = "".join(
+        f'<li><a href="{up}{page_path(code, key)}" lang="{code}" hreflang="{code}"'
+        + (' aria-current="page"' if code == lang else "")
+        + f">{LANG_NAMES.get(code, code)}</a></li>"
+        for code in langs
+    )
     return render(
-        "base.html",
+        "base.html", strings,
         lang=lang,
         dir="rtl" if lang in RTL else "ltr",
         title=html.escape(title),
-        description=html.escape(description or "What applies to the people should apply to those who lead them."),
+        description=html.escape(description),
+        canonical=page_url(lang, key),
+        alternates=alternates,
+        locale=LOCALES.get(lang, lang),
+        og_image=f"{ORIGIN}/og.png",
+        jsonld=jsonld,
         up=up,
+        base=base,
         repo=REPO_URL,
-        body=body.replace("{{up}}", up),
+        lang_name=LANG_NAMES.get(lang, lang),
+        switcher=switcher,
+        body=fill(body, strings, up=up, base=base, repo=REPO_URL),
     )
 
 
@@ -67,102 +147,18 @@ def first_heading(text: str, fallback: str) -> str:
     return m.group(1).strip() if m else fallback
 
 
-def languages() -> list[str]:
-    folder = ROOT / "translations"
-    found = sorted(p.name for p in folder.iterdir() if (p / "MANIFESTO.md").exists()) if folder.is_dir() else []
-    return ["en"] + found
-
-
-def leader_stats(today: datetime.date) -> dict:
-    """Aggregate facts for the home page, from the country profiles."""
-    countries = load_countries()
-    ages, medians, at_or_above, offices = [], [], 0, 0
-    for c in countries:
-        norm = country_norm(c)
-        m = (c.get("median_age") or {}).get("value")
-        if isinstance(m, (int, float)):
-            medians.append(m)
-        for o in c.get("offices", []):
-            a = age_on(o.get("birth_date"), today)
-            if a is None:
-                continue
-            offices += 1
-            ages.append(a)
-            at_or_above += a >= norm
-    return {
-        "countries": countries,
-        "n_countries": len(countries),
-        "n_offices": offices,
-        "avg_leader_age": sum(ages) / len(ages) if ages else None,
-        "avg_median_age": sum(medians) / len(medians) if medians else None,
-        "n_medians": len(medians),
-        "at_or_above": at_or_above,
-    }
-
-
-def home() -> str:
-    today = datetime.date.today()
-    st = leader_stats(today)
-    langs_list = languages()
-    langs = "".join(
-        f'<a href="{"manifesto/" if code == "en" else code + "/"}" lang="{code}">{LANG_NAMES.get(code, code)}</a>'
-        for code in langs_list
-    )
-    facts = (
-        '<div class="facts"><div class="wrap"><ul>'
-        f"<li><strong>{len(langs_list)}</strong>languages</li>"
-        f"<li><strong>{st['n_countries']}</strong>countries profiled</li>"
-        f"<li><strong>{st['at_or_above']}</strong>of {st['n_offices']} top office holders at or above the norm</li>"
-        "</ul></div></div>"
-    ) if st["n_countries"] else ""
-
-    gap = ""
-    if st["avg_leader_age"] is not None:
-        scale = 90
-        rows = [
-            ("Heads of state and government", f"average age, {st['n_offices']} office holders", st["avg_leader_age"], ""),
-        ]
-        if st["avg_median_age"] is not None:
-            rows.append(("The people they lead", f"average median age, {st['n_medians']} countries", st["avg_median_age"], " people"))
-        bars = "".join(
-            f'<div class="gap-row"><div class="label">{label}<small>{sub}</small></div>'
-            f'<div class="bar{cls}"><i style="width:{min(v / scale * 100, 100):.1f}%"></i><b>{v:.0f}</b></div></div>'
-            for label, sub, v, cls in rows
-        )
-        gap = (
-            '<section class="section ink"><div class="wrap">'
-            "<h2>Leaders and the people they lead</h2>"
-            f'<div class="gap">{bars}</div>'
-            f'<p class="gap-note">Calculated on {today.isoformat()} from the sourced profiles on the <a href="countries/">countries page</a>. '
-            "Bars run from 0 to 90 years.</p>"
-            "</div></section>"
-        )
-
-    names = "".join(f"<li>{html.escape(c.get('country', ''))}</li>" for c in st["countries"])
-    countries_cloud = (
-        f"<h2>{st['n_countries']} countries and counting</h2>"
-        "<p>For every country we record who holds the highest offices, their age and the country's statutory retirement age, each with its source.</p>"
-        f'<ul class="country-cloud">{names}</ul>'
-    ) if st["n_countries"] else "<h2>Countries</h2><p>The first country profiles are being researched.</p>"
-
-    body = render("home.html", facts=facts, gap=gap, countries_cloud=countries_cloud, langs=langs, repo=REPO_URL)
-    return page("Pass the Baton: passing it on is leadership", body)
-
-
-def doc_page(md_file: Path, lang: str, depth: int) -> str:
-    text = md_file.read_text(encoding="utf-8")
-    title = first_heading(text, "Pass the Baton")
-    body = f'<article class="doc" lang="{lang}">{md_to_html(text)}</article>'
-    return page(title, body, lang=lang, depth=depth)
-
+# ---------- Country data ----------
 
 def load_countries() -> list[dict]:
     out = []
-    for f in sorted((ROOT / "data/countries").glob("*.json")):
+    folder = ROOT / "data/countries"
+    for f in sorted(folder.glob("*.json")) if folder.is_dir() else []:
         try:
-            out.append(json.loads(f.read_text(encoding="utf-8")))
+            d = json.loads(f.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
             continue
+        d.setdefault("iso2", f.stem.upper())
+        out.append(d)
     return sorted(out, key=lambda c: c.get("country", ""))
 
 
@@ -174,72 +170,196 @@ def age_on(birth: str | None, today: datetime.date) -> int | None:
     return today.year - b.year - ((today.month, today.day) < (b.month, b.day))
 
 
-def src(url: str | None, label: str = "source") -> str:
-    return f'<a href="{html.escape(url)}" rel="nofollow noopener">{label}</a>' if url else ""
-
-
-def country_norm(c: dict) -> int:
+def country_norm(c: dict) -> float:
     statutory = (c.get("retirement_age") or {}).get("statutory")
     return min(statutory, 67) if isinstance(statutory, (int, float)) else 67
 
 
-def countries_page() -> str:
+def num(v: float) -> str:
+    return f"{v:g}"
+
+
+def src(url: str | None, label: str) -> str:
+    return f'<a href="{html.escape(url)}" rel="nofollow noopener">{html.escape(label)}</a>' if url else ""
+
+
+def leader_stats(today: datetime.date) -> dict:
+    countries = load_countries()
+    ages, medians, at_or_above = [], [], 0
+    for c in countries:
+        norm = country_norm(c)
+        m = (c.get("median_age") or {}).get("value")
+        if isinstance(m, (int, float)):
+            medians.append(m)
+        for o in c.get("offices", []):
+            a = age_on(o.get("birth_date"), today)
+            if a is None:
+                continue
+            ages.append(a)
+            at_or_above += a >= norm
+    return {
+        "countries": countries,
+        "n_countries": len(countries),
+        "n_offices": len(ages),
+        "avg_leader_age": sum(ages) / len(ages) if ages else None,
+        "avg_median_age": sum(medians) / len(medians) if medians else None,
+        "n_medians": len(medians),
+        "at_or_above": at_or_above,
+    }
+
+
+# ---------- Pages ----------
+
+def home(lang: str) -> str:
+    s = load_strings(lang)
     today = datetime.date.today()
-    scale = 90
+    st = leader_stats(today)
+    langs = "".join(
+        f'<a href="{{{{up}}}}{page_path(code, "home")}" lang="{code}" hreflang="{code}">{LANG_NAMES.get(code, code)}</a>'
+        for code in languages()
+    )
+    facts = (
+        '<div class="facts"><div class="wrap"><ul>'
+        f"<li><strong>{len(languages())}</strong>{html.escape(s['fact_languages'])}</li>"
+        f"<li><strong>{st['n_countries']}</strong>{html.escape(s['fact_countries'])}</li>"
+        f"<li><strong>{st['at_or_above']}</strong>{html.escape(fmt(s['fact_offices'], total=st['n_offices']))}</li>"
+        "</ul></div></div>"
+    ) if st["n_countries"] else ""
+
+    gap = ""
+    if st["avg_leader_age"] is not None:
+        rows = [(s["gap_leaders"], fmt(s["gap_leaders_sub"], n=st["n_offices"]), st["avg_leader_age"], "")]
+        if st["avg_median_age"] is not None:
+            rows.append((s["gap_people"], fmt(s["gap_people_sub"], n=st["n_medians"]), st["avg_median_age"], " people"))
+        bars = "".join(
+            f'<div class="gap-row"><div class="label">{html.escape(label)}<small>{html.escape(sub)}</small></div>'
+            f'<div class="bar{cls}"><i style="width:{min(v / SCALE * 100, 100):.1f}%"></i><b>{v:.0f}</b></div></div>'
+            for label, sub, v, cls in rows
+        )
+        gap = (
+            '<section class="section ink"><div class="wrap">'
+            f"<h2>{html.escape(s['gap_title'])}</h2>"
+            f'<div class="gap">{bars}</div>'
+            f'<p class="gap-note"><a href="{{{{base}}}}countries/">{html.escape(fmt(s["gap_note"], date=today.isoformat()))}</a></p>'
+            "</div></section>"
+        )
+
+    names = "".join(
+        f'<li><a href="{{{{base}}}}countries/#{c["iso2"].lower()}">{html.escape(c.get("country", ""))}</a></li>'
+        for c in st["countries"]
+    )
+    countries_cloud = (
+        f"<h2>{html.escape(fmt(s['countries_title'], n=st['n_countries']))}</h2>"
+        f"<p>{html.escape(s['countries_text'])}</p>"
+        f'<ul class="country-cloud">{names}</ul>'
+    ) if st["n_countries"] else f"<h2>{html.escape(s['cp_title'])}</h2><p>{html.escape(s['countries_empty'])}</p>"
+
+    jsonld = (
+        '<script type="application/ld+json">'
+        + json.dumps({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Pass the Baton",
+            "url": ORIGIN + "/",
+            "logo": f"{ORIGIN}/brand/favicon.svg",
+            "slogan": s["hero_title"],
+            "description": s["meta_description"],
+            "sameAs": [REPO_URL],
+        }, ensure_ascii=False)
+        + "</script>"
+    )
+    body = render("home.html", s, facts=facts, gap=gap, countries_cloud=countries_cloud, langs=langs)
+    return page(lang, "home", s["site_title"], s["meta_description"], body, jsonld)
+
+
+def manifesto(lang: str) -> str:
+    s = load_strings(lang)
+    md_file = ROOT / "MANIFESTO.md" if lang == "en" else ROOT / "translations" / lang / "MANIFESTO.md"
+    text = md_file.read_text(encoding="utf-8")
+    title = first_heading(text, "Pass the Baton")
+    body = f'<article class="doc" lang="{lang}">{md_to_html(text)}</article>'
+    return page(lang, "manifesto", title, s["meta_description"], body)
+
+
+def countries(lang: str) -> str:
+    s = load_strings(lang)
+    today = datetime.date.today()
     cards = []
     for c in load_countries():
+        code = c["iso2"].lower()
         ra = c.get("retirement_age") or {}
         norm = country_norm(c)
         groups = ra.get("by_group") or {}
         ra_text = (", ".join(f"{k.replace('_', ' ')} {v}" for k, v in groups.items()) if groups
-                   else (str(ra.get("statutory")) if ra.get("statutory") is not None else "unknown"))
-        norm_pos = f"{norm / scale * 100:.1f}%"
+                   else (num(ra["statutory"]) if isinstance(ra.get("statutory"), (int, float)) else s["cp_unknown"]))
+        norm_pos = f"{norm / SCALE * 100:.1f}%"
         rows = []
         for o in c.get("offices", []):
             age = age_on(o.get("birth_date"), today)
             on = age is not None and age >= norm
-            width = f"{min(age / scale * 100, 100):.1f}%" if age is not None else "0%"
+            width = f"{min(age / SCALE * 100, 100):.1f}%" if age is not None else "0%"
             rows.append(
                 '<div class="office">'
-                f'<div class="who"><b>{html.escape(o.get("holder") or "unknown")}</b>'
-                f'{html.escape(o.get("title") or o.get("office", ""))} {src(o.get("source"))}</div>'
+                f'<div class="who"><b>{html.escape(o.get("holder") or s["cp_unknown"])}</b>'
+                f'{html.escape(o.get("title") or o.get("office", ""))} {src(o.get("source"), s["cp_source"])}</div>'
                 f'<div class="age{" on" if on else ""}">{age if age is not None else "?"}</div>'
-                f'<div class="track" role="img" aria-label="Age {age if age is not None else "unknown"}, norm {norm}">'
-                f'<i style="width:{width}"></i><u style="left:{norm_pos}"></u></div>'
+                f'<div class="track" aria-hidden="true"><i style="width:{width}"></i><u style="left:{norm_pos}"></u></div>'
                 "</div>"
             )
         med = c.get("median_age") or {}
         if isinstance(med.get("value"), (int, float)):
+            year = f", {med['year']}" if med.get("year") else ""
             rows.append(
                 '<div class="office">'
-                f'<div class="who"><b>The people</b>median age{f", {med.get("year")}" if med.get("year") else ""} {src(med.get("source"))}</div>'
+                f'<div class="who"><b>{html.escape(s["cp_people"])}</b>{html.escape(s["cp_median"])}{year} {src(med.get("source"), s["cp_source"])}</div>'
                 f'<div class="age">{med["value"]:.0f}</div>'
-                f'<div class="track people"><i style="width:{min(med["value"] / scale * 100, 100):.1f}%"></i><u style="left:{norm_pos}"></u></div>'
+                f'<div class="track people" aria-hidden="true"><i style="width:{min(med["value"] / SCALE * 100, 100):.1f}%"></i><u style="left:{norm_pos}"></u></div>'
                 "</div>"
             )
+        system = f' · {html.escape(c["political_system"])}' if c.get("political_system") else ""
         cards.append(
-            '<section class="country">'
-            f'<header><h3>{html.escape(c.get("country", ""))}</h3>'
-            f'<span class="norm">norm for a new term <b>{norm}</b></span></header>'
+            f'<section class="country" id="{code}">'
+            f'<header><h3><a href="#{code}" title="{html.escape(s["cp_link"])}">{html.escape(c.get("country", ""))}</a></h3>'
+            f'<span class="norm">{html.escape(s["cp_norm"])} <b>{num(norm)}</b></span></header>'
             + "".join(rows)
-            + f'<p class="meta">Statutory retirement age: {html.escape(ra_text)} {src(ra.get("source"))}'
-            + (f' · {html.escape(c.get("political_system"))}' if c.get("political_system") else "")
-            + f' · checked {html.escape(c.get("checked_on", ""))}</p>'
+            + f'<p class="meta">{html.escape(s["cp_retirement"])}: {html.escape(ra_text)} {src(ra.get("source"), s["cp_source"])}'
+            + f'{system} · {html.escape(s["cp_checked"])} {html.escape(c.get("checked_on", ""))}</p>'
             "</section>"
         )
-    listing = f'<div class="country-list">{"".join(cards)}</div>' if cards else "<p>The first country profiles are being researched.</p>"
+    listing = f'<div class="country-list">{"".join(cards)}</div>' if cards else f"<p>{html.escape(s['countries_empty'])}</p>"
     body = f"""
 <article class="doc wide">
-<h1>Countries</h1>
-<p class="countries-intro">For each country: who holds the highest offices, their age, and the country's statutory retirement age. The norm for a new term is that retirement age, at the latest 67. This page states facts; it does not judge anyone. Every value links to its source.</p>
-<p class="countries-intro">Kings and queens are included too. They have no terms, but the same principle applies: what holds for the people holds for those who lead them.</p>
-<div class="legend"><span>age of the office holder</span><span class="p">median age of the population</span><span class="n">the norm for a new term</span></div>
+<h1>{html.escape(s['cp_title'])}</h1>
+<p class="countries-intro">{html.escape(s['cp_intro'])}</p>
+<p class="countries-intro">{html.escape(s['cp_monarchs'])}</p>
+<div class="legend"><span>{html.escape(s['cp_legend_holder'])}</span><span class="p">{html.escape(s['cp_legend_people'])}</span><span class="n">{html.escape(s['cp_legend_norm'])}</span></div>
 {listing}
-<p><small>Ages calculated on {today.isoformat()}. Bars run from 0 to 90 years. Profiles are researched by an AI agent with web search, reviewed by a person before publication, and refreshed regularly. Spotted an error? <a href="{REPO_URL}/issues">Tell us</a>.</small></p>
+<p><small>{html.escape(fmt(s['cp_footnote'], date=today.isoformat()))} {html.escape(s['cp_error'])} <a href="{REPO_URL}/issues">{html.escape(s['cp_tell'])}</a>.</small></p>
 </article>
 """
-    return page("Countries: Pass the Baton", body, depth=1,
-                description="Leaders of the highest offices compared with their country's retirement age.")
+    return page(lang, "countries", f"{s['cp_title']}: Pass the Baton", s["cp_meta_description"], body)
+
+
+def sitemap() -> str:
+    today = datetime.date.today().isoformat()
+    urls = []
+    for code in languages():
+        for key in PAGES:
+            alts = "".join(
+                f'<xhtml:link rel="alternate" hreflang="{c}" href="{page_url(c, key)}"/>' for c in languages()
+            )
+            urls.append(f"<url><loc>{page_url(code, key)}</loc><lastmod>{today}</lastmod>{alts}</url>")
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+        + "\n".join(urls) + "\n</urlset>\n"
+    )
+
+
+def write(rel: str, content: str) -> None:
+    target = OUT / rel
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(content, encoding="utf-8")
 
 
 def main() -> None:
@@ -247,30 +367,25 @@ def main() -> None:
         shutil.rmtree(OUT)
     OUT.mkdir()
 
-    if (ROOT / "brand").is_dir():
-        shutil.copytree(ROOT / "brand", OUT / "brand", ignore=shutil.ignore_patterns("*.md"))
+    for folder in ("brand", "design"):
+        if (ROOT / folder).is_dir():
+            shutil.copytree(ROOT / folder, OUT / folder, ignore=shutil.ignore_patterns("*.md"))
+    shutil.copy(SITE / "style.css", OUT / "style.css")
+    if (SITE / "og-card.svg").exists():
+        shutil.copy(SITE / "og-card.svg", OUT / "og-card.svg")
 
-    shutil.copy(Path(__file__).resolve().parent / "style.css", OUT / "style.css")
-    if (ROOT / "design").is_dir():
-        shutil.copytree(ROOT / "design", OUT / "design", ignore=shutil.ignore_patterns("*.md"))
+    for code in languages():
+        write(page_path(code, "home") + "index.html", home(code))
+        write(page_path(code, "manifesto") + "index.html", manifesto(code))
+        write(page_path(code, "countries") + "index.html", countries(code))
 
-    (OUT / "index.html").write_text(home(), encoding="utf-8")
-
-    (OUT / "manifesto").mkdir()
-    (OUT / "manifesto/index.html").write_text(doc_page(ROOT / "MANIFESTO.md", "en", 1), encoding="utf-8")
-
-    for code in languages()[1:]:
-        (OUT / code).mkdir()
-        (OUT / code / "index.html").write_text(
-            doc_page(ROOT / "translations" / code / "MANIFESTO.md", code, 1), encoding="utf-8"
-        )
-
-    (OUT / "countries").mkdir()
-    (OUT / "countries/index.html").write_text(countries_page(), encoding="utf-8")
-
-    (OUT / "CNAME").write_text(DOMAIN + "\n", encoding="utf-8")
-    (OUT / ".nojekyll").write_text("", encoding="utf-8")
-    print("Built", sorted(str(p.relative_to(OUT)) for p in OUT.rglob("*.html")))
+    write("sitemap.xml", sitemap())
+    write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {ORIGIN}/sitemap.xml\n")
+    write("CNAME", DOMAIN + "\n")
+    write(".nojekyll", "")
+    missing = [c for c in languages() if not has_own_strings(c)]
+    print(f"Built {len(languages())} languages x {len(PAGES)} pages."
+          + (f" Interface still in English for: {', '.join(missing)}." if missing else ""))
 
 
 if __name__ == "__main__":
