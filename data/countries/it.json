@@ -1,0 +1,41 @@
+{
+  "country": "Italy",
+  "iso2": "IT",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 67,
+    "notes": "Old-age pension (pensione di vecchiaia) age is 67 for men and women in 2026, with at least 20 years of contributions. The age is linked to life expectancy and is scheduled to rise: an INPS circular on the 2027-2028 adjustment is reported as setting 67 years 1 month in 2027 and 67 years 3 months in 2028 (https://italianpayroll.it/pensions-new-requirements-2027-2028/). Early retirement based on contribution years is possible without a minimum age.",
+    "source": "https://www.statista.com/statistics/1174497/retirement-age-in-italy-by-gender/"
+  },
+  "political_system": "parliamentary republic",
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President of the Republic",
+      "holder": "Sergio Mattarella",
+      "birth_date": "1941-07-23",
+      "in_office_since": "2015-02-03",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Sergio_Mattarella"
+    },
+    {
+      "office": "Head of government",
+      "title": "President of the Council of Ministers (Prime Minister)",
+      "holder": "Giorgia Meloni",
+      "birth_date": "1977-01-15",
+      "in_office_since": "2022-10-22",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Giorgia_Meloni"
+    }
+  ],
+  "next_national_election": {
+    "date": null,
+    "source": "https://www.aljazeera.com/news/2026/10/8/italian-law-to-give-election-winners-bonus-seats-why-thats-controversial"
+  },
+  "open_questions": [
+    "Italy next national election: no fixed date yet. Al Jazeera (2026-10-08) says it must be held by 22 December 2027 and can be called earlier. One Wikipedia page (Legislature XIX of Italy) gives 22 October 2027 as the latest date, which conflicts with this; an official source (Camera dei deputati / Ministry of the Interior) is needed.",
+    "Mattarella: his second seven-year term began with his swearing-in on 3 February 2022 (ANSA, https://www.ansa.it/english/news/2022/02/03/mattarella-set-to-be-sworn-in-for-second-term_5dbec46a-770d-4eb1-aff1-359a9d6882d7.html). in_office_since shows the start of his first term (2015-02-03, Wikipedia). The exact end date of the second term was not found in an official source, so term_ends is null. The Quirinale website should be checked.",
+    "Meloni: no fixed term end; the government depends on the legislature, which ends no later than late 2027. Birth date and in-office date are from Wikipedia; governo.it confirms she is in office as of 2026-10-08 but gives no birth date. An official governo.it profile with the birth date should be added.",
+    "Retirement age: INPS (official) pages were not found in this run. The 2027 figure is disputed in sources: an INPS circular summary reports 67y1m for 2027, while an IPE article (https://www.ipe.com/news/italys-inps-under-fire-for-unilaterally-changing-pension-requirements/10128131.article) cites a union figure of 67y3m for 2027. Needs an official INPS source."
+  ]
+}
