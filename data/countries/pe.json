@@ -1,0 +1,32 @@
+{
+  "country": "Peru",
+  "iso2": "PE",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 65,
+    "notes": "Age 65 for both public (SNP) and private (SPP) pension systems, with at least 20 years of contributions for a standard SNP pension. Early retirement is possible under certain conditions. A 2024 pension reform law kept age 65 as the normal old-age pension age.",
+    "source": "https://www.ssa.gov/policy/docs/progdesc/intl_update/2024-10/index.html"
+  },
+  "political_system": "unitary presidential republic with a bicameral Congress",
+  "population": { "value": 34600000, "year": 2025, "source": "https://www.unfpa.org/data/world-population/PE" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President",
+      "holder": "Keiko Fujimori",
+      "birth_date": "1975-05-25",
+      "in_office_since": "2026-07-28",
+      "term_ends": "2031-07-28",
+      "source": "https://en.wikipedia.org/wiki/Keiko_Fujimori"
+    }
+  ],
+  "next_national_election": { "date": "2031-04-13", "source": "https://en.wikipedia.org/wiki/Next_Peruvian_general_election" },
+  "open_questions": [
+    "Median age: no reliable UN/INEI figure with year found in this run; left null.",
+    "Term end 2031-07-28 is derived from the five-year term and the 28 July inauguration date (President of Peru article), not from an official calendar.",
+    "The President of the Council of Ministers (Luis Galarreta per Wikipedia) was not added as a separate entry because his birth date and appointment were not verified in this run; the President is listed as head of state and government.",
+    "Pension age source is the US Social Security Administration (Oct 2024); an official Peruvian source (ONP / SBS) was not found in this run.",
+    "Next election date is from Wikipedia; an official source (JNE / ONPE) was not found in this run."
+  ]
+}
