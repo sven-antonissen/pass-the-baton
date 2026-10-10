@@ -1,0 +1,30 @@
+{
+  "country": "United States",
+  "iso2": "US",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 67,
+    "notes": "Social Security full retirement age is 67 for people born in 1960 or later; it is 66 for those born 1943-1954 and rises in two-month steps to 66 years 10 months for those born 1955-1959. Benefits can be claimed from age 62 with a reduction. Medicare eligibility remains at 65.",
+    "source": "https://www.ssa.gov/pubs/EN-05-10035.pdf"
+  },
+  "political_system": "federal presidential constitutional republic",
+  "population": { "value": 341784857, "year": 2025, "source": "https://www.census.gov/newsroom/press-releases/2026/vintage-2025-pop-estimates.html" },
+  "median_age": { "value": 39.4, "year": 2025, "source": "https://www.visionmonday.com/business/research-and-stats/article/us-median-age-continued-to-rise-in-2025-census-bureau-reports/" },
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President",
+      "holder": "Donald John Trump",
+      "birth_date": "1946-06-14",
+      "in_office_since": "2025-01-20",
+      "term_ends": "2029-01-20",
+      "source": "https://millercenter.org/president/trump"
+    }
+  ],
+  "next_national_election": { "date": "2026-11-03", "source": "https://bipartisanpolicy.org/article/the-2026-midterms-key-dates-and-events/" },
+  "open_questions": [
+    "The next national election listed (2026-11-03) is the congressional midterm (all 435 House seats and 35 Senate seats). The date of the next presidential election (2028) was not verified in this run.",
+    "Term end 2029-01-20 follows from the inauguration date (2025-01-20) and the 20th Amendment as described by presidencyclock.com (a non-official site); confirm against an official or constitutional source.",
+    "Median age 39.4 (2025) was taken from press coverage of a Census Bureau report; the primary Census Bureau page was not retrieved in this run."
+  ]
+}

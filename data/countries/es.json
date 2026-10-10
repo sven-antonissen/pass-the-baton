@@ -1,0 +1,41 @@
+{
+  "country": "Spain",
+  "iso2": "ES",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 67,
+    "notes": "Two-track system phased in since 2013. In 2026 the ordinary age is 66 years 10 months, or 65 with at least 38 years 3 months of contributions. From 2027 it becomes 67, or 65 with at least 38 years 6 months of contributions. The value 67 is the age reached once the transition completes.",
+    "source": "https://coveredabroad.com/guides/retirement-age-in-spain/"
+  },
+  "political_system": "parliamentary constitutional monarchy",
+  "population": { "value": 49801559, "year": 2026, "source": "https://www.ine.es/uc/pFdjFZnPi1" },
+  "median_age": { "value": 46.8, "year": 2025, "source": "https://www.populationpyramid.net/spain/2025/" },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "King",
+      "holder": "Felipe VI",
+      "birth_date": "1968-01-30",
+      "in_office_since": "2014-06-19",
+      "term_ends": null,
+      "source": "https://www.britannica.com/biography/Felipe-VI"
+    },
+    {
+      "office": "Head of government",
+      "title": "President of the Government (Prime Minister)",
+      "holder": "Pedro Sánchez Pérez-Castejón",
+      "birth_date": "1972-02-29",
+      "in_office_since": "2018-06-02",
+      "term_ends": null,
+      "source": "https://planetrulers.com/spain-prime-minister/"
+    }
+  ],
+  "next_national_election": { "date": null, "source": "https://en.wikipedia.org/wiki/2027_in_politics" },
+  "open_questions": [
+    "Next general election: no exact date found. It must take place no later than 2027-08-22 unless triggered earlier; date left null.",
+    "Population 49,801,559 is the provisional INE figure for 1 July 2026 (Estadística Continua de Población, published 6 Aug 2026).",
+    "Median age 46.8 (2025) is the UN World Population Prospects 2024 figure as shown on populationpyramid.net; INE publishes mean age (44.55 in 2025) but its median-age table was not retrieved. Replace with INE median if available.",
+    "Retirement age source is a secondary guide quoting the Seguridad Social table; confirm on seg-social.es.",
+    "Sánchez in_office_since 2018-06-02 comes from planetrulers.com; La Moncloa confirms only 'June 2018'. He was re-invested on 2023-11-16. The prime minister has no fixed term end."
+  ]
+}

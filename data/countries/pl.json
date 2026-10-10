@@ -1,0 +1,42 @@
+{
+  "country": "Poland",
+  "iso2": "PL",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 65,
+    "by_group": { "men": 65, "women": 60 },
+    "notes": "Normal retirement age is 65 for men and 60 for women (restored in October 2017 after a planned increase to 67 was reversed). statutory is set to the higher value (men). The OECD reports no changes foreseen in law.",
+    "source": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/11/pensions-at-a-glance-2025-country-notes_e320013d/poland_8eb20164/33765ee7-en.pdf"
+  },
+  "political_system": "unitary parliamentary republic",
+  "population": { "value": 37490000, "year": 2024, "source": "https://wbj.pl/gus-poland-continues-demographic-decline/post/147422" },
+  "median_age": { "value": 43, "year": 2024, "source": "https://wbj.pl/gus-poland-continues-demographic-decline/post/147422" },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President",
+      "holder": "Karol Tadeusz Nawrocki",
+      "birth_date": "1983-03-03",
+      "in_office_since": "2025-08-06",
+      "term_ends": "2030-08-06",
+      "source": "https://en.wikipedia.org/wiki/Karol_Nawrocki"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Donald Franciszek Tusk",
+      "birth_date": "1957-04-22",
+      "in_office_since": "2023-12-13",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Donald_Tusk"
+    }
+  ],
+  "next_national_election": { "date": null, "source": "https://en.wikipedia.org/wiki/2027_in_politics" },
+  "open_questions": [
+    "Next parliamentary election: no exact date found. It must take place no later than 2027-11-07 unless triggered earlier; date left null.",
+    "President's term end 2030-08-06 is derived from the 6 Aug 2025 swearing-in and the five-year term (illiberalism.org, nbcnews.com); confirm against the Polish constitution or an official source.",
+    "Population (37.49 million, end of 2024) and median age (43) come from a press report of Statistics Poland (GUS) data; the primary GUS publication was not retrieved. Update to the latest GUS figure.",
+    "Tusk's full middle name 'Franciszek' was not confirmed in the search results; holder name may be shortened to 'Donald Tusk'.",
+    "Nawrocki's full name and Tusk's dates are from Wikipedia; an official source (prezydent.pl, premier.gov.pl) would be preferable."
+  ]
+}
