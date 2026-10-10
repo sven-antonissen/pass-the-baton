@@ -1,0 +1,40 @@
+{
+  "country": "Portugal",
+  "iso2": "PT",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 66.75,
+    "notes": "Normal pension age under the general social security scheme is 66 years and 9 months in 2026 (stored as 66.75) and rises to 66 years and 11 months in 2027. It is reset every year by ministerial order based on life expectancy at 65. Early retirement from 60 is possible with 40+ years of contributions, with a reduction.",
+    "source": "https://www.theportugalnews.com/news/2025-12-29/portugal-retirement-age-to-rise-again/937568"
+  },
+  "political_system": "unitary semi-presidential republic",
+  "population": { "value": 11424031, "year": 2025, "source": "https://www.ine.pt/xportal/xmain?xpid=INE&xpgid=ine_destaques&DESTAQUESdest_boui=770295679&DESTAQUESmodo=2" },
+  "median_age": { "value": 45.8, "year": 2025, "source": "https://www.ine.pt/ngt_server/attachfileu.jsp?look_parentBoui=799790042&att_display=n&att_download=y" },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President of the Republic",
+      "holder": "António José Martins Seguro",
+      "birth_date": "1962-03-11",
+      "in_office_since": "2026-03-09",
+      "term_ends": "2031-03-09",
+      "source": "https://www.presidencia.pt/en-en/president-of-the-republic/the-president/"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Luís Filipe Montenegro Cardoso de Morais Esteves",
+      "birth_date": "1973-02-16",
+      "in_office_since": "2025-06-05",
+      "term_ends": null,
+      "source": "https://portugal.gov.pt/en/gc25/prime-minister/about"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "Next national election: no date found in this run. A parliamentary election is not scheduled; the next presidential election would fall at the end of the five-year term (March 2031). Needs an official source (e.g. Comissão Nacional de Eleições).",
+    "President Seguro: birth date 1962-03-11 is from presidencia.pt (a secondary site gave 15 September 1962, which conflicts and was disregarded). The start date 2026-03-09 comes from Wikipedia and a secondary site, not from presidencia.pt. term_ends 2031-03-09 is derived from the five-year term and was not stated on an official page.",
+    "Prime Minister Montenegro: in_office_since uses the start of the current (XXV) government on 2025-06-05 per portugal.gov.pt. Wikipedia and Wikidata give 2024-04-02 as the start of his continuous tenure as Prime Minister (his previous government fell in March 2025). Decide which convention the site should use.",
+    "Retirement age source is a news report on the official decree published in the Diário da República; the decree itself (Portaria) was not retrieved."
+  ]
+}
