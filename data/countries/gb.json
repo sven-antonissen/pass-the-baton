@@ -1,0 +1,42 @@
+{
+  "country": "United Kingdom",
+  "iso2": "GB",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 66,
+    "notes": "State Pension age is 66 for men and women (people born before 6 April 1960). It is rising to 67 in a phased way for people born 6 April 1960 to 5 March 1961, completed by April 2028 under the Pensions Act 2014. A further rise to 68 is legislated for 2044 to 2046 but its timing is under review.",
+    "source": "https://www.royallondon.com/guides-tools/pension-guides/pension-basics/state-pension-age-increase-what-you-need-to-know/"
+  },
+  "political_system": "unitary parliamentary constitutional monarchy",
+  "population": { "value": 69487000, "year": 2025, "source": "https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population" },
+  "median_age": { "value": 40.1, "year": 2025, "source": "https://database.earth/population/median-age/2025" },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "King",
+      "holder": "Charles III",
+      "birth_date": "1948-11-14",
+      "in_office_since": "2022-09-08",
+      "term_ends": null,
+      "source": "https://www.britannica.com/biography/Charles-III-king-of-the-United-Kingdom"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Andy Burnham",
+      "birth_date": "1970-01-07",
+      "in_office_since": "2026-07-20",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Andy_Burnham"
+    }
+  ],
+  "next_national_election": { "date": null, "source": "https://www.instituteforgovernment.org.uk/explainer/calling-general-election" },
+  "open_questions": [
+    "No general election date is set: it must be held no later than 2029-08-15 and the prime minister can call it earlier. Date left null.",
+    "The monarch holds the post for life and the prime minister has no fixed term, so term_ends is null for both.",
+    "Andy Burnham became Prime Minister on 2026-07-20 (confirmed on gov.uk) succeeding Keir Starmer; his birth date comes from Wikipedia and several other biographies, not from an official page.",
+    "Population of 69,487,000 (30 June 2025 official estimate) is taken from a Wikipedia list; the ONS original was not opened. UN projection for 2025 is about 69.9 million.",
+    "Median age of 40.1 comes from database.earth, which republishes UN World Population Prospects 2024; other aggregators give 39.8 to 41.6. No ONS figure was retrieved.",
+    "State Pension age sources were commercial pension guides, not gov.uk; they agree with each other. The rise to 67 is described as starting in April or May 2026 (first affected cohort reaches the new age from 6 May 2026)."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "country": "South Africa",
+  "iso2": "ZA",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 60,
+    "notes": "No general statutory retirement age was found. 60 is the minimum age for the state Older Person's Grant (means-tested, men and women). Sources conflict on whether men face a higher age (one non-official site says 65 for men); the official gov.za and SASSA pages say 60. Public-sector pension (GEPF) retirement age was not verified.",
+    "source": "https://www.gov.za/services/services-residents/social-benefits/old-age-pension"
+  },
+  "political_system": "parliamentary republic; the president is elected by the National Assembly and is both head of state and head of government; coalition Government of National Unity",
+  "population": { "value": 64800000, "year": 2025, "source": "https://www.unfpa.org/data/world-population/ZA" },
+  "median_age": { "value": 28.7, "year": 2025, "source": "https://database.earth/population/median-age/2025" },
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President",
+      "holder": "Cyril Ramaphosa",
+      "birth_date": "1952-11-17",
+      "in_office_since": "2018-02-15",
+      "term_ends": null,
+      "source": "https://sahistory.org.za/people/cyril-matamela-ramaphosa"
+    }
+  ],
+  "next_national_election": { "date": null, "source": "https://www.riotimesonline.com/south-africa-politics-key-players-2026/" },
+  "open_questions": [
+    "No general statutory retirement age for South Africa was found; 60 is the Older Person's Grant age. Confirm whether to use this or the GEPF/public-sector age.",
+    "Ramaphosa's current term (re-elected by the National Assembly in June 2024, inaugurated 19 June 2024) is reported to run to 2029; the exact end date and the date of the next national election were not found.",
+    "Median age of 28.7 comes from database.earth, which republishes UN World Population Prospects 2024 (2025, medium variant); other aggregators give 28.2 to 30.7. A direct UN or Stats SA figure was not retrieved.",
+    "Population of 64.8 million is the UNFPA/UN figure for 2025; a Wikipedia list shows a lower official (Stats SA) estimate of 63,522,380 for 30 June 2026 that was not checked at the Stats SA source."
+  ]
+}
