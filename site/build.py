@@ -254,6 +254,7 @@ def countries_page() -> str:
 <article class="doc wide">
 <h1>Countries</h1>
 <p>For each country: who holds the highest offices, their age, and the country's statutory retirement age. The norm for a new term is that retirement age, at the latest 67. This page states facts; it does not judge anyone. Every value links to its source.</p>
+<p>Kings and queens are included too. They have no terms, but the same principle applies: what holds for the people holds for those who lead them.</p>
 {table}
 <p><small>Ages calculated on {today.isoformat()}. Profiles are researched by an AI agent with web search, reviewed by a person before publication, and refreshed regularly. Spotted an error? <a href="{REPO_URL}/issues">Tell us</a>.</small></p>
 </article>
