@@ -1,0 +1,44 @@
+{
+  "country": "China",
+  "iso2": "CN",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 63,
+    "by_group": {"men": 63, "women_cadres": 58, "women_workers": 55},
+    "notes": "Target ages under the decision of the NPC Standing Committee of 13 Sep 2024, being phased in over 15 years from 1 Jan 2025: men 60 to 63, women cadres 55 to 58, women blue-collar workers 50 to 55. Statutory is set to the highest value (men, 63). During the transition the age in force for an individual depends on birth date and is currently below the target.",
+    "source": "http://english.scio.gov.cn/chinavoices/2025-01/02/content_117641102.html"
+  },
+  "political_system": "unitary one-party socialist republic",
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President",
+      "holder": "Xi Jinping",
+      "birth_date": "1953-06-15",
+      "in_office_since": "2013-03-14",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Xi_Jinping"
+    },
+    {
+      "office": "Head of government",
+      "title": "Premier of the State Council",
+      "holder": "Li Qiang",
+      "birth_date": null,
+      "in_office_since": "2023-03-11",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Li_Qiang"
+    }
+  ],
+  "next_national_election": {
+    "date": null,
+    "source": null
+  },
+  "open_questions": [
+    "Xi Jinping also holds the posts of General Secretary of the Chinese Communist Party (since 2012-11-15) and Chairman of the Central Military Commission; these are not listed as separate offices. Birth date 1953-06-15 is confirmed by Britannica (https://britannica.com/EBchecked/topic/1490336); the start date of 2013-03-14 is from the Wikipedia page cited in the entry.",
+    "Li Qiang's exact birth day: English Wikipedia gives only 'July 1959', while SCMP and Simple English Wikipedia give 23 July 1959. No official source found; left null.",
+    "Exact end date of the presidential and premier terms not confirmed. The 14th National People's Congress is scheduled to continue until March 2028 (Wikipedia); left null.",
+    "China has no direct national election. The National People's Congress is indirectly elected; the 14th NPC runs until March 2028, but no confirmed date for the next election/session was found, so next_national_election is null.",
+    "One source (UPI, 2023) says Xi's third term runs 'through 2027', while the 14th NPC runs to March 2028; not resolved.",
+    "The retirement-age source is Xinhua via the State Council Information Office; the official NPC Standing Committee decision text was not accessed directly."
+  ]
+}

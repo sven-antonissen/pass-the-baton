@@ -1,0 +1,33 @@
+{
+  "country": "Brazil",
+  "iso2": "BR",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 65,
+    "by_group": {"men": 65, "women": 62},
+    "notes": "Minimum retirement ages set by the 2019 pension reform: 65 for men and 62 for women. Statutory is set to the higher value (men). Transitional rules for people insured before the reform were not checked in this run.",
+    "source": "https://cri.georgetown.edu/countries/brazil/"
+  },
+  "political_system": "federal presidential republic",
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President",
+      "holder": "Luiz Inácio Lula da Silva",
+      "birth_date": "1945-10-27",
+      "in_office_since": "2023-01-01",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Luiz_In%C3%A1cio_Lula_da_Silva"
+    }
+  ],
+  "next_national_election": {
+    "date": "2026-10-25",
+    "source": "https://en.wikipedia.org/wiki/2026_Brazilian_general_election"
+  },
+  "open_questions": [
+    "Date 2026-10-25 is the presidential runoff. The first round was held on 2026-10-04; per Bloomberg and CNBC, the incumbent President Lula and Senator Flávio Bolsonaro advanced to the runoff. Re-check after 2026-10-25 for the result and the new holder.",
+    "Exact end date of the current presidential term (term_ends) was not confirmed from a source in this run; left null.",
+    "Transitional pension rules (for people insured before the 2019 reform) not verified; only the permanent minimum ages (65 men / 62 women) are recorded.",
+    "Source for retirement age (Georgetown Center for Retirement Initiatives) is a secondary reference, not an official Brazilian pension authority page; an official INSS/gov.br source should be added."
+  ]
+}

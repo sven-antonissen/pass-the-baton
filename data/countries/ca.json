@@ -1,0 +1,50 @@
+{
+  "country": "Canada",
+  "iso2": "CA",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 65,
+    "notes": "Canada has no mandatory retirement age. 65 is the age of eligibility for the Old Age Security pension. A planned increase to 67 was cancelled in 2016, so eligibility remains 65.",
+    "source": "https://www.canada.ca/en/employment-social-development/programs/old-age-security/facts.html"
+  },
+  "political_system": "federal parliamentary constitutional monarchy",
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "King of Canada",
+      "holder": "Charles III",
+      "birth_date": null,
+      "in_office_since": null,
+      "term_ends": null,
+      "source": "https://www.thecanadianencyclopedia.ca/en/article/governor-general"
+    },
+    {
+      "office": "Representative of the head of state",
+      "title": "Governor General",
+      "holder": "Louise Arbour",
+      "birth_date": "1947-02-10",
+      "in_office_since": "2026-06-08",
+      "term_ends": null,
+      "source": "https://www.britannica.com/biography/Louise-Arbour"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Mark Carney",
+      "birth_date": "1965-03-16",
+      "in_office_since": "2025-03-14",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Mark_Carney"
+    }
+  ],
+  "next_national_election": {
+    "date": "2029-10-15",
+    "source": "https://www.elections.ca/electofacts"
+  },
+  "open_questions": [
+    "King Charles III: birth date and exact start date as King of Canada were not found in a source during this run; left null.",
+    "The Governor General (Louise Arbour, installed 2026-06-08, replacing Mary Simon) is the King's representative, not the head of state; included as a separate entry for completeness. Governor General serves at the King's pleasure, so term_ends is null.",
+    "Prime Minister has no fixed term; term_ends is null. The election date 2029-10-15 is the fixed-date maximum under the Canada Elections Act; an earlier election can be called.",
+    "Canada's retirement age has no statutory mandatory value; 65 reflects Old Age Security eligibility."
+  ]
+}
