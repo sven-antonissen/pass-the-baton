@@ -1,0 +1,51 @@
+{
+  "country": "Vietnam",
+  "iso2": "VN",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 61.5,
+    "by_group": {"men": 61.5, "women": 57},
+    "notes": "Values are for 2026 (men 61 years 6 months, women 57 years) for workers under normal conditions under the 2019 Labour Code. Statutory is the higher of the two group values. The age rises 3 months per year for men until 62 in 2028 and 4 months per year for women until 60 in 2035.",
+    "source": "https://www.vietnam.vn/en/quy-dinh-tuoi-nghi-huu-va-ty-le-luong-huu-nam-2026"
+  },
+  "political_system": "one-party socialist republic",
+  "population": { "value": 100675000, "year": 2024, "source": "https://en.wikipedia.org/wiki/Demographics_of_Asia" },
+  "median_age": { "value": 32.9, "year": 2024, "source": "https://en.wikipedia.org/wiki/Demographics_of_Asia" },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President",
+      "holder": "Tô Lâm",
+      "birth_date": "1957-07-10",
+      "in_office_since": "2026-04-07",
+      "term_ends": null,
+      "source": "https://vietnamlawmagazine.vn/brief-biography-of-party-general-secretary-and-state-president-to-lam-79148.html"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Lê Minh Hưng",
+      "birth_date": "1970-12-11",
+      "in_office_since": "2026-04-07",
+      "term_ends": null,
+      "source": "https://en.baochinhphu.vn/le-minh-hung-unanimously-elected-as-new-prime-minister-of-viet-nam-111260407121245654.htm"
+    },
+    {
+      "office": "Party leader",
+      "title": "General Secretary of the Communist Party of Vietnam",
+      "holder": "Tô Lâm",
+      "birth_date": "1957-07-10",
+      "in_office_since": "2024-08-03",
+      "term_ends": null,
+      "source": "https://vietnamlawmagazine.vn/brief-biography-of-party-general-secretary-and-state-president-to-lam-79148.html"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "President and Prime Minister were elected by the 16th National Assembly for the 2026-2031 term; the exact end dates were not found, so term_ends is null.",
+    "Tô Lâm was first elected General Secretary on 2024-08-03 and re-elected by the 14th Central Committee on 23 January 2026; the end date of the current tenure was not found.",
+    "Date of the next National Assembly election not found (last held 2026-03-15).",
+    "Population and median age are UN World Population Prospects 2024 values for 2024 taken from a Wikipedia table; the UN projection for 2026 is about 102.2 million and median age 33.9 (populationpyramids.org). A direct UN or national statistics office source was not retrieved.",
+    "The retirement ages listed apply to workers under normal conditions; no specific retirement age for senior Party or State offices was found."
+  ]
+}

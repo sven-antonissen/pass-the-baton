@@ -1,0 +1,41 @@
+{
+  "country": "Thailand",
+  "iso2": "TH",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 60,
+    "notes": "60 is the default retirement age under the Labour Protection Act for private-sector employees and the retirement age for civil servants under the Government Pension Act. A Ministry of Labour proposal to raise it to 65 was reported by one secondary source; no enacted or scheduled change was found.",
+    "source": "https://www.tilleke.com/insights/new-retirement-regime-thai-private-sector-employees/"
+  },
+  "political_system": "parliamentary constitutional monarchy",
+  "population": { "value": 71689000, "year": 2024, "source": "https://en.wikipedia.org/wiki/Demographics_of_Asia" },
+  "median_age": { "value": 40.1, "year": 2024, "source": "https://en.wikipedia.org/wiki/Demographics_of_Asia" },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "King",
+      "holder": "Vajiralongkorn (King Rama X)",
+      "birth_date": null,
+      "in_office_since": null,
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Second_Anutin_cabinet"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Anutin Charnvirakul",
+      "birth_date": "1966-09-13",
+      "in_office_since": "2026-03-19",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Second_Anutin_cabinet"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "Birth date and accession date of King Vajiralongkorn were not verified in this run; left null.",
+    "Source note: Anutin Charnvirakul's birth date (1966-09-13) comes from https://www.thaigov.go.th/en/cabinet/prime-minister. His 2026-03-19 re-election by the House (royal appointment the same day) is from the Wikipedia page cited in the office entry and is consistent with CNBC and The Diplomat reports. He first took office as Prime Minister on 2025-09-07.",
+    "Date of the next general election not found (last held 2026-02-08). A Constitutional Court case over the vote was reported in September 2026 with a possible election rerun; its status was not confirmed.",
+    "Prime Minister term_ends left null: the term runs until the House term ends or is dissolved, and no date was found.",
+    "Population and median age are UN World Population Prospects 2024 values for 2024 taken from a Wikipedia table; a direct UN or National Statistical Office source was not retrieved."
+  ]
+}
