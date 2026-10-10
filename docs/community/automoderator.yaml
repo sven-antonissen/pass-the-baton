@@ -1,0 +1,83 @@
+# AutoModerator configuration for r/PassTheBaton
+#
+# Paste everything below into: Mod Tools > Automations > AutoModerator
+# (or https://www.reddit.com/r/PassTheBaton/wiki/config/automoderator).
+# Rules are separated by "---". Removed or filtered items wait in the mod queue,
+# so a moderator always makes the final call.
+
+---
+# 1. Welcome comment under every new post, pinned, with the essentials.
+type: submission
+comment_stickied: true
+comment_locked: true
+comment: |
+    Thanks for posting in r/PassTheBaton.
+
+    **The demand:** anyone who has reached the statutory retirement age of their own country, and at the latest 67, does not start a new term in one of the highest offices. Not out of distrust of older people, but out of respect for renewal.
+
+    * [Read the manifesto](https://pass-the-baton.org/manifesto/), available in many languages
+    * [See how countries compare](https://pass-the-baton.org/countries/), with a source for every fact
+    * [Join the Discord](https://pass-the-baton.org/join/) to help translate, research and organise
+
+    We debate ideas, not people: no personal attacks on anyone, including leaders, and no mocking of age. Disagreement is welcome.
+
+    *I am a bot. This comment is posted automatically on every new post.*
+
+---
+# 2. Hold posts and comments from very new or low-karma accounts for review (spam and brigading protection).
+type: any
+author:
+    account_age: "< 3 days"
+    combined_karma: "< 10"
+    satisfy_any_threshold: true
+action: filter
+action_reason: "New or low-karma account: check before approving"
+
+---
+# 3. Calls for violence or harm: remove and alert the moderators.
+type: any
+body+title (includes, regex): ['\b(kill|shoot|hang|lynch|assassinate|execute)\s+(him|her|them|the\s+(president|king|queen|leader|pm|prime\s+minister))\b', '\b(should|must|deserve[sd]?\s+to)\s+(die|be\s+killed)\b']
+action: remove
+action_reason: "Possible call for violence: review"
+modmail_subject: "Possible call for violence in r/PassTheBaton"
+modmail: |
+    AutoModerator removed this {{kind}} by u/{{author}} for review: {{permalink}}
+
+---
+# 4. Mocking age or health: hold for review. The movement is about handing over, not about age as a flaw.
+type: any
+body+title (includes, regex): ['\b(senile|dementia|demented|geriatric|fossil|dinosaur|old\s+fart|boomer\s+(scum|trash)|on\s+his\s+deathbed|half\s+dead)\b']
+action: filter
+action_reason: "Possible mocking of age or health: check tone"
+
+---
+# 5. Personal data: phone numbers and e-mail addresses in posts or comments are held (doxxing protection).
+type: any
+body+title (includes, regex): ['\+?\d[\d\s().-]{8,}\d', '[\w.+-]+@[\w-]+\.[\w.-]+']
+action: filter
+action_reason: "Possible personal data (phone or e-mail): check before approving"
+
+---
+# 6. Link shorteners hide where a link goes: remove and ask for the full link.
+type: any
+domain: [bit.ly, tinyurl.com, t.co, goo.gl, ow.ly, is.gd, buff.ly, cutt.ly, rebrand.ly, shorturl.at]
+action: remove
+action_reason: "Link shortener"
+comment: |
+    Your {{kind}} was removed because it uses a link shortener. Please post the full link so everyone can see where it goes.
+
+    *I am a bot. Contact the moderators if you think this was a mistake.*
+
+---
+# 7. Party campaigning: the movement is non-partisan. Hold posts that ask people to vote for or against a party or candidate.
+type: any
+body+title (includes, regex): ['\b(vote\s+(for|against)|don''t\s+vote\s+for|join\s+(the\s+)?party)\b']
+action: filter
+action_reason: "Possible party campaigning: the movement is non-partisan"
+
+---
+# 8. Reports: anything reported three times is held for review.
+type: any
+reports: 3
+action: filter
+action_reason: "Reported three times"
