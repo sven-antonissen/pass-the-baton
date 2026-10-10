@@ -81,6 +81,14 @@ def build_message(config: dict) -> str:
         names = sorted(p.name for p in folder.iterdir()) if folder.is_dir() else []
         parts.append(f'<listing path="{rel}">\n' + "\n".join(names) + "\n</listing>")
     focus = os.environ.get("AGENT_FOCUS", "").strip()
+    # Extra inputs per focus item, e.g. "translations/{item}/site.json" for each language code in the focus.
+    pattern = config.get("focus_inputs")
+    if focus and pattern:
+        for item in [x.strip() for x in focus.split(",") if x.strip()]:
+            rel = pattern.replace("{item}", item)
+            path = ROOT / rel
+            if path.is_file():
+                parts.append(f'<file path="{rel}">\n{path.read_text(encoding="utf-8")}\n</file>')
     if focus:
         parts.append(f"Focus for this run (overrides the queue order): {focus}")
     parts.append("Do your task now and return all files in one write_files call.")

@@ -21,10 +21,19 @@ def queue_items(path: Path) -> list[str]:
     return [m.group(1).strip() for m in re.finditer(r"^- (.+)$", path.read_text(encoding="utf-8"), re.M)]
 
 
+def _site_keys_complete(folder: Path) -> bool:
+    try:
+        en = json.loads((ROOT / "translations/en/site.json").read_text(encoding="utf-8"))
+        own = json.loads((folder / "site.json").read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    return set(en) <= set(own)
+
+
 def remaining_localisation() -> list[str]:
     codes = [item.split(":", 1)[0].strip() for item in queue_items(ROOT / "agents/localisation/languages.md")]
     done = {p.name for p in (ROOT / "translations").iterdir()
-            if (p / "MANIFESTO.md").exists() and (p / "site.json").exists()}
+            if (p / "MANIFESTO.md").exists() and _site_keys_complete(p)}
     return [c for c in codes if c not in done]
 
 

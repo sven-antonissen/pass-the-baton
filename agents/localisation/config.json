@@ -14,5 +14,6 @@
   "protect": [
     "translations/en/site.json"
   ],
-  "check": "python3 agents/check_site_strings.py"
+  "check": "python3 agents/check_site_strings.py",
+  "focus_inputs": "translations/{item}/site.json"
 }

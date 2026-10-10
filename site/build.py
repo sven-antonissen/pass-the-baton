@@ -18,6 +18,7 @@ from __future__ import annotations
 import datetime
 import html
 import json
+import os
 import re
 import shutil
 from pathlib import Path
@@ -44,7 +45,7 @@ LOCALES = {
     "ar": "ar_AR", "hi": "hi_IN", "zh": "zh_CN", "ru": "ru_RU", "sw": "sw_KE", "id": "id_ID",
     "ja": "ja_JP", "tr": "tr_TR", "it": "it_IT", "pl": "pl_PL", "ko": "ko_KR",
 }
-PAGES = {"home": "", "manifesto": "manifesto/", "countries": "countries/"}
+PAGES = {"home": "", "manifesto": "manifesto/", "countries": "countries/", "join": "join/"}
 SCALE = 90  # bars run from 0 to 90 years
 
 
@@ -364,6 +365,96 @@ def countries(lang: str) -> str:
     return page(lang, "countries", f"{s['cp_title']}: Pass the Baton", s["cp_meta_description"], body)
 
 
+def load_community() -> dict:
+    f = ROOT / "data/community.json"
+    try:
+        return json.loads(f.read_text(encoding="utf-8")) if f.exists() else {}
+    except json.JSONDecodeError:
+        return {}
+
+
+_MEMBER_CACHE: dict = {}
+
+
+def community_counts(c: dict) -> dict:
+    """Best-effort member counts, fetched once per build. Missing counts are simply not shown."""
+    if _MEMBER_CACHE or os.environ.get("PTB_OFFLINE"):
+        return _MEMBER_CACHE
+    import urllib.request
+
+    def get(url: str) -> dict:
+        req = urllib.request.Request(url, headers={"User-Agent": "pass-the-baton-site/1.0 (+https://pass-the-baton.org)"})
+        with urllib.request.urlopen(req, timeout=8) as r:
+            return json.loads(r.read().decode("utf-8"))
+
+    code = (c.get("discord_invite") or "").rstrip("/").rsplit("/", 1)[-1]
+    if code:
+        try:
+            _MEMBER_CACHE["discord"] = get(f"https://discord.com/api/v10/invites/{code}?with_counts=true").get("approximate_member_count")
+        except Exception:  # noqa: BLE001 - counts are optional
+            pass
+    if c.get("reddit"):
+        try:
+            _MEMBER_CACHE["reddit"] = get(c["reddit"].rstrip("/") + "/about.json")["data"].get("subscribers")
+        except Exception:  # noqa: BLE001
+            pass
+    _MEMBER_CACHE.setdefault("_done", True)
+    return _MEMBER_CACHE
+
+
+def join(lang: str) -> str:
+    s = load_strings(lang)
+    c = load_community()
+    counts = community_counts(c)
+
+    def members(key: str) -> str:
+        n = counts.get(key)
+        return f'<span class="members">{html.escape(fmt(s["jp_members"], n=n))}</span>' if isinstance(n, int) and n > 0 else ""
+
+    cards = []
+    if c.get("discord_invite"):
+        cards.append(
+            '<div class="channel discord">'
+            f'<h2>{html.escape(s["jp_discord_title"])}</h2>{members("discord")}'
+            f'<p>{html.escape(s["jp_discord_text"])}</p>'
+            f'<a class="btn primary" href="{html.escape(c["discord_invite"])}" rel="noopener">{html.escape(s["jp_discord_cta"])}</a></div>'
+        )
+    if c.get("reddit"):
+        cards.append(
+            '<div class="channel reddit">'
+            f'<h2>{html.escape(s["jp_reddit_title"])}</h2>{members("reddit")}'
+            f'<p>{html.escape(s["jp_reddit_text"])}</p>'
+            f'<a class="btn ghost" href="{html.escape(c["reddit"])}" rel="noopener">{html.escape(s["jp_reddit_cta"])}</a></div>'
+        )
+    ways = "".join(
+        f'<li><h3>{html.escape(s[f"jp_way{i}_title"])}</h3><p>{html.escape(s[f"jp_way{i}_text"])}</p></li>'
+        for i in (1, 2, 3)
+    )
+    body = f"""
+<section class="join-hero">
+  <div class="wrap">
+    <h1>{html.escape(s['jp_title'])}</h1>
+    <p class="lead">{html.escape(s['jp_intro'])}</p>
+    <div class="channels">{''.join(cards)}</div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <h2>{html.escape(s['jp_ways_title'])}</h2>
+    <ol class="ways">{ways}</ol>
+  </div>
+</section>
+<section class="section paper-2">
+  <div class="wrap safety">
+    <h2>{html.escape(s['jp_safety_title'])}</h2>
+    <p>{html.escape(s['jp_safety_text'])}</p>
+    <p><small>{html.escape(s['jp_privacy'])}</small></p>
+  </div>
+</section>
+"""
+    return page(lang, "join", f"{s['jp_title']}: Pass the Baton", s["jp_meta_description"], body)
+
+
 def sitemap() -> str:
     today = datetime.date.today().isoformat()
     urls = []
@@ -402,6 +493,7 @@ def main() -> None:
         write(page_path(code, "home") + "index.html", home(code))
         write(page_path(code, "manifesto") + "index.html", manifesto(code))
         write(page_path(code, "countries") + "index.html", countries(code))
+        write(page_path(code, "join") + "index.html", join(code))
 
     write("sitemap.xml", sitemap())
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {ORIGIN}/sitemap.xml\n")
