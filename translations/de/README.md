@@ -6,13 +6,11 @@
 
 ## Die Forderung
 
-**Wer das gesetzliche Rentenalter des eigenen Landes erreicht hat, spätestens aber mit 67, beginnt keine neue Amtszeit in einem der höchsten Ämter.**
+Wer das gesetzliche Rentenalter des eigenen Landes erreicht hat, spätestens aber mit 67, beginnt keine neue Amtszeit in einem der höchsten Ämter.
 
-Pass the Baton ist eine weltweite, gewaltfreie und überparteiliche Bewegung. Hashtag: #PassTheBaton oder #StaffelstabWeitergeben.
+## Mehr erfahren
 
-## Mehr lesen
+- [Manifest](MANIFESTO.md)
+- [Englisches Original](../../MANIFESTO.md)
 
-- [Manifest auf Deutsch](MANIFESTO.md)
-- [Englisches Original des Manifests](../../MANIFESTO.md)
-
-*Die Texte stehen unter der Lizenz [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*
+Hashtag: #PassTheBaton · #StaffelstabWeitergeben
