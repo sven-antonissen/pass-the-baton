@@ -1,0 +1,30 @@
+{
+  "country": "Mexico",
+  "iso2": "MX",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 65,
+    "notes": "IMSS (private-sector) old-age retirement pension at 65; reduced early pension available from 60. Universal non-contributory old-age pension also starts at 65. Civil servants under ISSSTE follow a separate schedule.",
+    "source": "https://www.lexology.com/library/detail.aspx?g=432cc503-8ac8-4dea-9dce-015fbbef9ab5"
+  },
+  "political_system": "federal presidential republic",
+  "population": { "value": 130911314, "year": 2025, "source": "https://mexiconewsdaily.com/news/mexicos-population-growth-130-million-fertility-rate-falls/" },
+  "median_age": { "value": 32, "year": 2025, "source": "https://mexiconewsdaily.com/news/mexicos-population-growth-130-million-fertility-rate-falls/" },
+  "offices": [
+    {
+      "office": "Head of state and head of government",
+      "title": "President",
+      "holder": "Claudia Sheinbaum Pardo",
+      "birth_date": "1962-06-24",
+      "in_office_since": "2024-10-01",
+      "term_ends": "2030-09-30",
+      "source": "https://www.britannica.com/biography/Claudia-Sheinbaum"
+    }
+  ],
+  "next_national_election": { "date": "2027-06-06", "source": "https://mexiconewsdaily.com/politics/mexicos-2027-election-cycle-has-begun-what-to-know/" },
+  "open_questions": [
+    "term_ends 2030-09-30 is derived from the six-year term that began on 1 October 2024 (Britannica); no source found in this run states the end date explicitly.",
+    "The 2027-06-06 election is a federal legislative midterm (Chamber of Deputies, 17 governorships, local offices), not a presidential election. The next presidential election is in 2030; its date was not found.",
+    "Population and median age come from INEGI's 2025 Intercensal Survey as reported by Mexico News Daily; the INEGI primary page was not retrieved. INEGI reports the median age as a whole number (32)."
+  ]
+}

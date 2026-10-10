@@ -1,0 +1,42 @@
+{
+  "country": "Russia",
+  "iso2": "RU",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 65,
+    "by_group": { "men": 65, "women": 60 },
+    "notes": "Under the 2018 reform, the pension age rises gradually to 65 for men and 60 for women; the transition period runs from 2019 to 2028. Trading Economics lists the age in 2026 as 64 for men and 59 for women. statutory is set to the highest value (men).",
+    "source": "https://tass.com/society/1038728"
+  },
+  "political_system": "federal semi-presidential republic",
+  "population": { "value": 143394458, "year": 2026, "source": "https://www.worldometers.info/world-population/russia-population/" },
+  "median_age": { "value": null, "year": null, "source": null },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "President",
+      "holder": "Vladimir Vladimirovich Putin",
+      "birth_date": "1952-10-07",
+      "in_office_since": "2012-05-07",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Vladimir_Putin"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister (Chairman of the Government)",
+      "holder": "Mikhail Vladimirovich Mishustin",
+      "birth_date": "1966-03-03",
+      "in_office_since": "2020-01-16",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Mikhail_Mishustin"
+    }
+  ],
+  "next_national_election": { "date": null, "source": null },
+  "open_questions": [
+    "Putin: in_office_since 2012-05-07 is the start of the current continuous period (he was also president 2000-2008). His latest term began with the inauguration on 7 May 2024 after the March 2024 election. Sources state only that it ends in 2030; the exact date was not found, so term_ends is null.",
+    "Mishustin was appointed on 16 January 2020; his government resigned on 7 May 2024 at Putin's new term and he was re-proposed on 10 May 2024. He has no fixed term (appointed by the president with Duma consent).",
+    "Next national election: the State Duma election was held 18-20 September 2026 (results certified 25 September 2026 per Electiomap). The next presidential election is expected in 2030, but its date was not found, so the field is null.",
+    "Median age: UN WPP 2024-based sources disagree (40.7, 41.5, 41.8 for 2026); no Rosstat figure was retrieved, so the value is left null.",
+    "Population 143,394,458 is the UN WPP 2024 projection (mid-2026) via Worldometer. Rosstat figures (about 146 million for January 2025 per Wikipedia) are higher and include different territory counts; the Rosstat primary source was not retrieved."
+  ]
+}
