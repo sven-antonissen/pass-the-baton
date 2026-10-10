@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="t">
+  <title id="t">Pass the Baton: an open ring with a baton leaving it</title>
+  <rect width="256" height="256" rx="40" fill="#FBF7F0"/>
+  <circle cx="128" cy="128" r="84" fill="none" stroke="#0B6E6E" stroke-width="28" stroke-linecap="round" stroke-dasharray="400 127.8"/>
+  <g transform="rotate(-45 128 128)">
+    <rect x="128" y="114" width="104" height="28" rx="14" fill="#F0A202" stroke="#1B2230" stroke-width="6"/>
+  </g>
+  <circle cx="128" cy="128" r="15" fill="#1B2230"/>
+</svg>

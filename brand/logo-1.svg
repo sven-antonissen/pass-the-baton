@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="t">
+  <title id="t">Pass the Baton: two batons being handed over</title>
+  <rect width="256" height="256" rx="56" fill="#1B2230"/>
+  <g transform="rotate(-45 128 128)">
+    <rect x="40" y="88" width="120" height="44" rx="22" fill="#FBF7F0"/>
+    <rect x="96" y="124" width="120" height="44" rx="22" fill="#F0A202" stroke="#1B2230" stroke-width="8"/>
+  </g>
+</svg>

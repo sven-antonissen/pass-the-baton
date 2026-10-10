@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160" role="img" aria-labelledby="t">
+  <title id="t">Pass the Baton</title>
+  <rect width="640" height="160" fill="#FBF7F0"/>
+  <circle cx="48" cy="98" r="32" fill="#0B6E6E"/>
+  <circle cx="116" cy="62" r="24" fill="#F0A202"/>
+  <line x1="30" y1="130" x2="140" y2="34" stroke="#FBF7F0" stroke-width="26" stroke-linecap="round"/>
+  <line x1="30" y1="130" x2="140" y2="34" stroke="#1B2230" stroke-width="14" stroke-linecap="round"/>
+  <text x="184" y="98" font-family="Lexend, 'Noto Sans', Arial, Helvetica, sans-serif" font-size="52" font-weight="700" fill="#1B2230" textLength="434" lengthAdjust="spacingAndGlyphs">Pass the Baton</text>
+</svg>
