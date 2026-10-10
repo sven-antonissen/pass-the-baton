@@ -1,0 +1,52 @@
+{
+  "country": "Denmark",
+  "iso2": "DK",
+  "checked_on": "2026-10-10",
+  "retirement_age": {
+    "statutory": 67,
+    "notes": "Public pension (folkepension) age is 67 in 2026 for people born from 1 July 1955. It rises to 68 from 2030 (born from 1 January 1963), 69 from 2035 (born from 1 January 1967) and 70 from 2040 (born from 1 January 1971), as adopted by the Folketing in May 2025. The age is reviewed every five years against life expectancy; the next review is scheduled for 2030.",
+    "source": "https://star.dk/ydelser/pension-og-efterloen/folkepension-tidlig-pension-foertidspension-og-seniorpension/folkepension/folkepensionsalderen-nu-og-fremover"
+  },
+  "political_system": "unitary parliamentary constitutional monarchy",
+  "population": {
+    "value": 6038638,
+    "year": 2026,
+    "source": "https://www.dst.dk/da/Statistik/emner/borgere/befolkning/befolkningstal"
+  },
+  "median_age": {
+    "value": null,
+    "year": null,
+    "source": null
+  },
+  "offices": [
+    {
+      "office": "Head of state",
+      "title": "King",
+      "holder": "Frederik X",
+      "birth_date": "1968-05-26",
+      "in_office_since": "2024-01-14",
+      "term_ends": null,
+      "source": "https://www.britannica.com/biography/Frederik-X"
+    },
+    {
+      "office": "Head of government",
+      "title": "Prime Minister",
+      "holder": "Mette Frederiksen",
+      "birth_date": "1977-11-19",
+      "in_office_since": "2019-06-27",
+      "term_ends": null,
+      "source": "https://en.wikipedia.org/wiki/Frederiksen_III_Cabinet"
+    }
+  ],
+  "next_national_election": {
+    "date": null,
+    "source": "https://www.valg.im.dk/vaelgere/hvornaar-er-der-valg-eller-folkeafstemning"
+  },
+  "open_questions": [
+    "Median age: sources found conflict (UN-based figures of 41.3 and 42.3 for 2025) and no national statistics office or Eurostat median value was retrieved; left null. Statistics Denmark gives a mean age of 42.7 on 1 January 2026 (via Danish Wikipedia citing Statistics Denmark), which is not a median.",
+    "Next national election: no fixed date. The last Folketing election was held on 24 March 2026; the next must be held by 23 March 2030, and the Prime Minister may call it earlier (valg.im.dk). Date left null.",
+    "Mette Frederiksen has been Prime Minister since 27 June 2019 without a break. Her third cabinet took office on 3 June 2026 after the 24 March 2026 election; in_office_since keeps the 2019 date. The Prime Minister has no fixed term.",
+    "Birth dates for Frederik X (Britannica) and Mette Frederiksen (Wikipedia) come from reference works, not an official Danish government page; an official source (e.g. kongehuset.dk, stm.dk) could not be retrieved in this run.",
+    "Population figure of 6,038,638 is labelled September 2026 on the Statistics Denmark page (monthly register count)."
+  ]
+}
