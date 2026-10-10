@@ -2,66 +2,66 @@
 
 ## Ana mesaj
 
-**Halk için geçerli olan kural, onu yönetenler için de geçerli olmalı.**
+**Halk için geçerli olan, halkı yönetenler için de geçerli olmalı.**
 
-Dünyanın her yerinde insanlar belli bir yaşta işlerini sonraki kuşağa devreder. Biz liderlerden de aynısını istiyoruz. Yaşlılara güvenmediğimizden değil, yenilenmeye saygı duyduğumuz için.
+Dünyanın her yerinde insanlar belli bir yaşta işlerini yeni kuşağa devrediyor. Biz de liderlerden aynısını istiyoruz. Yaşlılara güvensizlikten değil, yenilenmeye duyduğumuz saygıdan.
 
 ## Neden: sorun
 
-Dünyada birçok lider, yurttaşlarının emekli olduğu yaşı çoktan geçmiş durumda. Bu, demokrasilerde de otoriter rejimlerde de böyle.
+Dünyanın dört bir yanında birçok lider, vatandaşlarının emekli olduğu yaşın çok ötesinde. Bu, demokrasilerde de otoriter rejimlerde de böyle.
 
-- **Çifte standart.** Bir hemşire, bir inşaat işçisi ya da bir öğretmen işini devreder. Milyonlarca insanın hayatı hakkında karar verenler ise çoğu zaman son âna kadar görevde kalır.
-- **Kısa zaman ufku.** İklim, borç ve emeklilik kararları çoğunlukla sonuçlarını kendileri yaşayacak kuşakları etkiler.
+- **Çifte standart.** Bir hemşire, bir inşaat işçisi ya da bir öğretmen işini devreder. Milyonların hayatı hakkında karar verenler ise çoğu zaman kariyerlerinin sonuna kadar kalır.
+- **Kısa zaman ufku.** İklim, borç ve emeklilik kararları, sonuçlarını bizzat taşıyacak kuşakları en çok etkiler.
 - **Yenilenme engelleniyor.** Hiç ayrılmayanlar yeni fikirlere, yeni insanlara ve yeni enerjiye yer bırakmaz.
-- **Göreve yeterince dikkat edilmiyor.** Bir ülkeyi yönetmek her gün tam bir bağlılık ister. Bu, her yaşta ağır bir görevdir; ileri yaşta daha da ağırdır.
+- **Göreve yeterince dikkat edilmiyor.** Bir ülkeyi yönetmek her gün tam bir adanmışlık gerektirir. Bu, her yaşta ağır bir görevdir; ileri yaşta daha da ağırdır.
 
 ## Talebimiz
 
-**Kendi ülkesinin yasal emeklilik yaşına ulaşmış olan ve en geç 67 yaşında olan hiç kimse, en yüksek makamlardan birinde yeni bir döneme başlamaz.**
+**Kendi ülkesinin yasal emeklilik yaşına ve en geç 67 yaşına ulaşmış olan kişi, en yüksek makamlardan birinde yeni bir döneme başlamaz.**
 
-- Dünya çapında, her ülkede ve her rejimde geçerlidir; en yüksek makamlarla başlar: devlet başkanı, hükümet başkanı ve bakanlar. İkinci aşamada bunu diğer siyasi makamlara da genişletiyoruz.
-- Sınırı, halkın zaten kabul ettiği şeye bağlar: emeklilik yaşına; dünya genelinde üst sınır 67'dir.
-- Süren bir dönem tamamlanabilir. Yeni bir dönem başlatılmaz.
-- Sıradan yurttaşlar çalışmaya devam etmekte özgür kalır. Bir ülkeyi yönetenler daha ağır bir sorumluluk taşır ve tıpkı pilotlar ve yargıçlar gibi daha sıkı bir kurala tabidir.
+- Dünya çapında, her ülkede ve her rejimde geçerlidir; en yüksek makamlardan başlar: devlet başkanı, hükümet başkanı ve bakanlar. İkinci aşamada bunu diğer siyasi makamlara yayarız.
+- Sınırı, halkın zaten kabul ettiği şeye bağlar: emeklilik yaşı; dünya çapında üst sınır 67.
+- Devam etmekte olan dönem tamamlanabilir. Yeni bir dönem başlatılmaz.
+- Sıradan vatandaşlar çalışmaya devam etmekte özgürdür. Bir ülkeyi yönetenlerin sorumluluğu daha ağırdır ve pilotlar ile yargıçlar gibi daha katı bir kurala tabidir.
 
 ## İlkelerimiz
 
-1. **Eşitlik.** Liderler için, hizmet ettikleri yurttaşlarla aynı yaş kuralı.
+1. **Eşitlik.** Liderler için, hizmet ettikleri vatandaşlarla aynı yaş normu.
 2. **Saygı.** Yaşlılara karşı değiliz. Deneyim; danışman, yol gösterici ya da elçi olarak değerini korur.
 3. **Yenilenme.** Batonu devretmek bir liderlik eylemidir, yenilgi değil.
 4. **Şiddetsizlik.** İkna ederiz; asla güç kullanmayız.
-5. **Bağımsızlık.** Sağda ya da solda taraf tutmayız. Bu kural herkes için geçerlidir.
+5. **Bağımsızlık.** Sağda ya da solda, hiçbir tarafta yer almayız. Norm herkes için geçerlidir.
 
-## İtirazlara yanıtlarımız
+## İtirazlara yanıtlar
 
 | İtiraz | Yanıtımız |
 | --- | --- |
-| Yaş, bireyle ilgili bir şey söylemez. | Doğru, ama yargıçlar ve pilotlar için sabit bir sınırı zaten kabul ediyoruz. Net bir kural, kimin hâlâ "yeterince sağlıklı" olduğunu her seferinde tartışmaktan daha adildir. |
-| Bu yaş ayrımcılığıdır. | Herkes çalışmaya devam etme hakkını korur. Yalnızca en yüksek makam daha sıkı bir kurala tabidir, çünkü milyonlarca insanın hayatını etkiler. |
-| Seçmenler özgürce seçebilmeli. | Seçmenler dönem sınırı ve asgari yaş gibi sınırları zaten kabul ediyor. Azami yaş, bunların mantıklı karşılığıdır. |
-| Krizde en çok deneyim önemlidir. | O deneyim kaybolmaz. Eski liderler iktidarda olmadan da danışmanlık yapabilir, arabuluculuk yapabilir, ilham verebilir. |
-| Diktatörlüklerde halkın sesi yok. | Bu yüzden bunun dünya çapında bir norm olması gerekir. Başka yerlerde ne kadar kendiliğinden anlaşılır olursa, bundan kaçanlar üzerindeki baskı o kadar artar. |
+| Yaş, bireyle ilgili hiçbir şey söylemez. | Doğru, ama yargıçlar ve pilotlar için sabit bir sınırı zaten kabul ediyoruz. Açık bir kural, kimin hâlâ "yeterince zinde" olduğunu her seferinde tartışmaktan daha adildir. |
+| Bu yaş ayrımcılığıdır. | Herkes çalışmaya devam etme hakkını korur. Yalnızca en yüksek makam daha katı bir normu taşır, çünkü milyonların hayatını etkiler. |
+| Seçmenler seçmekte özgür olmalı. | Seçmenler dönem sınırı ve asgari yaş gibi sınırları zaten kabul ediyor. Azami yaş, bunun mantıklı karşılığıdır. |
+| Krizde en çok deneyim önemlidir. | Bu deneyim yok olmaz. Eski liderler iktidarda olmadan da danışmanlık yapabilir, arabuluculuk edebilir, ilham verebilir. |
+| Diktatörlüklerde halkın sesi yok. | Bu yüzden bunun dünya çapında bir norm olması gerekiyor. Başka yerlerde ne kadar doğal hâle gelirse, bundan kaçanlara baskı o kadar artar. |
 
-## Nasıl yapacağız: simge, an, eylem
+## Nasıl yapıyoruz: simge, an, eylem
 
-- **Simge: baton.** Bir bayrak yarışı batonu; görüntü, jest ya da nesne olarak. İnsanlar onu internette ve sokakta birbirine verir. Her dilde ve kültürde tanınır.
+- **Simge: baton.** Bir bayrak yarışı batonu; görüntü, jest ya da nesne olarak. İnsanlar bunu çevrimiçi ortamda ve sokakta birbirine verir. Her dilde ve kültürde tanınır.
 - **Etiket:** #PassTheBaton; #BatonuDevret gibi yerel biçimleriyle.
-- **An: yılda bir kez dünya çapında eylem günü.** Aynı gün, her yerde insanlar meydanlarda, işyerlerinde ve internette sembolik olarak batonu devreder.
-- **Yüzler.** Gençler ve batonu çoktan devretmiş emekliler birlikte. Bu, meselenin gençlerin yaşlılara karşı olmadığını gösterir.
+- **An: yılda bir dünya çapında eylem günü.** Aynı gün, her yerde insanlar simgesel olarak batonu devreder; meydanlarda, işyerlerinde ve çevrimiçi.
+- **Yüzler.** Gençler ve batonu zaten devretmiş emekliler birlikte. Bu, meselenin gençlere karşı yaşlılar olmadığını gösterir.
 - **Yerel çeviri.** Her ülke talebi kendi emeklilik yaşına ve kendi liderlerine bağlar.
-- **İlk adımlar.** Mümkün olan en kısa sürede, iki aşamada başlamak: önce internette (manifesto, kayıt formlu web sitesi, etiket), ardından birkaç ülkede destekçi olunca ilk fiziksel eylem günü.
+- **İlk adımlar.** Mümkün olan en kısa sürede, iki aşamada başlamak: önce çevrimiçi (manifesto, kayıt formlu web sitesi, etiket), ardından birkaç ülkede destekçi olunca ilk fiziksel eylem günü.
 
-## Olası öncü isimler
+## Olası simge isimler
 
-Güçlü bir öncü isim mesajı kişiliğinde taşır. Yaklaşılacak profiller:
+Güçlü bir simge isim, mesajı bizzat temsil eder. Ulaşılacak profiller:
 
 | Profil | Neden işe yarar |
 | --- | --- |
-| Gönüllü olarak ve erken çekilmiş eski bir lider | Çekilmenin bir liderlik eylemi olduğunun canlı kanıtı. En güçlü inandırıcılık. |
-| Batonu kendisi devretmiş bir emekli | Bunun "gençler yaşlılara karşı" olmadığını kanıtlar. Yaşlı seçmenlere hitap eder. |
+| Gönüllü ve erken çekilmiş eski bir lider | Çekilmenin bir liderlik eylemi olduğunun canlı kanıtı. En güçlü inandırıcılık. |
+| Batonu kendisi devretmiş bir emekli | Bunun "gençlere karşı yaşlılar" olmadığını kanıtlar. Yaşlı seçmenlere seslenir. |
 | Bir bayrak yarışı atleti | Baton tam anlamıyla onun mesleği. Tanınan, sevilen ve siyaseten tarafsız biri. |
 | Genç bir aktivist ya da öğrenci | Gençler arasında ve sosyal medyada enerji ve erişim getirir. |
-| İkili: biri yaşlı, biri genç | Devretmenin kendisinin görüntüsü. Belki de en güçlü seçim. |
+| İkili: biri yaşlı, biri genç | Devretmenin kendisini anlatan görüntü. Belki de en güçlü seçenek. |
 
 ---
 
