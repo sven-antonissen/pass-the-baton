@@ -22,13 +22,17 @@ Not out of distrust of older people, but out of respect for renewal.
 
 The project is just starting. What exists today: the manifesto and the architecture. Next, in this order:
 
-1. **Foundation**: research and localisation agents; country profiles and the manifesto in the first languages.
-2. **Visibility**: website with sign-up and the digital baton.
+1. **Identity and website**: a branding agent builds the brand (tone of voice, colours, typography, logo proposals, the "why" in short texts); a simple website carries the manifesto.
+2. **Facts and languages**: research and localisation agents; country profiles and the manifesto in the first languages.
 3. **Reach**: partner and media agents, always with prior human approval.
-4. **Scale**: volunteer agent, coordinator and local chapters.
+4. **Scale**: volunteer agent, coordinator, local chapters and the digital baton.
 5. **Second line**: extending the demand to other political offices.
 
-Still open: the final name of the movement and a figurehead.
+Still open: a figurehead. Athletes carrying the baton would be a strong image.
+
+## How the agents run
+
+The agents live in [`agents/`](agents/) and run on GitHub Actions. Every agent delivers its work as a **pull request**. Merging a pull request is the human approval: nothing an agent makes goes live until a maintainer has reviewed and merged it.
 
 ## Principles
 

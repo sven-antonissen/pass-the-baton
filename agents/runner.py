@@ -1,0 +1,141 @@
+"""Run one Pass the Baton agent.
+
+Each agent lives in agents/<name>/ with:
+  instructions.md  the system prompt, in plain language anyone can read
+  config.json      model, max_tokens, input files and the one folder it may write to
+
+The agent can only write files inside its own output folder. Its work is
+committed on a branch and opened as a pull request by the workflow; nothing
+goes live until a human merges it.
+
+Usage:
+  python agents/runner.py branding            # call the API and write files
+  python agents/runner.py branding --dry-run  # show what would be sent, no API call
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+
+WRITE_FILES_TOOL = {
+    "name": "write_files",
+    "description": "Write the agent's output files. Paths are relative to the repository root.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "files": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "path": {"type": "string"},
+                        "content": {"type": "string"},
+                    },
+                    "required": ["path", "content"],
+                },
+            },
+            "summary": {
+                "type": "string",
+                "description": "A short summary of the choices made, used as the pull request description.",
+            },
+        },
+        "required": ["files", "summary"],
+    },
+}
+
+
+def load_agent(name: str) -> tuple[str, dict]:
+    folder = ROOT / "agents" / name
+    if not folder.is_dir():
+        sys.exit(f"Unknown agent: {name}")
+    instructions = (folder / "instructions.md").read_text(encoding="utf-8")
+    config = json.loads((folder / "config.json").read_text(encoding="utf-8"))
+    return instructions, config
+
+
+def build_message(config: dict) -> str:
+    parts = []
+    for rel in config.get("inputs", []):
+        path = ROOT / rel
+        if path.is_file():
+            parts.append(f'<file path="{rel}">\n{path.read_text(encoding="utf-8")}\n</file>')
+        else:
+            parts.append(f'<file path="{rel}" missing="true"/>')
+    parts.append("Do your task now and return all files in one write_files call.")
+    return "\n\n".join(parts)
+
+
+def safe_path(rel: str, output_dir: str) -> Path:
+    """Resolve a path and refuse anything outside the agent's output folder."""
+    allowed = (ROOT / output_dir).resolve()
+    target = (ROOT / rel).resolve()
+    if target != allowed and allowed not in target.parents:
+        raise ValueError(f"Refused to write outside {output_dir}/: {rel}")
+    return target
+
+
+def write_outputs(result: dict, output_dir: str) -> list[str]:
+    written = []
+    for item in result.get("files", []):
+        target = safe_path(item["path"], output_dir)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(item["content"], encoding="utf-8")
+        written.append(str(target.relative_to(ROOT)))
+    return written
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("agent")
+    parser.add_argument("--dry-run", action="store_true")
+    args = parser.parse_args()
+
+    instructions, config = load_agent(args.agent)
+    message = build_message(config)
+
+    if args.dry_run:
+        print(f"Agent: {args.agent}\nModel: {config['model']}\nWrites to: {config['output_dir']}/")
+        print(f"Prompt: {len(instructions)} chars, input: {len(message)} chars")
+        return
+
+    import anthropic  # imported here so --dry-run works without the package
+
+    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+    response = client.messages.create(
+        model=config["model"],
+        max_tokens=config["max_tokens"],
+        system=instructions,
+        tools=[WRITE_FILES_TOOL],
+        tool_choice={"type": "tool", "name": "write_files"},
+        messages=[{"role": "user", "content": message}],
+    )
+
+    calls = [b for b in response.content if b.type == "tool_use" and b.name == "write_files"]
+    if not calls:
+        sys.exit("The agent returned no files.")
+    if response.stop_reason == "max_tokens":
+        sys.exit("The agent ran out of output space; raise max_tokens in config.json.")
+
+    result = calls[0].input
+    written = write_outputs(result, config["output_dir"])
+
+    summary = result.get("summary", "").strip()
+    usage = response.usage
+    body = (
+        f"{summary}\n\n**Files**\n" + "\n".join(f"- `{p}`" for p in written)
+        + f"\n\n_Agent: {args.agent} · model: {config['model']} · "
+        f"tokens in/out: {usage.input_tokens}/{usage.output_tokens}_\n\n"
+        "Review before merging: merging this pull request is the human approval."
+    )
+    (ROOT / ".agent-pr-body.md").write_text(body, encoding="utf-8")
+    print(body)
+
+
+if __name__ == "__main__":
+    main()

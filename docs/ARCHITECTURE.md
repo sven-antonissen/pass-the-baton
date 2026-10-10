@@ -8,12 +8,13 @@ A small team of AI agents does the preparatory work of the campaign autonomously
 flowchart TD
     subgraph internal["Internal: agents work autonomously"]
         C["Coordinator<br/>plans, assigns, reports"]
+        C --> B["Branding<br/>identity, why"]
         C --> R["Research<br/>country profiles"]
         C --> L["Localisation<br/>languages, cultures"]
         C --> P["Partners<br/>proposals"]
         C --> M["Media<br/>news, posts"]
         C --> V["Volunteers<br/>onboarding, questions"]
-        R & L & P & M & V --- K[("Knowledge base<br/>country profiles, material, partners, sources")]
+        B & R & L & P & M & V --- K[("Knowledge base<br/>country profiles, material, partners, sources")]
     end
     internal -->|"everything that goes out"| A["Human approval<br/>community approver: yes, edit or no"]
     A -->|"rejected: adjust"| internal
@@ -26,11 +27,12 @@ The agents work around one knowledge base; everything that goes out passes a hum
 
 ## The agents
 
-Six agents, each with one clear task. The coordinator assigns the work; the other five report to it.
+Seven agents, each with one clear task. The coordinator assigns the work; the other six report to it.
 
 | Agent | Task | Delivers | Autonomy |
 | --- | --- | --- | --- |
 | Coordinator | Plans the work, sets priorities, tracks progress | Task list, weekly report for the maintainers | Fully internal |
+| Branding | Develops the brand identity and the "why" from the manifesto | Brand guide, colour palette, typography, logo proposals, short texts | Published only after approval |
 | Research | Collects per country the retirement age, the age of the highest office holders, the political system, election dates | Country profiles with sources | Fully internal |
 | Localisation | Translates and adapts the manifesto, posters and texts per language and culture | Campaign material per country | Fully internal |
 | Partners | Finds organisations per country that fit and drafts a tailored proposal | Partner list + draft e-mails | Sent only after approval |
@@ -42,8 +44,8 @@ Six agents, each with one clear task. The coordinator assigns the work; the othe
 The rule is simple: **internal work is autonomous; everything that goes out passes a human.**
 
 1. An agent makes a proposal (e-mail, post, press release, partner contact).
-2. The proposal enters the **approval queue**, with context: for whom, why, based on which sources.
-3. A community approver, per country or language, approves, edits or rejects it with one click. Sensitive messages (press releases, contact with large organisations) need two approvers.
+2. The proposal enters the **approval queue** as a GitHub pull request, with context: for whom, why, based on which sources.
+3. A community approver, per country or language, approves (merges), edits or rejects (closes) it. Sensitive messages (press releases, contact with large organisations) need two approvers.
 4. Only after approval does the system send or publish it, through the movement's official channel.
 5. The response (reply, reach, signatures) goes back to the coordinator, which adjusts the next plan.
 
@@ -57,7 +59,8 @@ Rejections and edits are kept. They are used to regularly refine the agents' ins
 | Orchestration | Claude Agent SDK | The coordinator starts the other agents as subagents and assigns the work |
 | Scheduling | Scheduled jobs (daily, weekly) | For example: scan the news every morning, report every Monday |
 | Knowledge base | Database with country profiles, material, partners, decisions | Single source of truth for all agents |
-| Approval screen | Simple web app with a queue | Approve, edit, reject; full audit log |
+| Approval queue | GitHub pull requests, branch protection | Merge = approve; two required reviews for sensitive paths; full history |
+| Runtime | GitHub Actions | Agents start on a schedule or by hand; no server to host |
 | Website | Manifesto, sign-up, digital baton, world map | Multilingual, fed by the localisation agent |
 | Channels | Official e-mail, newsletter, the movement's accounts | Approved messages only |
 | Monitoring | Costs, errors, reach | Budget cap per agent per month |
@@ -78,10 +81,10 @@ The movement's credibility is its most important asset. These rules therefore li
 
 Start small; expand only once each step works.
 
-1. **Foundation.** Research and localisation agents. Result: country profiles and the manifesto in the first languages.
-2. **Visibility.** Website with sign-up and digital baton, fed by phase 1. Approval screen in use.
+1. **Identity and website.** Branding agent: brand guide, colours, typography, logo proposals, the "why" in short texts. A simple website with the manifesto.
+2. **Facts and languages.** Research and localisation agents. Result: country profiles and the manifesto in the first languages, added to the website.
 3. **Reach.** Partner and media agents added, always with prior approval.
-4. **Scale.** Volunteer agent and coordinator. Local chapters start independently with the starter kit.
+4. **Scale.** Volunteer agent and coordinator, sign-up and digital baton. Local chapters start independently with the starter kit.
 5. **Second line.** Extending the demand to other political offices, with the same machine.
 
 ## Open source and community

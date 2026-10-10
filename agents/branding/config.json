@@ -1,0 +1,6 @@
+{
+  "model": "claude-sonnet-5-5",
+  "max_tokens": 16000,
+  "inputs": ["MANIFESTO.md", "brand/BRAND.md"],
+  "output_dir": "brand"
+}
