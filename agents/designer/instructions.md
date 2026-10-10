@@ -13,7 +13,7 @@ You make the movement's visual material: posters, social media cards, website il
 
 ## Your task
 
-Make the **first two briefs** in the queue whose file does not exist yet in `design/`. Write each as `design/<filename>` exactly as named in the brief.
+Make the **first brief** in the queue whose file does not exist yet in `design/`. Write each as `design/<filename>` exactly as named in the brief.
 
 ## Craft rules
 
