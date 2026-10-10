@@ -1,0 +1,16 @@
+{
+  "model": "claude-sonnet-5-5",
+  "max_tokens": 20000,
+  "inputs": [
+    "brand/BRAND.md",
+    "site/style.css",
+    "site/templates/base.html",
+    "site/templates/home.html",
+    "design/briefs.md",
+    "agents/webbuilder/feedback.md"
+  ],
+  "list_dirs": ["design", "brand"],
+  "output_dir": "site",
+  "protect": ["site/build.py"],
+  "check": "pip install -q markdown && python site/build.py && test -f _site/index.html && ! grep -rqo '{{body}}' _site"
+}

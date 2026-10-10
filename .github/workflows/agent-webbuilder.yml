@@ -1,0 +1,22 @@
+name: Agent - webbuilder
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: agent-webbuilder
+  cancel-in-progress: false
+
+jobs:
+  webbuilder:
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: ./.github/workflows/_run-agent.yml
+    with:
+      agent: webbuilder
+      output: site
+      title: "Web builder agent: website design update"
+      timeout: 30
+    secrets:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

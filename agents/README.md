@@ -24,6 +24,8 @@ Each agent is a folder with two files anyone can read:
 | [research](research/) | 2 | `data/countries/` | Orchestrator, while countries are queued; three per run, with web search |
 | [partners](partners/) | 3 | `outreach/partners/` | Orchestrator, while researched countries lack partners; two per run, with web search. Drafts only, never sends |
 | [media](media/) | 3 | `outreach/media/` | Orchestrator, once a week; news and draft posts, with web search. Drafts only, never publishes |
+| [designer](designer/) | 1 | `design/` | Orchestrator, while design briefs are queued; two pieces per run (Opus) |
+| [webbuilder](webbuilder/) | 1 | `site/` (style and templates only) | Orchestrator, when new artwork, brand files or feedback arrive; the site must build before a PR opens |
 | [coordinator](coordinator/) | all | `docs/status/` | Orchestrator, once a week; status report and next steps |
 
 The volunteers agent from the architecture is not built yet: it needs a channel where volunteers sign up (phase 4).

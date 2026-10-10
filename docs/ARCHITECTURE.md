@@ -27,12 +27,14 @@ The agents work around one knowledge base; everything that goes out passes a hum
 
 ## The agents
 
-Seven agents, each with one clear task. The coordinator assigns the work; the other six report to it.
+Nine agents, each with one clear task. The orchestrator starts them by plain rules; the coordinator reports on the whole.
 
 | Agent | Task | Delivers | Autonomy |
 | --- | --- | --- | --- |
 | Coordinator | Plans the work, sets priorities, tracks progress | Task list, weekly report for the maintainers | Fully internal |
 | Branding | Develops the brand identity and the "why" from the manifesto | Brand guide, colour palette, typography, logo proposals, short texts | Published only after approval |
+| Designer | Makes posters, social cards, illustrations and icons from design briefs | SVG artwork in `design/` | Published only after approval |
+| Web builder | Designs and builds the website's look and layout with the brand and artwork | Stylesheet and templates in `site/` | Published only after approval; the site must build first |
 | Research | Collects per country the retirement age, the age of the highest office holders, the political system, election dates | Country profiles with sources | Fully internal |
 | Localisation | Translates and adapts the manifesto, posters and texts per language and culture | Campaign material per country | Fully internal |
 | Partners | Finds organisations per country that fit and drafts a tailored proposal | Partner list + draft e-mails | Sent only after approval |

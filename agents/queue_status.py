@@ -45,12 +45,18 @@ def remaining_partners() -> list[str]:
     return sorted(profiles - done)
 
 
+def remaining_designer() -> list[str]:
+    files = [item.split(":", 1)[0].strip() for item in queue_items(ROOT / "design/briefs.md")]
+    return [f for f in files if not (ROOT / "design" / f).exists()]
+
+
 def main() -> None:
     agent = sys.argv[1] if len(sys.argv) > 1 else ""
     funcs = {
         "localisation": remaining_localisation,
         "research": remaining_research,
         "partners": remaining_partners,
+        "designer": remaining_designer,
     }
     if agent not in funcs:
         print(0)

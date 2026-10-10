@@ -109,11 +109,14 @@ def check_content(rel: str, content: str) -> None:
             raise ValueError(f"{rel} is not valid JSON: {e}") from e
 
 
-def write_outputs(result: dict, output_dir: str) -> list[str]:
+def write_outputs(result: dict, output_dir: str, protect: list[str] | None = None) -> list[str]:
+    protected = {(ROOT / p).resolve() for p in (protect or [])}
     written = []
     for item in result.get("files", []):
         check_content(item["path"], item["content"])
         target = safe_path(item["path"], output_dir)
+        if target in protected:
+            raise ValueError(f"Refused to change a protected file: {item['path']}")
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(item["content"], encoding="utf-8")
         written.append(str(target.relative_to(ROOT)))
@@ -180,9 +183,17 @@ def main() -> None:
 
     result = calls[0].input
     try:
-        written = write_outputs(result, config["output_dir"])
+        written = write_outputs(result, config["output_dir"], config.get("protect"))
     except (ValueError, KeyError, TypeError) as e:
         fail(f"Could not write the agent's files: {e}")
+
+    check = config.get("check")
+    if check:
+        import subprocess
+
+        done = subprocess.run(check, shell=True, cwd=ROOT, capture_output=True, text=True)
+        if done.returncode != 0:
+            fail(f"The check '{check}' failed after the agent's changes:\n{(done.stdout + done.stderr)[-1500:]}")
 
     summary = result.get("summary", "").strip()
     body = (

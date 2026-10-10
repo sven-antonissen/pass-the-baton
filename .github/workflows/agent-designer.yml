@@ -1,0 +1,22 @@
+name: Agent - designer
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: agent-designer
+  cancel-in-progress: false
+
+jobs:
+  designer:
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: ./.github/workflows/_run-agent.yml
+    with:
+      agent: designer
+      output: design
+      title: "Designer agent: new visual material"
+      timeout: 45
+    secrets:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

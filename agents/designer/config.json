@@ -1,0 +1,13 @@
+{
+  "model": "claude-opus-5-5",
+  "max_tokens": 32000,
+  "inputs": [
+    "brand/BRAND.md",
+    "brand/baton.svg",
+    "design/briefs.md",
+    "agents/designer/feedback.md"
+  ],
+  "list_dirs": ["design"],
+  "output_dir": "design",
+  "protect": ["design/briefs.md"]
+}

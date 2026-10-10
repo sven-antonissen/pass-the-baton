@@ -5,9 +5,16 @@
     "localisation": { "auto": true, "rule": "queue" },
     "research": { "auto": true, "rule": "queue" },
     "partners": { "auto": true, "rule": "queue" },
+    "designer": { "auto": true, "rule": "queue" },
+    "webbuilder": {
+      "auto": true,
+      "rule": "when_changed",
+      "watch": ["design", "brand", "agents/webbuilder/feedback.md"],
+      "outputs": ["site/style.css", "site/templates"]
+    },
     "media": { "auto": true, "rule": "every_days", "days": 7, "folder": "outreach/media" },
     "coordinator": { "auto": true, "rule": "every_days", "days": 7, "folder": "docs/status" },
     "branding": { "auto": false }
   },
-  "priority": ["coordinator", "research", "localisation", "partners", "media"]
+  "priority": ["coordinator", "designer", "webbuilder", "research", "localisation", "partners", "media"]
 }

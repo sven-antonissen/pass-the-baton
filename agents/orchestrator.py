@@ -49,11 +49,24 @@ def last_commit_age_days(folder: str, today: datetime.date) -> float | None:
     return (today - datetime.date.fromisoformat(out)).days
 
 
+def last_commit_time(paths: list[str]) -> int | None:
+    """Unix time of the last commit touching any of paths, or None if never."""
+    try:
+        out = subprocess.run(
+            ["git", "log", "-1", "--format=%ct", "--", *paths],
+            cwd=ROOT, capture_output=True, text=True, check=True,
+        ).stdout.strip()
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return None
+    return int(out) if out else None
+
+
 def queue_left(agent: str) -> int:
     funcs = {
         "localisation": queue_status.remaining_localisation,
         "research": queue_status.remaining_research,
         "partners": queue_status.remaining_partners,
+        "designer": queue_status.remaining_designer,
     }
     return len(funcs[agent]()) if agent in funcs else 0
 
@@ -100,6 +113,13 @@ def decide(settings: dict, prs: list[dict], runs: list[dict], today: datetime.da
                 log.append(f"{agent}: last output {age} days ago; next after {cfg.get('days', 7)} days.")
                 continue
             reason = "no output yet" if age is None else f"last output {age} days ago"
+        elif rule == "when_changed":
+            watched = last_commit_time(cfg.get("watch", []))
+            own = last_commit_time(cfg.get("outputs", []))
+            if watched is None or (own is not None and own >= watched):
+                log.append(f"{agent}: nothing new in {', '.join(cfg.get('watch', []))} since its last change.")
+                continue
+            reason = "new material in " + ", ".join(cfg.get("watch", []))
         else:
             log.append(f"{agent}: unknown rule '{rule}'.")
             continue

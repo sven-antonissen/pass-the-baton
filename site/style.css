@@ -1,0 +1,288 @@
+/* Pass the Baton website styles. The web builder agent edits this file. */
+:root{
+  --ink:#111318;
+  --paper:#F6F3EC;
+  --amber:#F5A623;
+  --glint:#FFF4DC;
+  --shadow:#6B3B04;
+  --muted:#4A4F5C;
+  
+--head:'Archivo Black','Arial Black',system-ui,sans-serif;
+  --body:Inter,'Noto Sans',system-ui,sans-serif
+}
+
+*{
+  box-sizing:border-box
+}
+html{
+  -webkit-text-size-adjust:100%
+}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font:400 18px/1.55 var(--body)
+}
+
+a{
+  color:var(--shadow)
+}
+a:hover{
+  color:var(--ink)
+}
+
+.wrap{
+  max-width:1080px;
+  margin:0 auto;
+  padding:0 20px
+}
+
+header.top{
+  background:var(--ink);
+  color:var(--paper)
+}
+
+header.top .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  min-height:64px;
+  flex-wrap:wrap
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--paper);
+  text-decoration:none;
+  font:400 20px var(--head);
+  letter-spacing:-.01em
+}
+
+.brand img{
+  width:34px;
+  height:34px
+}
+
+nav a{
+  color:var(--paper);
+  text-decoration:none;
+  font-weight:600;
+  font-size:15px;
+  margin-left:18px;
+  opacity:.85
+}
+nav a:hover{
+  opacity:1;
+  color:var(--amber)
+}
+
+.hero{
+  background:var(--ink);
+  color:var(--paper);
+  padding:24px 0 56px
+}
+
+.hero .art{
+  width:100%;
+  border-radius:16px;
+  display:block;
+  aspect-ratio:16/9;
+  object-fit:cover
+}
+
+.hero h1{
+  font:400 clamp(36px,7vw,72px)/1.02 var(--head);
+  letter-spacing:-.01em;
+  margin:32px 0 16px;
+  max-width:15ch
+}
+
+.hero p.lead{
+  font-size:clamp(18px,2.4vw,22px);
+  max-width:60ch;
+  margin:0 0 28px;
+  opacity:.92
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:999px;
+  font-weight:600;
+  text-decoration:none;
+  margin:0 10px 10px 0
+}
+
+.btn.primary{
+  background:var(--amber);
+  color:var(--ink)
+}
+.btn.primary:hover{
+  background:var(--glint);
+  color:var(--ink)
+}
+
+.btn.ghost{
+  border:2px solid var(--paper);
+  color:var(--paper)
+}
+.btn.ghost:hover{
+  background:var(--paper);
+  color:var(--ink)
+}
+
+section{
+  padding:64px 0
+}
+
+h2{
+  font:400 clamp(28px,4vw,36px)/1.1 var(--head);
+  margin:0 0 24px
+}
+
+h3{
+  font:400 22px/1.2 var(--head);
+  margin:0 0 8px
+}
+
+.demand{
+  background:var(--glint);
+  border-left:8px solid var(--amber);
+  padding:24px 28px;
+  border-radius:0 12px 12px 0;
+  font-size:clamp(20px,2.6vw,26px);
+  font-weight:600;
+  max-width:46ch
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px
+}
+
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:24px;
+  border:1px solid #e6e0d2
+}
+
+.card p{
+  margin:0;
+  color:var(--muted)
+}
+
+.baton-band{
+  background:var(--ink);
+  color:var(--paper)
+}
+
+.baton-band img{
+  width:100%;
+  display:block;
+  border-radius:16px
+}
+
+.langs a{
+  display:inline-block;
+  margin:0 8px 10px 0;
+  padding:8px 14px;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid #e6e0d2;
+  text-decoration:none;
+  color:var(--ink);
+  font-weight:600
+}
+
+.langs a:hover{
+  border-color:var(--amber)
+}
+
+article.doc{
+  max-width:760px;
+  margin:0 auto;
+  padding:48px 20px 72px
+}
+
+article.doc h1{
+  font:400 clamp(32px,5vw,52px)/1.05 var(--head);
+  margin:0 0 24px
+}
+
+article.doc h2{
+  margin-top:48px
+}
+
+article.doc table{
+  border-collapse:collapse;
+  width:100%;
+  font-size:16px;
+  margin:16px 0;
+  display:block;
+  overflow-x:auto
+}
+
+article.doc th,article.doc td{
+  border-bottom:1px solid #ddd5c4;
+  padding:10px 12px;
+  text-align:start;
+  vertical-align:top
+}
+
+article.doc th{
+  background:var(--glint)
+}
+
+article.doc.wide{
+  max-width:1080px
+}
+
+.tag{
+  display:inline-block;
+  padding:2px 10px;
+  border-radius:999px;
+  background:#e9e4d8;
+  font-size:14px;
+  font-weight:600;
+  white-space:nowrap
+}
+
+.tag.on{
+  background:var(--amber);
+  color:var(--ink)
+}
+
+small{
+  color:var(--muted)
+}
+
+footer{
+  background:var(--ink);
+  color:var(--paper);
+  padding:32px 0;
+  font-size:15px
+}
+
+footer a{
+  color:var(--amber)
+}
+
+@media (max-width:600px){
+  nav a{
+  margin:0 14px 0 0
+}
+body{
+  font-size:17px
+}
+section{
+  padding:48px 0
+}
+
+}
+
