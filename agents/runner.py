@@ -123,7 +123,6 @@ def main() -> None:
             max_tokens=config["max_tokens"],
             system=instructions,
             tools=[WRITE_FILES_TOOL],
-            tool_choice={"type": "tool", "name": "write_files"},
             messages=[{"role": "user", "content": message}],
         ) as stream:
             response = stream.get_final_message()
