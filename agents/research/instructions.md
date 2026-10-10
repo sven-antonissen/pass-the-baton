@@ -37,7 +37,9 @@ You build **country profiles**: verified, sourced facts that the website and the
 }
 ```
 
+- If the statutory retirement age differs by group (for example men and women), add `"by_group": {"men": 65, "women": 60}` inside `retirement_age`, and set `statutory` to the **highest** of those values, explaining this in `notes`.
 - Include the head of state and the head of government (one entry if they are the same person).
+- Write the `country` field exactly as it appears in the country queue, so progress can be tracked.
 - Do **not** compute ages or judge anyone; store birth dates and let the website calculate.
 
 ## Rules for facts

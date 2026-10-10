@@ -2,6 +2,8 @@ name: Website
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "23 4 * * 1" # weekly rebuild so ages on the countries page stay current
   push:
     branches: [main]
     paths:
@@ -9,6 +11,7 @@ on:
       - brand/**
       - MANIFESTO.md
       - translations/**
+      - data/**
       - .github/workflows/website.yml
 
 permissions:

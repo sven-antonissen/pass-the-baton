@@ -4,8 +4,12 @@
   "checked_on": "2026-10-10",
   "retirement_age": {
     "statutory": 65,
-    "notes": "Ordinary retirement (jubilación ordinaria) requires age 65 for men and 60 for women, plus 30 years of contributions. Women may opt to keep working until 65. The single value stored here is the men's age; the women's age is 60.",
-    "source": "https://www.anses.gob.ar/jubilaciones-y-pensiones/como-iniciar-mi-jubilacion"
+    "notes": "Ordinary retirement (jubilación ordinaria) requires age 65 for men and 60 for women, plus 30 years of contributions. Women may opt to keep working until 65. 'statutory' holds the highest value (65).",
+    "source": "https://www.anses.gob.ar/jubilaciones-y-pensiones/como-iniciar-mi-jubilacion",
+    "by_group": {
+      "men": 65,
+      "women": 60
+    }
   },
   "political_system": "federal presidential republic",
   "offices": [

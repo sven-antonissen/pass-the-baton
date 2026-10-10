@@ -10,7 +10,9 @@ the repository itself, so whatever the agents add through merged pull requests
 
 from __future__ import annotations
 
+import datetime
 import html
+import json
 import re
 import shutil
 from pathlib import Path
@@ -66,6 +68,10 @@ article.doc h2{margin-top:48px}
 article.doc table{border-collapse:collapse;width:100%;font-size:16px;margin:16px 0;display:block;overflow-x:auto}
 article.doc th,article.doc td{border-bottom:1px solid #ddd5c4;padding:10px 12px;text-align:start;vertical-align:top}
 article.doc th{background:var(--glint)}
+article.doc.wide{max-width:1080px}
+.tag{display:inline-block;padding:2px 10px;border-radius:999px;background:#e9e4d8;font-size:14px;font-weight:600;white-space:nowrap}
+.tag.on{background:var(--amber);color:var(--ink)}
+small{color:var(--muted)}
 footer{background:var(--ink);color:var(--paper);padding:32px 0;font-size:15px}
 footer a{color:var(--amber)}
 @media (max-width:600px){nav a{margin:0 14px 0 0}body{font-size:17px}section{padding:48px 0}}
@@ -98,7 +104,7 @@ def page(title: str, body: str, lang: str = "en", depth: int = 0, description: s
 <body>
 <header class="top"><div class="wrap">
 <a class="brand" href="{up}index.html">{logo}Pass the Baton</a>
-<nav><a href="{up}manifesto/">Manifesto</a><a href="{up}index.html#languages">Languages</a><a href="{REPO_URL}">Help build it</a></nav>
+<nav><a href="{up}manifesto/">Manifesto</a><a href="{up}countries/">Countries</a><a href="{up}index.html#languages">Languages</a><a href="{REPO_URL}">Help build it</a></nav>
 </div></header>
 {body}
 <footer><div class="wrap">
@@ -152,6 +158,7 @@ def home() -> str:
 <h2>The demand</h2>
 <p class="demand">Anyone who has reached the statutory retirement age of their own country, and at the latest 67, does not start a new term in one of the highest offices.</p>
 <p>It applies worldwide, in every country and under every regime, starting with heads of state, heads of government and ministers. A term already under way may be completed. Ordinary citizens remain free to keep working.</p>
+<p><a href="countries/">See how countries compare</a>, with sources for every fact.</p>
 </div></section>
 
 <section style="padding-top:0"><div class="wrap">
@@ -188,6 +195,73 @@ def doc_page(md_file: Path, lang: str, depth: int) -> str:
     return page(title, body, lang=lang, depth=depth)
 
 
+def load_countries() -> list[dict]:
+    out = []
+    for f in sorted((ROOT / "data/countries").glob("*.json")):
+        try:
+            out.append(json.loads(f.read_text(encoding="utf-8")))
+        except json.JSONDecodeError:
+            continue
+    return sorted(out, key=lambda c: c.get("country", ""))
+
+
+def age_on(birth: str | None, today: datetime.date) -> int | None:
+    try:
+        b = datetime.date.fromisoformat(birth or "")
+    except ValueError:
+        return None
+    return today.year - b.year - ((today.month, today.day) < (b.month, b.day))
+
+
+def src(url: str | None, label: str = "source") -> str:
+    return f'<a href="{html.escape(url)}" rel="nofollow noopener">{label}</a>' if url else ""
+
+
+def countries_page() -> str:
+    today = datetime.date.today()
+    rows = []
+    for c in load_countries():
+        ra = c.get("retirement_age") or {}
+        statutory = ra.get("statutory")
+        norm = min(statutory, 67) if isinstance(statutory, int) else 67
+        groups = ra.get("by_group") or {}
+        ra_text = (", ".join(f"{k} {v}" for k, v in groups.items()) if groups
+                   else (str(statutory) if statutory is not None else "unknown"))
+        for o in c.get("offices", []):
+            age = age_on(o.get("birth_date"), today)
+            if age is None:
+                status = '<span class="tag">unknown</span>'
+            elif age >= norm:
+                status = '<span class="tag on">at or above</span>'
+            else:
+                status = '<span class="tag">below</span>'
+            rows.append(
+                "<tr>"
+                f"<td><strong>{html.escape(c.get('country', ''))}</strong></td>"
+                f"<td>{html.escape(o.get('title') or o.get('office', ''))}</td>"
+                f"<td>{html.escape(o.get('holder') or 'unknown')} {src(o.get('source'))}</td>"
+                f"<td>{age if age is not None else 'unknown'}</td>"
+                f"<td>{html.escape(ra_text)} {src(ra.get('source'))}<br><small>norm for a new term: {norm}</small></td>"
+                f"<td>{status}</td>"
+                "</tr>"
+            )
+    table = (
+        "<table><thead><tr><th>Country</th><th>Office</th><th>Holder</th><th>Age</th>"
+        "<th>Statutory retirement age</th><th>Compared with the norm</th></tr></thead>"
+        f"<tbody>{''.join(rows)}</tbody></table>"
+    ) if rows else "<p>The first country profiles are being researched.</p>"
+    body = f"""
+<article class="doc wide">
+<h1>Countries</h1>
+<p>For each country: who holds the highest offices, their age, and the country's statutory retirement age. The norm for a new term is that retirement age, at the latest 67. This page states facts; it does not judge anyone. Every value links to its source.</p>
+{table}
+<p><small>Ages calculated on {today.isoformat()}. Profiles are researched by an AI agent with web search, reviewed by a person before publication, and refreshed regularly. Spotted an error? <a href="{REPO_URL}/issues">Tell us</a>.</small></p>
+</article>
+"""
+    return page("Countries: Pass the Baton", body, depth=1,
+                description="Leaders of the highest offices compared with their country's retirement age.")
+
+
 def main() -> None:
     if OUT.exists():
         shutil.rmtree(OUT)
@@ -206,6 +280,9 @@ def main() -> None:
         (OUT / code / "index.html").write_text(
             doc_page(ROOT / "translations" / code / "MANIFESTO.md", code, 1), encoding="utf-8"
         )
+
+    (OUT / "countries").mkdir()
+    (OUT / "countries/index.html").write_text(countries_page(), encoding="utf-8")
 
     (OUT / "CNAME").write_text(DOMAIN + "\n", encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
