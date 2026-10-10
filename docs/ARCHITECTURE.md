@@ -57,7 +57,7 @@ Rejections and edits are kept. They are used to regularly refine the agents' ins
 | --- | --- | --- |
 | Language model | Claude via the API | One model for all agents, each with its own instructions and tools |
 | Orchestration | Claude Agent SDK | The coordinator starts the other agents as subagents and assigns the work |
-| Scheduling | Scheduled jobs (daily, weekly) | For example: scan the news every morning, report every Monday |
+| Orchestration rules | `agents/orchestrator.py`, every six hours and after each merge | Plain rules, no AI: starts agents with work to do, waits for open PRs, daily run budget, pause switch |
 | Knowledge base | Database with country profiles, material, partners, decisions | Single source of truth for all agents |
 | Approval queue | GitHub pull requests, branch protection | Merge = approve; two required reviews for sensitive paths; full history |
 | Runtime | GitHub Actions | Agents start on a schedule or by hand; no server to host |

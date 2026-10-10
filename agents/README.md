@@ -19,16 +19,26 @@ Each agent is a folder with two files anyone can read:
 
 | Agent | Phase | Writes to | Runs |
 | --- | --- | --- | --- |
-| [branding](branding/) | 1 | `brand/` | By hand, and on the 1st of each month (Opus, the most expensive) |
-| [localisation](localisation/) | 2 | `translations/` | By hand, and when the manifesto or language queue changes; three languages per run |
-| [research](research/) | 2 | `data/countries/` | By hand, and every Monday; three countries per run, with web search |
-| [partners](partners/) | 3 | `outreach/partners/` | By hand, and every Wednesday; two researched countries per run, with web search. Drafts only, never sends |
-| [media](media/) | 3 | `outreach/media/` | By hand, and every Thursday; news of the past week and draft posts, with web search. Drafts only, never publishes |
-| [coordinator](coordinator/) | all | `docs/status/` | By hand, and every Monday after research; status report and next steps |
+| [branding](branding/) | 1 | `brand/` | By hand only (Opus, the most expensive) |
+| [localisation](localisation/) | 2 | `translations/` | Orchestrator, while languages are queued; three per run |
+| [research](research/) | 2 | `data/countries/` | Orchestrator, while countries are queued; three per run, with web search |
+| [partners](partners/) | 3 | `outreach/partners/` | Orchestrator, while researched countries lack partners; two per run, with web search. Drafts only, never sends |
+| [media](media/) | 3 | `outreach/media/` | Orchestrator, once a week; news and draft posts, with web search. Drafts only, never publishes |
+| [coordinator](coordinator/) | all | `docs/status/` | Orchestrator, once a week; status report and next steps |
 
 The volunteers agent from the architecture is not built yet: it needs a channel where volunteers sign up (phase 4).
 
-Merging a pull request from the localisation, research or partners agent automatically starts that agent's next batch, until its queue is done.
+## The orchestrator
+
+[`orchestrator.py`](orchestrator.py) decides which agents to start. It uses plain rules, no AI model, so it costs nothing to run. It runs every six hours and after every merge.
+
+- An agent never starts while its previous pull request is still open: **your review sets the pace**.
+- Queue agents (localisation, research, partners) start while their queue has items.
+- Media and coordinator start once a week.
+- Branding only runs by hand.
+- At most `max_agent_runs_per_day` agent runs per day (default 4), counting every route.
+
+Settings live in [`orchestrator.json`](orchestrator.json). Set `"paused": true` to stop everything, change the daily budget, or switch an agent to `"auto": false`. Each orchestrator run shows its decisions under *Actions → Orchestrator*.
 
 The website in [`site/`](../site/) is not an agent: it is built from the repository on every merge and published to pass-the-baton.org.
 

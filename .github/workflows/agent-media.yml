@@ -2,8 +2,6 @@ name: Agent - media
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "29 6 * * 4" # 06:29 UTC every Thursday
 
 concurrency:
   group: agent-media

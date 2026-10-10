@@ -1,0 +1,13 @@
+{
+  "paused": false,
+  "max_agent_runs_per_day": 4,
+  "agents": {
+    "localisation": { "auto": true, "rule": "queue" },
+    "research": { "auto": true, "rule": "queue" },
+    "partners": { "auto": true, "rule": "queue" },
+    "media": { "auto": true, "rule": "every_days", "days": 7, "folder": "outreach/media" },
+    "coordinator": { "auto": true, "rule": "every_days", "days": 7, "folder": "docs/status" },
+    "branding": { "auto": false }
+  },
+  "priority": ["coordinator", "research", "localisation", "partners", "media"]
+}

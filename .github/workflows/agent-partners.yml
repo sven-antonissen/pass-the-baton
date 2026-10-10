@@ -2,8 +2,6 @@ name: Agent - partners
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "11 6 * * 3" # 06:11 UTC every Wednesday
 
 concurrency:
   group: agent-partners

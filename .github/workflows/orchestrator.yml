@@ -1,0 +1,49 @@
+name: Orchestrator
+
+# Decides which agents to start, using plain rules in agents/orchestrator.py
+# (no AI model, no API cost). Settings, the daily run budget and the pause
+# switch live in agents/orchestrator.json.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 */6 * * *" # every six hours
+  pull_request:
+    types: [closed]
+
+permissions:
+  actions: write
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: orchestrator
+  cancel-in-progress: false
+
+jobs:
+  orchestrate:
+    if: github.event_name != 'pull_request' || github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Decide and start agents
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr list --state open --limit 100 --json headRefName > prs.json
+          gh run list --limit 100 --json workflowName,status,createdAt > runs.json
+          python3 agents/orchestrator.py prs.json runs.json > start.txt 2> log.txt || { cat log.txt; exit 1; }
+          {
+            echo "## Orchestrator decisions"
+            sed 's/^/- /' log.txt
+          } >> "$GITHUB_STEP_SUMMARY"
+          cat log.txt
+          while read -r agent; do
+            [ -z "$agent" ] && continue
+            gh workflow run "agent-$agent.yml" --ref main
+            echo "Started $agent"
+          done < start.txt

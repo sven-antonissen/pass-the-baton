@@ -2,8 +2,6 @@ name: Agent - research
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "41 5 * * 1" # 05:41 UTC every Monday
 
 concurrency:
   group: agent-research
