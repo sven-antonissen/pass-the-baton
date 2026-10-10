@@ -1,0 +1,23 @@
+name: Agent - partners
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "11 6 * * 3" # 06:11 UTC every Wednesday
+
+concurrency:
+  group: agent-partners
+  cancel-in-progress: false
+
+jobs:
+  partners:
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: ./.github/workflows/_run-agent.yml
+    with:
+      agent: partners
+      output: outreach/partners
+      title: "Partners agent: organisations and draft outreach"
+    secrets:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

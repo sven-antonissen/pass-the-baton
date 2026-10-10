@@ -7,3 +7,4 @@ __pycache__/
 .DS_Store
 .agent-pr-body.md
 _site/
+.agent-context/

@@ -1,0 +1,24 @@
+name: Agent - coordinator
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "53 7 * * 1" # 07:53 UTC every Monday, after the research run
+
+concurrency:
+  group: agent-coordinator
+  cancel-in-progress: false
+
+jobs:
+  coordinator:
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: ./.github/workflows/_run-agent.yml
+    with:
+      agent: coordinator
+      output: docs/status
+      title: "Coordinator: weekly status"
+      timeout: 10
+    secrets:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

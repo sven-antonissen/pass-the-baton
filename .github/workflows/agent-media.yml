@@ -1,0 +1,23 @@
+name: Agent - media
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "29 6 * * 4" # 06:29 UTC every Thursday
+
+concurrency:
+  group: agent-media
+  cancel-in-progress: false
+
+jobs:
+  media:
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: ./.github/workflows/_run-agent.yml
+    with:
+      agent: media
+      output: outreach/media
+      title: "Media agent: weekly news and draft posts"
+    secrets:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

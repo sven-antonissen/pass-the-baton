@@ -40,6 +40,25 @@ jobs:
       - name: Install
         run: pip install anthropic
 
+      - name: Collect GitHub context for the agent
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p .agent-context
+          {
+            echo "# Open pull requests"
+            gh pr list --state open --limit 30 --json number,title,createdAt --template '{{range .}}- #{{.number}} {{.title}} ({{.createdAt}}){{"\n"}}{{end}}' || true
+            echo
+            echo "# Recently merged pull requests"
+            gh pr list --state merged --limit 15 --json number,title,mergedAt --template '{{range .}}- #{{.number}} {{.title}} ({{.mergedAt}}){{"\n"}}{{end}}' || true
+            echo
+            echo "# Open issues"
+            gh issue list --state open --limit 30 --json number,title,labels --template '{{range .}}- #{{.number}} {{.title}}{{"\n"}}{{end}}' || true
+            echo
+            echo "# Recent workflow runs"
+            gh run list --limit 20 --json workflowName,conclusion,createdAt --template '{{range .}}- {{.workflowName}}: {{.conclusion}} ({{.createdAt}}){{"\n"}}{{end}}' || true
+          } > .agent-context/github.md
+
       - name: Run the agent
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

@@ -1,0 +1,14 @@
+{
+  "model": "claude-sonnet-5-5",
+  "max_tokens": 4000,
+  "inputs": [
+    "docs/ARCHITECTURE.md",
+    "agents/README.md",
+    "agents/localisation/languages.md",
+    "agents/research/countries.md",
+    ".agent-context/github.md",
+    "docs/status/STATUS.md"
+  ],
+  "list_dirs": ["translations", "data/countries", "outreach/partners", "outreach/media", "brand"],
+  "output_dir": "docs/status"
+}

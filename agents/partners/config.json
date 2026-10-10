@@ -1,0 +1,8 @@
+{
+  "model": "claude-sonnet-5-5",
+  "max_tokens": 10000,
+  "inputs": ["MANIFESTO.md"],
+  "list_dirs": ["data/countries", "outreach/partners"],
+  "output_dir": "outreach/partners",
+  "web_search": { "type": "web_search_20250305", "max_uses": 8 }
+}

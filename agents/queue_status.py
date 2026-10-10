@@ -38,9 +38,20 @@ def remaining_research() -> list[str]:
     return [n for n in names if n.casefold() not in done]
 
 
+def remaining_partners() -> list[str]:
+    profiles = {f.stem for f in (ROOT / "data/countries").glob("*.json")}
+    folder = ROOT / "outreach/partners"
+    done = {f.stem for f in folder.glob("*.md")} if folder.is_dir() else set()
+    return sorted(profiles - done)
+
+
 def main() -> None:
     agent = sys.argv[1] if len(sys.argv) > 1 else ""
-    funcs = {"localisation": remaining_localisation, "research": remaining_research}
+    funcs = {
+        "localisation": remaining_localisation,
+        "research": remaining_research,
+        "partners": remaining_partners,
+    }
     if agent not in funcs:
         print(0)
         return
