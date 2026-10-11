@@ -45,7 +45,7 @@ LOCALES = {
     "ar": "ar_AR", "hi": "hi_IN", "zh": "zh_CN", "ru": "ru_RU", "sw": "sw_KE", "id": "id_ID",
     "ja": "ja_JP", "tr": "tr_TR", "it": "it_IT", "pl": "pl_PL", "ko": "ko_KR",
 }
-PAGES = {"home": "", "manifesto": "manifesto/", "countries": "countries/", "join": "join/"}
+PAGES = {"home": "", "manifesto": "manifesto/", "countries": "countries/", "join": "join/", "about": "about/"}
 SCALE = 90  # bars run from 0 to 90 years
 
 
@@ -455,6 +455,56 @@ def join(lang: str) -> str:
     return page(lang, "join", f"{s['jp_title']}: Pass the Baton", s["jp_meta_description"], body)
 
 
+def about(lang: str) -> str:
+    s = load_strings(lang)
+    c = load_community()
+    e = html.escape
+    hows = "".join(
+        f'<li><h3>{e(s[f"ap_how{i}_title"])}</h3><p>{e(s[f"ap_how{i}_text"])}</p></li>' for i in (1, 2, 3)
+    )
+    links = []
+    if c.get("discord_invite"):
+        links.append(f'<a class="btn primary" href="{e(c["discord_invite"])}" rel="noopener">{e(s["ap_contact_discord"])}</a>')
+    if c.get("reddit"):
+        links.append(f'<a class="btn dark" href="{e(c["reddit"])}" rel="noopener">{e(s["ap_contact_reddit"])}</a>')
+    links.append(f'<a class="btn outline" href="{REPO_URL}/issues">{e(s["ap_contact_github"])}</a>')
+    body = f"""
+<section class="about-hero">
+  <div class="wrap">
+    <h1>{e(s['ap_title'])}</h1>
+    <p class="lead">{e(s['ap_intro'])}</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap about-cols">
+    <h2>{e(s['ap_why_title'])}</h2>
+    <p class="about-big">{e(s['ap_why_text'])}</p>
+  </div>
+</section>
+<section class="section ink">
+  <div class="wrap">
+    <h2>{e(s['ap_how_title'])}</h2>
+    <ul class="hows">{hows}</ul>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap about-grid">
+    <div><h2>{e(s['ap_not_title'])}</h2><p>{e(s['ap_not_text'])}</p></div>
+    <div><h2>{e(s['ap_who_title'])}</h2><p>{e(s['ap_who_text'])}</p></div>
+    <div><h2>{e(s['ap_money_title'])}</h2><p>{e(s['ap_money_text'])}</p></div>
+  </div>
+</section>
+<section class="section paper-2">
+  <div class="wrap">
+    <h2>{e(s['ap_contact_title'])}</h2>
+    <p>{e(s['ap_contact_text'])}</p>
+    <div class="contact-links">{''.join(links)}</div>
+  </div>
+</section>
+"""
+    return page(lang, "about", f"{s['ap_title']}", s["ap_meta_description"], body)
+
+
 def sitemap() -> str:
     today = datetime.date.today().isoformat()
     urls = []
@@ -494,6 +544,7 @@ def main() -> None:
         write(page_path(code, "manifesto") + "index.html", manifesto(code))
         write(page_path(code, "countries") + "index.html", countries(code))
         write(page_path(code, "join") + "index.html", join(code))
+        write(page_path(code, "about") + "index.html", about(code))
 
     write("sitemap.xml", sitemap())
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {ORIGIN}/sitemap.xml\n")

@@ -280,3 +280,23 @@ footer .lang-switch ul { top: auto; bottom: calc(100% + 8px); }
 .ways li::before { content: counter(way); display: block; font: 400 56px/1 var(--head); color: var(--amber); margin-bottom: 10px; }
 .ways p { margin: 0; color: var(--muted); }
 .wrap.safety > * { max-width: 70ch; }
+
+/* ---------- About page ---------- */
+.about-hero { background: var(--ink); color: var(--paper); padding: clamp(48px, 7vw, 96px) 0; position: relative; overflow: hidden; isolation: isolate; }
+.about-hero::before { content: ""; position: absolute; inset: -40% -20%; background: repeating-linear-gradient(-28deg, transparent 0 118px, rgba(246, 243, 236, .07) 118px 121px); z-index: -1; }
+.about-hero::after { content: ""; position: absolute; top: -20%; bottom: -20%; right: 8%; width: clamp(90px, 12vw, 170px); background: rgba(245, 166, 35, .14); border-left: 3px solid rgba(245, 166, 35, .55); border-right: 3px solid rgba(245, 166, 35, .55); transform: skewX(-28deg); z-index: -1; }
+.about-hero h1 { font-size: clamp(42px, 7.4vw, 96px); line-height: .94; letter-spacing: -0.03em; margin: 0 0 24px; max-width: 13ch; }
+.about-hero .lead { font-size: clamp(19px, 2.2vw, 24px); color: var(--on-ink-muted); max-width: 52ch; margin: 0; }
+.about-big { font-size: clamp(20px, 2.4vw, 26px); line-height: 1.45; max-width: 46ch; }
+.hows { list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 22px; }
+.hows li { padding: 28px; border-radius: 20px; background: var(--ink-2); box-shadow: inset 0 0 0 1px rgba(246, 243, 236, .1); }
+.hows li:first-child { box-shadow: inset 0 0 0 2px var(--amber); }
+.hows h3 { color: var(--paper); }
+.hows p { margin: 10px 0 0; }
+.about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 40px; }
+.about-grid h2 { font-size: clamp(26px, 3vw, 34px); padding-top: 18px; border-top: 3px solid var(--ink); }
+.about-grid p { color: var(--muted); }
+.contact-links { display: flex; flex-wrap: wrap; gap: 0; margin-top: 24px; }
+.btn.outline { box-shadow: inset 0 0 0 2px var(--ink); color: var(--ink); }
+.btn.outline:hover { background: var(--ink); color: var(--paper); }
+footer p a:first-child { font-weight: 600; }
