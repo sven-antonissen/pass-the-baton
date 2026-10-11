@@ -15,5 +15,9 @@
     "translations/en/site.json"
   ],
   "check": "python3 agents/check_site_strings.py",
-  "focus_inputs": "translations/{item}/site.json"
+  "focus_inputs": "translations/{item}/site.json",
+  "keep_existing": [
+    "translations/*/MANIFESTO.md",
+    "translations/*/README.md"
+  ]
 }

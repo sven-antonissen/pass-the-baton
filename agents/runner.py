@@ -120,14 +120,39 @@ def check_content(rel: str, content: str) -> None:
             raise ValueError(f"{rel} is not valid JSON: {e}") from e
 
 
-def write_outputs(result: dict, output_dir: str, protect: list[str] | None = None) -> list[str]:
+def normalise_files(result: dict) -> list[dict]:
+    """The model sometimes sends the file list as a JSON string; accept that too."""
+    files = result.get("files", [])
+    if isinstance(files, str):
+        try:
+            files = json.loads(files)
+        except json.JSONDecodeError as e:
+            raise ValueError(f"The file list is not valid JSON: {e}") from e
+    if not isinstance(files, list) or not all(isinstance(f, dict) and "path" in f and "content" in f for f in files):
+        raise ValueError("The file list must be a list of {path, content} objects.")
+    return files
+
+
+KEPT: list[str] = []
+
+
+def write_outputs(result: dict, output_dir: str, protect: list[str] | None = None,
+                  keep_existing: list[str] | None = None) -> list[str]:
+    """Write the agent's files. Protected files are refused; files matching a
+    keep_existing pattern that already exist are left untouched (and reported)."""
+    import fnmatch
+
     protected = {(ROOT / p).resolve() for p in (protect or [])}
     written = []
-    for item in result.get("files", []):
+    for item in normalise_files(result):
         check_content(item["path"], item["content"])
         target = safe_path(item["path"], output_dir)
         if target in protected:
             raise ValueError(f"Refused to change a protected file: {item['path']}")
+        rel = str(target.relative_to(ROOT))
+        if target.exists() and any(fnmatch.fnmatch(rel, pat) for pat in (keep_existing or [])):
+            KEPT.append(rel)
+            continue
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(item["content"], encoding="utf-8")
         written.append(str(target.relative_to(ROOT)))
@@ -194,7 +219,7 @@ def main() -> None:
 
     result = calls[0].input
     try:
-        written = write_outputs(result, config["output_dir"], config.get("protect"))
+        written = write_outputs(result, config["output_dir"], config.get("protect"), config.get("keep_existing"))
     except (ValueError, KeyError, TypeError) as e:
         fail(f"Could not write the agent's files: {e}")
 
@@ -209,6 +234,7 @@ def main() -> None:
     summary = result.get("summary", "").strip()
     body = (
         f"{summary}\n\n**Files**\n" + "\n".join(f"- `{p}`" for p in written)
+        + ("\n\n**Left unchanged** (already reviewed): " + ", ".join(f"`{p}`" for p in KEPT) if KEPT else "")
         + f"\n\n_Agent: {args.agent} · model: {config['model']} · "
         f"tokens in/out: {tokens_in}/{tokens_out}_\n\n"
         "Review before merging: merging this pull request is the human approval."
