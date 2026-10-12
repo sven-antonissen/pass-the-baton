@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="hr-title hr-desc">
+  <title id="hr-title">Pass the Baton: the hand-off</title>
+  <desc id="hr-desc">Seen from a low angle, an older runner with silver hair pushes a shining amber relay baton into the open palm of a younger runner. The baton sits at the centre, glowing warm amber against a deep ink night.</desc>
+  <defs>
+    <radialGradient id="hr-glow" cx="800" cy="440" r="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F5A623" stop-opacity="0.55"/>
+      <stop offset="0.25" stop-color="#C27A0C" stop-opacity="0.35"/>
+      <stop offset="0.6" stop-color="#6B3B04" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#111318" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hr-core" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFCF73" stop-opacity="0.5"/>
+      <stop offset="0.5" stop-color="#F5A623" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#F5A623" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hr-vig" cx="0.5" cy="0.47" r="0.72">
+      <stop offset="0.55" stop-color="#0A0B0E" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0A0B0E" stop-opacity="0.85"/>
+    </radialGradient>
+    <linearGradient id="hr-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22180C"/>
+      <stop offset="0.25" stop-color="#16151A"/>
+      <stop offset="1" stop-color="#0B0C10"/>
+    </linearGradient>
+    <linearGradient id="hr-horizon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F5A623" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFCF73" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#F5A623" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hr-streak" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F5A623" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FFCF73" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="hr-trail" x1="-300" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF4DC" stop-opacity="0"/>
+      <stop offset="0.6" stop-color="#FFF4DC" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#FFF4DC" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hr-gskin" x1="250" y1="0" x2="700" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2A1708"/>
+      <stop offset="1" stop-color="#A85F07"/>
+    </linearGradient>
+    <linearGradient id="hr-gskinB" x1="180" y1="0" x2="560" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1C1008"/>
+      <stop offset="1" stop-color="#5A3306"/>
+    </linearGradient>
+    <linearGradient id="hr-rskin" x1="1340" y1="0" x2="930" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#160E07"/>
+      <stop offset="1" stop-color="#6B3B04"/>
+    </linearGradient>
+    <linearGradient id="hr-rskinB" x1="1340" y1="0" x2="930" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#100A05"/>
+      <stop offset="1" stop-color="#3D2205"/>
+    </linearGradient>
+    <linearGradient id="hr-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D98E1C"/>
+      <stop offset="0.10" stop-color="#FFCF73"/>
+      <stop offset="0.20" stop-color="#FFF4DC"/>
+      <stop offset="0.30" stop-color="#FFC34F"/>
+      <stop offset="0.55" stop-color="#F5A623"/>
+      <stop offset="0.78" stop-color="#C27A0C"/>
+      <stop offset="0.88" stop-color="#A85F07"/>
+      <stop offset="0.94" stop-color="#B5700F"/>
+      <stop offset="1" stop-color="#6B3B04"/>
+    </linearGradient>
+    <linearGradient id="hr-rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF4DC"/>
+      <stop offset="0.4" stop-color="#FFC34F"/>
+      <stop offset="1" stop-color="#8A4E06"/>
+    </linearGradient>
+    <linearGradient id="hr-hole" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A0E02"/>
+      <stop offset="0.6" stop-color="#3D2205"/>
+      <stop offset="1" stop-color="#9A5A0A"/>
+    </linearGradient>
+    <clipPath id="hr-clip">
+      <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z"/>
+    </clipPath>
+    <filter id="hr-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="hr-soft" x="-50%" y="-300%" width="200%" height="700%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="hr-rimblur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+
+    <!-- Older runner (giver), far-side limbs -->
+    <g id="hr-gB" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M440 300 L370 395 L305 335" stroke-width="34" fill="none"/>
+      <path d="M395 540 L330 690" stroke-width="62" fill="none"/>
+      <path d="M330 690 L215 770" stroke-width="44" fill="none"/>
+    </g>
+    <!-- Older runner (giver), body and near-side limbs -->
+    <g id="hr-gF" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M455 290 L405 522" stroke-width="108" fill="none"/>
+      <path d="M465 238 L455 292" stroke-width="36" fill="none"/>
+      <circle cx="472" cy="194" r="48" stroke-width="1"/>
+      <path d="M410 540 L540 640" stroke-width="62" fill="none"/>
+      <path d="M540 640 L525 795" stroke-width="44" fill="none"/>
+      <path d="M470 300 L590 390 L680 480" stroke-width="34" fill="none"/>
+    </g>
+    <!-- Younger runner (receiver), far-side limbs -->
+    <g id="hr-rB" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1175 300 L1255 385 L1325 320" stroke-width="32" fill="none"/>
+      <path d="M1110 535 L1050 685" stroke-width="60" fill="none"/>
+      <path d="M1050 685 L935 752" stroke-width="42" fill="none"/>
+    </g>
+    <!-- Younger runner (receiver), body and near-side limbs -->
+    <g id="hr-rF" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1165 285 L1125 517" stroke-width="98" fill="none"/>
+      <path d="M1180 232 L1168 287" stroke-width="34" fill="none"/>
+      <circle cx="1188" cy="186" r="46" stroke-width="1"/>
+      <path d="M1130 535 L1260 625" stroke-width="60" fill="none"/>
+      <path d="M1260 625 L1250 792" stroke-width="42" fill="none"/>
+      <path d="M1150 300 L1050 410 L950 440" stroke-width="32" fill="none"/>
+    </g>
+  </defs>
+
+  <!-- Night sky and warm glow -->
+  <rect width="1600" height="900" fill="#111318"/>
+  <rect width="1600" height="900" fill="url(#hr-glow)"/>
+  <g fill="#F5A623" opacity="0.07">
+    <path d="M800 440 L-100 40 L-100 200 Z"/>
+    <path d="M800 440 L380 -40 L560 -40 Z"/>
+    <path d="M800 440 L1000 -40 L1160 -40 Z"/>
+    <path d="M800 440 L1700 60 L1700 230 Z"/>
+    <path d="M800 440 L-100 560 L-100 650 Z"/>
+    <path d="M800 440 L1700 520 L1700 620 Z"/>
+  </g>
+  <ellipse cx="800" cy="440" rx="360" ry="260" fill="url(#hr-core)"/>
+
+  <!-- Track, low horizon -->
+  <rect x="0" y="770" width="1600" height="130" fill="url(#hr-ground)"/>
+  <rect x="0" y="768" width="1600" height="3" fill="url(#hr-horizon)"/>
+  <g fill="#F6F3EC">
+    <rect x="0" y="786" width="1600" height="1.5" opacity="0.10"/>
+    <rect x="0" y="812" width="1600" height="2.5" opacity="0.13"/>
+    <rect x="0" y="848" width="1600" height="3.5" opacity="0.15"/>
+    <rect x="0" y="894" width="1600" height="5" opacity="0.17"/>
+  </g>
+  <rect width="1600" height="900" fill="url(#hr-vig)"/>
+
+  <!-- Motion streaks -->
+  <g fill="url(#hr-streak)">
+    <rect x="40" y="250" width="230" height="4" rx="2"/>
+    <rect x="110" y="300" width="150" height="3" rx="1.5"/>
+    <rect x="20" y="440" width="300" height="5" rx="2.5"/>
+    <rect x="130" y="520" width="190" height="3" rx="1.5"/>
+    <rect x="0" y="640" width="220" height="4" rx="2"/>
+    <rect x="60" y="720" width="110" height="3" rx="1.5"/>
+    <rect x="780" y="590" width="220" height="4" rx="2"/>
+    <rect x="830" y="660" width="140" height="3" rx="1.5"/>
+    <rect x="860" y="230" width="200" height="3" rx="1.5"/>
+    <rect x="920" y="290" width="130" height="4" rx="2"/>
+  </g>
+
+  <!-- Ground shadows -->
+  <g fill="#000000" opacity="0.5" filter="url(#hr-soft)">
+    <ellipse cx="560" cy="822" rx="80" ry="7"/>
+    <ellipse cx="1285" cy="820" rx="78" ry="7"/>
+    <ellipse cx="420" cy="826" rx="170" ry="9" opacity="0.5"/>
+    <ellipse cx="1130" cy="826" rx="170" ry="9" opacity="0.5"/>
+  </g>
+
+  <!-- Older runner -->
+  <use xlink:href="#hr-gB" href="#hr-gB" stroke="#C27A0C" fill="#C27A0C" transform="translate(5 -3)" opacity="0.8" filter="url(#hr-rimblur)"/>
+  <use xlink:href="#hr-gB" href="#hr-gB" stroke="url(#hr-gskinB)" fill="url(#hr-gskinB)"/>
+  <use xlink:href="#hr-gF" href="#hr-gF" stroke="#FFC34F" fill="#FFC34F" transform="translate(6 -3)" filter="url(#hr-rimblur)"/>
+  <use xlink:href="#hr-gF" href="#hr-gF" stroke="url(#hr-gskin)" fill="url(#hr-gskin)"/>
+  <circle cx="463" cy="182" r="52" fill="#E4DED0"/>
+  <path d="M470 131 A52 52 0 0 1 514 168" fill="none" stroke="#FFF4DC" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="473" cy="195" r="48" fill="url(#hr-gskin)"/>
+  <path d="M512 170 A48 48 0 0 1 518 210" fill="none" stroke="#FFC34F" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <g stroke-linecap="round" fill="none">
+    <path d="M205 775 L178 742" stroke="#E4DED0" stroke-width="30"/>
+    <path d="M525 798 L588 810" stroke="#F6F3EC" stroke-width="30"/>
+    <path d="M540 818 L595 822" stroke="#C27A0C" stroke-width="4"/>
+  </g>
+
+  <!-- Younger runner -->
+  <use xlink:href="#hr-rB" href="#hr-rB" stroke="#C27A0C" fill="#C27A0C" transform="translate(-5 -3)" opacity="0.8" filter="url(#hr-rimblur)"/>
+  <use xlink:href="#hr-rB" href="#hr-rB" stroke="url(#hr-rskinB)" fill="url(#hr-rskinB)"/>
+  <use xlink:href="#hr-rF" href="#hr-rF" stroke="#FFC34F" fill="#FFC34F" transform="translate(-6 -3)" filter="url(#hr-rimblur)"/>
+  <use xlink:href="#hr-rF" href="#hr-rF" stroke="url(#hr-rskin)" fill="url(#hr-rskin)"/>
+  <path d="M1162 152 C1120 128 1074 136 1048 178 C1082 160 1118 166 1150 186 Z" fill="#1A0E02"/>
+  <path d="M1150 146 C1112 134 1078 146 1056 170" fill="none" stroke="#FFC34F" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="1195" cy="176" r="49" fill="#1A0E02"/>
+  <path d="M1150 160 A49 49 0 0 1 1180 129" fill="none" stroke="#FFC34F" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="1187" cy="190" r="45" fill="url(#hr-rskin)"/>
+  <path d="M1143 196 A45 45 0 0 0 1160 226" fill="none" stroke="#FFC34F" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <g stroke-linecap="round" fill="none">
+    <path d="M935 752 L910 718" stroke="#E4DED0" stroke-width="28"/>
+    <path d="M1250 795 L1312 806" stroke="#F6F3EC" stroke-width="28"/>
+    <path d="M1262 815 L1318 818" stroke="#C27A0C" stroke-width="4"/>
+  </g>
+
+  <!-- The baton at the centre of the hand-off -->
+  <g transform="translate(800 450) rotate(-24)">
+    <g fill="none" stroke="url(#hr-trail)" stroke-linecap="round">
+      <path d="M-300 -48 L150 -48" stroke-width="3"/>
+      <path d="M-240 -66 L90 -66" stroke-width="2"/>
+      <path d="M-320 44 L120 44" stroke-width="3"/>
+      <path d="M-220 62 L60 62" stroke-width="2"/>
+    </g>
+    <g transform="scale(0.34)">
+      <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z" fill="url(#hr-body)"/>
+      <g clip-path="url(#hr-clip)" fill="none" stroke-linecap="round">
+        <path d="M-560 -58 L580 -52 M-560 -22 L580 -20 M-560 8 L580 7 M-560 36 L580 33 M-560 60 L580 55" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="2"/>
+        <path d="M-560 -40 L580 -36 M-560 -6 L580 -5 M-560 22 L580 20 M-560 52 L580 48" stroke="#3A2002" stroke-opacity="0.10" stroke-width="2"/>
+        <path d="M-520 -44 L540 -39" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="7"/>
+      </g>
+      <path d="M550 -66 A22 66 0 0 1 550 66" fill="none" stroke="#6B3B04" stroke-opacity="0.35" stroke-width="4"/>
+      <ellipse cx="-550" cy="0" rx="26" ry="74" fill="url(#hr-rim)"/>
+      <ellipse cx="-547" cy="3" rx="19" ry="61" fill="url(#hr-hole)"/>
+      <path d="M-573.8 -30 A26 74 0 0 1 -550 -74" fill="none" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Giver's firm grip -->
+    <rect x="-136" y="-31" width="48" height="64" rx="20" fill="#93520C"/>
+    <path d="M-124 2 L-124 28 M-112 4 L-112 30 M-100 4 L-100 28" stroke="#2A1708" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M-130 -27 A20 20 0 0 1 -96 -28" fill="none" stroke="#FFC34F" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-112 -26 L-80 -20" stroke="#A85F07" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <path d="M-110 -31 L-82 -26" stroke="#FFCF73" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.9"/>
+
+    <!-- Receiver's open palm -->
+    <g stroke-linecap="round" fill="none" stroke="#5A3306">
+      <path d="M112 32 L80 26" stroke-width="11"/>
+      <path d="M114 40 L80 40" stroke-width="11"/>
+      <path d="M118 47 L86 54" stroke-width="10"/>
+      <path d="M124 52 L98 64" stroke-width="9"/>
+    </g>
+    <ellipse cx="130" cy="38" rx="28" ry="16" fill="#5A3306"/>
+    <path d="M146 28 L136 -12" stroke="#5A3306" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M141 28 L132 -10" stroke="#FFC34F" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.85"/>
+    <path d="M80 21 L108 26 M106 24 C116 22 130 21 150 24" stroke="#FFC34F" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- Glints -->
+  <g fill="#FFF4DC">
+    <circle cx="735" cy="420" r="3" opacity="0.8"/>
+    <circle cx="870" cy="355" r="2.5" opacity="0.7"/>
+    <circle cx="905" cy="470" r="2" opacity="0.6"/>
+    <circle cx="690" cy="560" r="2" opacity="0.5"/>
+  </g>
+</svg>
