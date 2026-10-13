@@ -76,6 +76,13 @@ def build_message(config: dict) -> str:
             parts.append(f'<file path="{rel}">\n{path.read_text(encoding="utf-8")}\n</file>')
         else:
             parts.append(f'<file path="{rel}" missing="true"/>')
+    # The newest file matching each pattern, e.g. the latest weekly media draft.
+    for pattern in config.get("latest_inputs", []):
+        matches = sorted(ROOT.glob(pattern))
+        if matches:
+            path = matches[-1]
+            rel = str(path.relative_to(ROOT))
+            parts.append(f'<file path="{rel}">\n{path.read_text(encoding="utf-8")}\n</file>')
     for rel in config.get("list_dirs", []):
         folder = ROOT / rel
         names = sorted(p.name for p in folder.iterdir()) if folder.is_dir() else []

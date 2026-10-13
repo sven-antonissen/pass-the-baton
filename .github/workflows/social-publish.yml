@@ -1,0 +1,51 @@
+name: Social - publish
+
+# Posts the oldest approved item from social/queue/ (one per run), then moves it
+# to social/posted/. Items reach the queue on main only through a merged pull
+# request, so merging is the approval. Platforms without secrets are skipped.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "13 8 * * *"  # 10:13 Brussels (summer time)
+    - cron: "43 16 * * *" # 18:43 Brussels (summer time)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: social-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Publish one post
+        env:
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
+          MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
+        run: python social/publish.py
+
+      - name: Record what was posted
+        run: |
+          if [ -z "$(git status --porcelain -- social)" ]; then
+            echo "Nothing posted."
+            exit 0
+          fi
+          git config user.name "pass-the-baton-agent"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A social
+          git commit -m "Social: record published post"
+          git push origin HEAD:main

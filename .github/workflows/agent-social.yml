@@ -1,0 +1,22 @@
+name: Agent - social
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: agent-social
+  cancel-in-progress: false
+
+jobs:
+  social:
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: ./.github/workflows/_run-agent.yml
+    with:
+      agent: social
+      output: social/queue
+      title: "Social agent: posts for review"
+      timeout: 10
+    secrets:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

@@ -26,6 +26,7 @@ Each agent is a folder with two files anyone can read:
 | [media](media/) | 3 | `outreach/media/` | Orchestrator, once a week; news and draft posts, with web search. Drafts only, never publishes |
 | [designer](designer/) | 1 | `design/` | Orchestrator, while design briefs are queued; one piece per run (Opus) |
 | [webbuilder](webbuilder/) | 1 | `site/` (style and templates only) | Orchestrator, when new artwork, brand files or feedback arrive; the site must build before a PR opens |
+| [social](social/) | 3 | `social/queue/` | Orchestrator, when fewer than two approved posts are waiting; three posts per run. Never posts itself: `social/publish.py` posts one merged item twice a day |
 | [coordinator](coordinator/) | all | `docs/status/` | Orchestrator, once a week; status report and next steps |
 
 The volunteers agent from the architecture is not built yet: it needs a channel where volunteers sign up (phase 4).

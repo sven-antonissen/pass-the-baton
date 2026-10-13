@@ -115,6 +115,13 @@ def decide(settings: dict, prs: list[dict], runs: list[dict], today: datetime.da
                 log.append(f"{agent}: last output {age} days ago; next after {cfg.get('days', 7)} days.")
                 continue
             reason = "no output yet" if age is None else f"last output {age} days ago"
+        elif rule == "refill":
+            folder = ROOT / cfg["folder"]
+            waiting = len(list(folder.glob("*.json"))) if folder.is_dir() else 0
+            if waiting >= cfg.get("min", 2):
+                log.append(f"{agent}: {waiting} items still waiting in {cfg['folder']}.")
+                continue
+            reason = f"only {waiting} items left in {cfg['folder']}"
         elif rule == "when_changed":
             watched = last_commit_time(cfg.get("watch", []))
             own = last_commit_time(cfg.get("outputs", []))

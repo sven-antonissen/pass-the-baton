@@ -1,0 +1,13 @@
+{
+  "model": "claude-sonnet-5-5",
+  "max_tokens": 4000,
+  "inputs": [
+    "MANIFESTO.md",
+    "brand/BRAND.md",
+    "agents/social/feedback.md"
+  ],
+  "latest_inputs": ["outreach/media/*.md"],
+  "list_dirs": ["social/queue", "social/posted", "data/countries"],
+  "output_dir": "social/queue",
+  "check": "python3 social/validate.py"
+}
