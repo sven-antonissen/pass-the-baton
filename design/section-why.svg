@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-labelledby="sw-title">
+  <title id="sw-title">A lifelike amber relay baton resting on the lane line of a curving dark running track</title>
+  <defs>
+    <radialGradient id="sw-bg" cx="0.25" cy="0.4" r="0.9">
+      <stop offset="0" stop-color="#FDFBF7"/>
+      <stop offset="0.6" stop-color="#F6F3EC"/>
+      <stop offset="1" stop-color="#E4DED0"/>
+    </radialGradient>
+    <radialGradient id="sw-track" cx="1400" cy="820" r="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B0C10"/>
+      <stop offset="0.7" stop-color="#111318"/>
+      <stop offset="1" stop-color="#1C1F26"/>
+    </radialGradient>
+    <radialGradient id="sw-glow" cx="977" cy="237" r="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F5A623" stop-opacity="0.34"/>
+      <stop offset="0.45" stop-color="#F5A623" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#F5A623" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sw-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0.3" stop-color="#111318" stop-opacity="0"/>
+      <stop offset="0.9" stop-color="#111318" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="sw-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D98E1C"/>
+      <stop offset="0.10" stop-color="#FFCF73"/>
+      <stop offset="0.20" stop-color="#FFF4DC"/>
+      <stop offset="0.30" stop-color="#FFC34F"/>
+      <stop offset="0.55" stop-color="#F5A623"/>
+      <stop offset="0.78" stop-color="#C27A0C"/>
+      <stop offset="0.88" stop-color="#A85F07"/>
+      <stop offset="0.94" stop-color="#B5700F"/>
+      <stop offset="1" stop-color="#6B3B04"/>
+    </linearGradient>
+    <linearGradient id="sw-rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF4DC"/>
+      <stop offset="0.4" stop-color="#FFC34F"/>
+      <stop offset="1" stop-color="#8A4E06"/>
+    </linearGradient>
+    <linearGradient id="sw-hole" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A0E02"/>
+      <stop offset="0.6" stop-color="#3D2205"/>
+      <stop offset="1" stop-color="#9A5A0A"/>
+    </linearGradient>
+    <clipPath id="sw-clip">
+      <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z"/>
+    </clipPath>
+    <clipPath id="sw-trackclip">
+      <circle cx="1400" cy="820" r="900"/>
+    </clipPath>
+    <mask id="sw-echomask">
+      <rect width="1200" height="600" fill="url(#sw-fade)"/>
+    </mask>
+    <filter id="sw-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.96  0 0 0 0 0.95  0 0 0 0 0.92  0 0 0 0.5 0"/>
+    </filter>
+    <filter id="sw-blur" x="-50%" y="-300%" width="200%" height="700%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="sw-blur2" x="-50%" y="-300%" width="200%" height="700%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- Quiet paper field for text on the left -->
+  <rect width="1200" height="600" fill="url(#sw-bg)"/>
+
+  <!-- Faint echo lanes fading into the paper -->
+  <g mask="url(#sw-echomask)" fill="none" stroke="#111318">
+    <circle cx="1400" cy="820" r="990" stroke-opacity="0.10" stroke-width="2"/>
+    <circle cx="1400" cy="820" r="1080" stroke-opacity="0.06" stroke-width="2"/>
+  </g>
+
+  <!-- The track bend -->
+  <circle cx="1400" cy="820" r="900" fill="url(#sw-track)"/>
+  <g clip-path="url(#sw-trackclip)">
+    <rect width="1200" height="600" filter="url(#sw-grain)" opacity="0.07"/>
+    <circle cx="1400" cy="820" r="450" fill="#F6F3EC" fill-opacity="0.035"/>
+    <rect width="1200" height="600" fill="url(#sw-glow)"/>
+    <g fill="none" stroke="#F6F3EC">
+      <circle cx="1400" cy="820" r="810" stroke-opacity="0.5" stroke-width="3"/>
+      <circle cx="1400" cy="820" r="720" stroke-opacity="0.6" stroke-width="3"/>
+      <circle cx="1400" cy="820" r="630" stroke-opacity="0.5" stroke-width="3"/>
+      <circle cx="1400" cy="820" r="540" stroke-opacity="0.5" stroke-width="3"/>
+      <circle cx="1400" cy="820" r="450" stroke-opacity="0.7" stroke-width="4"/>
+    </g>
+    <!-- Staggered start marks -->
+    <g stroke="#F6F3EC" stroke-opacity="0.75" stroke-width="5" stroke-linecap="butt">
+      <path d="M655 504 L572 469"/>
+      <path d="M766 482 L687 439"/>
+      <path d="M871 480 L795 431"/>
+      <path d="M968 496 L896 442"/>
+      <path d="M1058 527 L990 469"/>
+    </g>
+  </g>
+  <!-- Amber edge of the track -->
+  <circle cx="1400" cy="820" r="900" fill="none" stroke="#F5A623" stroke-width="4"/>
+  <circle cx="1400" cy="820" r="908" fill="none" stroke="#F5A623" stroke-opacity="0.25" stroke-width="2"/>
+
+  <!-- Shadows under the baton (light from upper left) -->
+  <g transform="translate(988 252) rotate(-36)">
+    <ellipse cx="0" cy="0" rx="200" ry="20" fill="#000000" opacity="0.55" filter="url(#sw-blur)"/>
+    <ellipse cx="-170" cy="2" rx="40" ry="14" fill="#000000" opacity="0.5" filter="url(#sw-blur2)"/>
+  </g>
+
+  <!-- Lifelike baton resting on the lane line -->
+  <g transform="translate(977 237) rotate(-36) scale(0.36)">
+    <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z" fill="url(#sw-body)"/>
+    <g clip-path="url(#sw-clip)" fill="none" stroke-linecap="round">
+      <path d="M-560 -58 L580 -52 M-560 -22 L580 -20 M-560 8 L580 7 M-560 36 L580 33 M-560 60 L580 55" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="3"/>
+      <path d="M-560 -40 L580 -36 M-560 -6 L580 -5 M-560 22 L580 20 M-560 52 L580 48" stroke="#3A2002" stroke-opacity="0.10" stroke-width="3"/>
+      <path d="M-520 -44 L540 -39" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="7"/>
+    </g>
+    <path d="M550 -66 A22 66 0 0 1 550 66" fill="none" stroke="#6B3B04" stroke-opacity="0.4" stroke-width="4"/>
+    <ellipse cx="-550" cy="0" rx="26" ry="74" fill="url(#sw-rim)"/>
+    <ellipse cx="-547" cy="3" rx="19" ry="61" fill="url(#sw-hole)"/>
+    <path d="M-573.8 -30 A26 74 0 0 1 -550 -74" fill="none" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>
