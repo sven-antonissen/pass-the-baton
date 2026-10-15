@@ -1,13 +1,14 @@
 <section class="hero">
   <div class="wrap">
-    <div>
+    <div class="hero-copy">
       <h1>{{t:hero_title}}</h1>
       <p class="lead">{{t:hero_lead}}</p>
       <a class="btn primary" href="{{base}}manifesto/">{{t:btn_manifesto}}</a>
       <a class="btn ghost" href="{{base}}countries/">{{t:btn_countries}}</a>
     </div>
-    <div class="baton-art">
-      <img src="{{up}}design/baton-cutout.svg" alt="{{t:baton_alt}}">
+    <div class="hero-art">
+      <div class="hero-frame"><img src="{{up}}design/hero-relay.svg" alt=""></div>
+      <img class="hero-baton" src="{{up}}design/baton-cutout.svg" alt="{{t:baton_alt}}">
     </div>
   </div>
 </section>
@@ -16,7 +17,10 @@
 
 <section class="section" id="demand">
   <div class="wrap demand-grid">
-    <div class="big-67" aria-hidden="true">67<span>{{t:big67_label}}</span></div>
+    <div class="demand-art">
+      <div class="big-67" aria-hidden="true">67<span>{{t:big67_label}}</span></div>
+      <img class="demand-baton" src="{{up}}design/baton-cutout.svg" alt="">
+    </div>
     <div>
       <h2 class="sr-only">{{t:demand_heading}}</h2>
       <p class="demand-text">{{t:demand_text}}</p>
@@ -30,6 +34,7 @@
 <section class="section">
   <div class="wrap">
     <h2>{{t:why_title}}</h2>
+    <div class="why-art"><img src="{{up}}design/section-why.svg" alt="" loading="lazy"></div>
     <div class="why-grid">
       <div><h3>{{t:why1_title}}</h3><p>{{t:why1_text}}</p></div>
       <div><h3>{{t:why2_title}}</h3><p>{{t:why2_text}}</p></div>
@@ -40,11 +45,14 @@
 </section>
 
 <section class="handover">
-  <img src="{{up}}design/handover-clean.svg" alt="{{t:handover_alt}}">
-  <div class="wrap">
+  <div class="handover-img"><img src="{{up}}design/handover-clean.svg" alt="{{t:handover_alt}}" loading="lazy"></div>
+  <div class="wrap handover-quote">
+    <span class="qmark" aria-hidden="true">&ldquo;</span>
     <blockquote>{{t:quote}}<cite>{{t:quote_cite}}</cite></blockquote>
   </div>
 </section>
+
+<div class="track-divider on-paper" aria-hidden="true"><img src="{{up}}design/baton-cutout.svg" alt="" loading="lazy"></div>
 
 <section class="section paper-2">
   <div class="wrap">
@@ -68,6 +76,6 @@
       <p>{{t:join_text}}</p>
       <a class="btn dark" href="{{base}}join/">{{t:join_cta}}</a>
     </div>
-    <img src="{{up}}design/baton-cutout.svg" alt="">
+    <img src="{{up}}design/baton-cutout.svg" alt="" loading="lazy">
   </div>
 </section>
