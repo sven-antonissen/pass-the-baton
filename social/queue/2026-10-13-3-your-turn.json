@@ -1,0 +1,9 @@
+{
+  "text": "Help us tie the demand to your country's own retirement age: join, translate, or hand a baton to someone today and share it. Your turn to hand it on. #PassTheBaton",
+  "link": "https://pass-the-baton.org/join/",
+  "link_title": "Join Pass the Baton",
+  "link_description": "Sign up, translate the manifesto or pass a baton.",
+  "platforms": ["bluesky", "mastodon"],
+  "kind": "invite",
+  "sources": ["https://pass-the-baton.org/join/"]
+}
