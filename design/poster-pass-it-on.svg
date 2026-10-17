@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" role="img" aria-labelledby="pp-title pp-desc">
+  <title id="pp-title">Passing it on is leadership.</title>
+  <desc id="pp-desc">Poster: a huge headline in Paper and Baton Amber on deep Relay Ink, with a lifelike amber relay baton crossing the poster on a rising diagonal, trailing soft motion streaks. #PassTheBaton and pass-the-baton.org at the bottom.</desc>
+  <defs>
+    <radialGradient id="pp-glow" cx="600" cy="880" r="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F5A623" stop-opacity="0.42"/>
+      <stop offset="0.35" stop-color="#A85F07" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#111318" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pp-vig" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0.6" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.45"/>
+    </radialGradient>
+    <linearGradient id="pp-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D98E1C"/>
+      <stop offset="0.10" stop-color="#FFCF73"/>
+      <stop offset="0.20" stop-color="#FFF4DC"/>
+      <stop offset="0.30" stop-color="#FFC34F"/>
+      <stop offset="0.55" stop-color="#F5A623"/>
+      <stop offset="0.78" stop-color="#C27A0C"/>
+      <stop offset="0.88" stop-color="#A85F07"/>
+      <stop offset="0.94" stop-color="#B5700F"/>
+      <stop offset="1" stop-color="#6B3B04"/>
+    </linearGradient>
+    <linearGradient id="pp-rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF4DC"/>
+      <stop offset="0.4" stop-color="#FFC34F"/>
+      <stop offset="1" stop-color="#8A4E06"/>
+    </linearGradient>
+    <linearGradient id="pp-hole" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A0E02"/>
+      <stop offset="0.6" stop-color="#3D2205"/>
+      <stop offset="1" stop-color="#9A5A0A"/>
+    </linearGradient>
+    <linearGradient id="pp-streak" x1="-1100" y1="0" x2="-600" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F5A623" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FFCF73" stop-opacity="0.75"/>
+    </linearGradient>
+    <clipPath id="pp-clip">
+      <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z"/>
+    </clipPath>
+    <filter id="pp-blur" x="-50%" y="-300%" width="200%" height="700%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="pp-blur2" x="-50%" y="-300%" width="200%" height="700%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1350" fill="#111318"/>
+  <rect width="1080" height="1350" fill="url(#pp-glow)"/>
+  <!-- Abstract track lanes sweeping along the diagonal -->
+  <g fill="none" stroke="#F6F3EC" stroke-width="3">
+    <path d="M-80 1330 C 300 1180, 700 900, 1180 640" stroke-opacity="0.07"/>
+    <path d="M-80 1420 C 340 1260, 760 990, 1180 760" stroke-opacity="0.06"/>
+    <path d="M-80 1220 C 260 1090, 640 820, 1180 520" stroke-opacity="0.05"/>
+    <path d="M-80 1110 C 220 1000, 580 740, 1180 400" stroke-opacity="0.035"/>
+  </g>
+  <rect width="1080" height="1350" fill="url(#pp-vig)"/>
+
+  <!-- Label -->
+  <text x="80" y="140" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="26" letter-spacing="3.1" fill="#F5A623">PASS THE BATON</text>
+  <rect x="80" y="164" width="72" height="5" fill="#F5A623"/>
+
+  <!-- Headline -->
+  <g font-family="'Archivo Black', 'Arial Black', sans-serif" letter-spacing="-1.7">
+    <text x="74" y="320" font-size="170" fill="#F6F3EC">PASSING</text>
+    <text x="74" y="470" font-size="170" fill="#F6F3EC">IT ON IS</text>
+    <text x="78" y="590" font-size="124" letter-spacing="-1.2" fill="#F5A623">LEADERSHIP.</text>
+  </g>
+
+  <!-- Cast shadow -->
+  <g transform="translate(600 880) rotate(-28)">
+    <ellipse cx="30" cy="150" rx="560" ry="34" fill="#000000" opacity="0.5" filter="url(#pp-blur)"/>
+    <ellipse cx="-470" cy="120" rx="120" ry="18" fill="#000000" opacity="0.4" filter="url(#pp-blur2)"/>
+  </g>
+
+  <!-- Baton -->
+  <g transform="translate(600 880) rotate(-28)">
+    <!-- motion streaks -->
+    <g stroke="url(#pp-streak)" stroke-linecap="round" fill="none">
+      <path d="M-1100 -52 L-610 -50" stroke-width="6"/>
+      <path d="M-1000 -14 L-640 -13" stroke-width="4" stroke-opacity="0.7"/>
+      <path d="M-1080 22 L-620 21" stroke-width="8" stroke-opacity="0.55"/>
+      <path d="M-960 58 L-640 56" stroke-width="4" stroke-opacity="0.6"/>
+      <path d="M-1100 104 L-700 100" stroke-width="3" stroke-opacity="0.4"/>
+      <path d="M-1060 -100 L-720 -96" stroke-width="3" stroke-opacity="0.4"/>
+    </g>
+    <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z" fill="url(#pp-body)"/>
+    <g clip-path="url(#pp-clip)" fill="none" stroke-linecap="round">
+      <path d="M-560 -58 L580 -52 M-560 -22 L580 -20 M-560 8 L580 7 M-560 36 L580 33 M-560 60 L580 55" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="2"/>
+      <path d="M-560 -40 L580 -36 M-560 -6 L580 -5 M-560 22 L580 20 M-560 52 L580 48" stroke="#3A2002" stroke-opacity="0.10" stroke-width="2"/>
+      <path d="M-520 -44 L540 -39" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="5"/>
+    </g>
+    <path d="M550 -66 A22 66 0 0 1 550 66" fill="none" stroke="#6B3B04" stroke-opacity="0.35" stroke-width="3"/>
+    <ellipse cx="-550" cy="0" rx="26" ry="74" fill="url(#pp-rim)"/>
+    <ellipse cx="-547" cy="3" rx="19" ry="61" fill="url(#pp-hole)"/>
+    <path d="M-573.8 -30 A26 74 0 0 1 -550 -74" fill="none" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Footer -->
+  <rect x="80" y="1232" width="920" height="2" fill="#F6F3EC" fill-opacity="0.18"/>
+  <text x="80" y="1290" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="40" fill="#F6F3EC">#PassTheBaton</text>
+  <text x="1000" y="1288" text-anchor="end" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-weight="600" font-size="30" fill="#F5A623">pass-the-baton.org</text>
+</svg>
