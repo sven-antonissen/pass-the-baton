@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="sc-title">
+  <title id="sc-title">Pass the Baton: what applies to the people applies to those who lead them. A lifelike amber relay baton rises on a dark background.</title>
+  <defs>
+    <linearGradient id="sc-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111318"/>
+      <stop offset="0.6" stop-color="#161820"/>
+      <stop offset="1" stop-color="#0B0C10"/>
+    </linearGradient>
+    <radialGradient id="sc-glow" cx="960" cy="320" r="460" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F5A623" stop-opacity="0.42"/>
+      <stop offset="0.35" stop-color="#C27A0C" stop-opacity="0.22"/>
+      <stop offset="0.7" stop-color="#6B3B04" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#6B3B04" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sc-floor" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFC34F" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFC34F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sc-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D98E1C"/>
+      <stop offset="0.10" stop-color="#FFCF73"/>
+      <stop offset="0.20" stop-color="#FFF4DC"/>
+      <stop offset="0.30" stop-color="#FFC34F"/>
+      <stop offset="0.55" stop-color="#F5A623"/>
+      <stop offset="0.78" stop-color="#C27A0C"/>
+      <stop offset="0.88" stop-color="#A85F07"/>
+      <stop offset="0.94" stop-color="#B5700F"/>
+      <stop offset="1" stop-color="#6B3B04"/>
+    </linearGradient>
+    <linearGradient id="sc-rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF4DC"/>
+      <stop offset="0.4" stop-color="#FFC34F"/>
+      <stop offset="1" stop-color="#8A4E06"/>
+    </linearGradient>
+    <linearGradient id="sc-hole" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A0E02"/>
+      <stop offset="0.6" stop-color="#3D2205"/>
+      <stop offset="1" stop-color="#9A5A0A"/>
+    </linearGradient>
+    <linearGradient id="sc-streak" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFC34F" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FFC34F" stop-opacity="0.55"/>
+    </linearGradient>
+    <clipPath id="sc-clip">
+      <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z"/>
+    </clipPath>
+    <filter id="sc-blur" x="-50%" y="-200%" width="200%" height="500%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="sc-blur2" x="-50%" y="-200%" width="200%" height="500%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="sc-blur3" x="-50%" y="-200%" width="200%" height="500%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <g id="sc-baton">
+      <path d="M-550 -74 L550 -66 A22 66 0 0 1 550 66 L-550 74 Z" fill="url(#sc-body)"/>
+      <g clip-path="url(#sc-clip)" fill="none" stroke-linecap="round">
+        <path d="M-560 -58 L580 -52 M-560 -22 L580 -20 M-560 8 L580 7 M-560 36 L580 33 M-560 60 L580 55" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="2"/>
+        <path d="M-560 -40 L580 -36 M-560 -6 L580 -5 M-560 22 L580 20 M-560 52 L580 48" stroke="#3A2002" stroke-opacity="0.10" stroke-width="2"/>
+        <path d="M-520 -44 L540 -39" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="5"/>
+      </g>
+      <path d="M550 -66 A22 66 0 0 1 550 66" fill="none" stroke="#6B3B04" stroke-opacity="0.35" stroke-width="3"/>
+      <ellipse cx="-550" cy="0" rx="26" ry="74" fill="url(#sc-rim)"/>
+      <ellipse cx="-547" cy="3" rx="19" ry="61" fill="url(#sc-hole)"/>
+      <path d="M-573.8 -30 A26 74 0 0 1 -550 -74" fill="none" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#sc-bg)"/>
+  <rect width="1200" height="630" fill="url(#sc-glow)"/>
+
+  <g fill="none" stroke="#F6F3EC" stroke-linecap="round">
+    <path d="M-40 640 C 300 560, 700 520, 1240 470" stroke-opacity="0.07" stroke-width="3"/>
+    <path d="M-40 700 C 320 610, 720 575, 1240 535" stroke-opacity="0.06" stroke-width="3"/>
+    <path d="M-40 770 C 340 670, 740 635, 1240 605" stroke-opacity="0.05" stroke-width="3"/>
+    <path d="M300 -40 C 600 80, 900 120, 1240 130" stroke-opacity="0.035" stroke-width="2"/>
+  </g>
+
+  <ellipse cx="950" cy="545" rx="330" ry="46" fill="url(#sc-floor)"/>
+  <ellipse cx="960" cy="548" rx="290" ry="16" transform="rotate(-3 960 548)" fill="#000000" opacity="0.45" filter="url(#sc-blur)"/>
+  <ellipse cx="700" cy="548" rx="80" ry="9" fill="#000000" opacity="0.5" filter="url(#sc-blur2)"/>
+
+  <g stroke="url(#sc-streak)" stroke-linecap="round" fill="none">
+    <path d="M560 520 L640 474" stroke-width="3"/>
+    <path d="M585 548 L655 508" stroke-width="2"/>
+    <path d="M610 470 L662 440" stroke-width="2" stroke-opacity="0.7"/>
+  </g>
+
+  <g transform="translate(955 318) rotate(-30) scale(0.62)">
+    <use href="#sc-baton"/>
+  </g>
+
+  <ellipse cx="122" cy="126" rx="46" ry="5" fill="#000000" opacity="0.5" filter="url(#sc-blur3)"/>
+  <g transform="translate(120 94) rotate(-32) scale(0.1)">
+    <use href="#sc-baton"/>
+  </g>
+  <text x="186" y="104" font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="34" letter-spacing="-0.3" fill="#F6F3EC">Pass the Baton</text>
+  <text x="188" y="130" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="1.6" fill="#FFF4DC" fill-opacity="0.8">PASSING IT ON IS LEADERSHIP.</text>
+
+  <rect x="72" y="190" width="64" height="6" rx="3" fill="#F5A623"/>
+
+  <g font-family="'Archivo Black', 'Arial Black', sans-serif" font-size="50" letter-spacing="-0.5">
+    <text x="70" y="264" fill="#F6F3EC">What applies</text>
+    <text x="70" y="322" fill="#F6F3EC">to the people</text>
+    <text x="70" y="380" fill="#F6F3EC">applies to those</text>
+    <text x="70" y="438" fill="#F5A623">who lead them.</text>
+  </g>
+
+  <text x="72" y="566" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="600" fill="#F6F3EC">#PassTheBaton<tspan fill="#F5A623" dx="10">·</tspan><tspan dx="10" fill-opacity="0.75">pass-the-baton.org</tspan></text>
+</svg>
